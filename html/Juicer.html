@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+  <head>
+    <title>BBC News Labs Documentation</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="http://bootstrap.bbcnewslabs.co.uk/dist/css/bootstrap.min.css"/>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="navbar navbar-default navbar-static-top no-margin">
+      <div class="container">        
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".header-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="README.html">BBC News Labs Documentation</a>
+        </div>
+        <div class="collapse navbar-collapse header-collapse">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-lg fa-fw fa-file-text"></i> Documentation <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="juicer.html">Juicer REST API</a></li>
+              </ul>
+            </li>
+          </ul>
+          <p class="navbar-btn navbar-right"><a href="https://github.com/BBC-News-Labs/juicer-docs" target="_blank" class="btn btn-primary navbar-link"><i class="fa fa-lg fa-github"></i> GitHub</a></p>
+          <p class="navbar-btn navbar-right" style="margin-right: 5px;"><a href="http://twitter.com/BBC_News_Labs" target="_blank" class="btn btn-primary navbar-link"><i class="fa fa-lg fa-twitter"></i> @BBC_News_Labs</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="jumbotron clearfix">
+      <div class="container">
+       <h1>
+          BBC News Labs <strong> Documentation</strong>
+       </h1>
+       <p>Last updated on <strong>2015-01-22 22:04:12</strong></p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 id="the-juicer-api">The Juicer API</h1>
+<h2 id="about-the-juicer">About the Juicer</h2>
+<p>The BBC Labs News Juicer is the software responsible for fetching content from the web – articles, videos and images from the BBC, other news sites, Twitter, etc. – parsing content and tagging it with people, organisations and places that correspond to DBpedia entries.</p>
+<p>The public Juicer API allows you to specify start and end dates for articles, select which sources or concepts you wish to search for and to free text search in real time, as articles, tweets and other content is ingested.</p>
+<p><a href="http://www.bbc.co.uk/partnersandsuppliers/connectedstudio/newslabs/projects/juicer.html">Read more about the Juicer</a></p>
+<h2 id="api-endpoints">API Endpoints</h2>
+<h3 id="1-get-articles">1. Get Articles</h3>
+<h4 id="url">URL</h4>
+<pre><code>http://data.bbc.co.uk/bbcrd-juicer/articles.json
+</code></pre><h4 id="options">Options</h4>
+<p>Filter Articles according to some parameters. Parameters can be provided in the query string.</p>
+<p>Available parameters:</p>
+<ul>
+<li><code>text</code>: keywords to search for. Searches in title, description and body of the article.</li>
+<li><code>product[]</code>: scopes the results to certain products. Multiple products can be specified by adding multiple <code>product[]</code> keys and values. Just specify &#39;NewsWeb&#39; to return only BBC News articles.</li>
+<li><code>content_format[]</code>: scopes the results to certain formats. Multiple formats can be specified by adding multiple <code>content_format[]</code> keys and values.</li>
+<li><code>section[]</code>: scopes the results to certain sections. Multiple sections can be specified by adding multiple <code>section[]</code> keys and values.</li>
+<li><code>site[]</code>: scopes the results to certain sites. Multiple sites can be specified by adding multiple <code>site[]</code> keys and values.</li>
+<li><code>published_after</code>: fetch articles published after <code>published_after</code>. The date format is <code>yyyy-mm-yy</code>.</li>
+<li><code>published_before</code>: fetch articles published before <code>published_before</code>. The date format is <code>yyyy-mm-yy</code>.</li>
+<li><code>recent_first</code>: Specify &#39;yes&#39; to sort results by date (with most recent first) instead of by relevance to keywords.</li>
+</ul>
+<p>All parameters are optional. If omitted, the endpoint will return the latest articles.</p>
+<h4 id="example-request">Example Request</h4>
+<pre><code>http://data.bbc.co.uk/bbcrd-juicer/articles.json?text=London&amp;product[]=NewsWeb&amp;content_format[]=TextualFormat&amp;recent_first=yes&amp;apikey=ABC123
+</code></pre><h3 id="2-get-article">2. Get Article</h3>
+<p>Get the full text of a specific article by its ID.</p>
+<p>The <code>id</code> in the URL is an article&#39;s ID (this property is sometimes called the <code>cps_id</code>.</p>
+<h4 id="url">URL</h4>
+<pre><code>http://data.bbc.co.uk/bbcrd-juicer/articles/{{article-id}}.json
+</code></pre><h4 id="example-request">Example Request</h4>
+<pre><code>http://data.bbc.co.uk/bbcrd-juicer/articles/news_web_5da5811f84a8c718689bbb831f0098bc4c5e4a1c.json?apikey=ABC123
+</code></pre><h3 id="3-get-products">3. Get Products</h3>
+<p>Get the a list of &quot;products&quot; currently indexed and avalible from the Juicer.</p>
+<p>&quot;Products&quot; are newspapers, broadcast TV channels and other sources.</p>
+<h4 id="url">URL</h4>
+<pre><code>http://data.bbc.co.uk/bbcrd-juicer/products.json
+</code></pre><h4 id="example-request">Example Request</h4>
+<pre><code>http://data.bbc.co.uk/bbcrd-juicer/products.json?apikey=ABC123
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
