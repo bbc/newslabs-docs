@@ -2,9 +2,9 @@
 
 The following information is intended for attendees of the [BBC Connected Studio: World Service](http://www.bbc.co.uk/corporate2/connectedstudio/events) event in Nairobi.
 
-> **Please note:** You will need an API key to be able to make calls to these APIs.
-
 ## Official BBC APIs
+
+> **Please note:** You will need an API key to be able to make calls to these APIs.
 
 ### [Juicer API Documentation](Juicer.html)
 
