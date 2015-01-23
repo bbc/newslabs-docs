@@ -27,7 +27,7 @@ http://data.bbc.co.uk/bbcrd-juicer/articles.json
 
 #### Options
 
-Filter Articles according to some parameters. Parameters can be provided in the query string.
+You can filter and sort the articles returned from the `articles` endpoint. Parameters can be provided in the query string.
 
 Available parameters:
 
@@ -40,7 +40,7 @@ Available parameters:
 * `published_before`: fetch articles published before `published_before`. The date format is `yyyy-mm-yy`.
 * `recent_first`: Specify 'yes' to sort results by date (with most recent first) instead of by relevance to keywords.
 
-All parameters are optional. If omitted, the endpoint will return the latest articles.
+All parameters are optional. If parameters are omitted, the endpoint will just return the latest articles.
 
 #### Example Request
 
@@ -50,9 +50,7 @@ http://data.bbc.co.uk/bbcrd-juicer/articles.json?text=London&product[]=NewsWeb&c
 
 ### 2. Get Article
 
-Get the full text of a specific article by its ID.
-
-The `id` in the URL is an article's ID (this property is sometimes called the `cps_id`.
+You can get the full text of a specific article by using it's `id` (this property is sometimes called the `cps_id`).
 
 #### URL
 
@@ -69,9 +67,11 @@ http://data.bbc.co.uk/bbcrd-juicer/articles/news_web_5da5811f84a8c718689bbb831f0
 
 ### 3. Get Products
 
-Get the a list of "products" currently indexed and avalible from the Juicer.
+Get the a list of `products` currently indexed and avalible from the Juicer.
 
 "Products" are newspapers, broadcast TV channels and other sources.
+
+To return only BBC News articles, specify `product[]=NewsWeb` when calling `articles.json`.
 
 #### URL
 

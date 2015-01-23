@@ -12,6 +12,11 @@
         padding-bottom: 5px;
         border-bottom: 4px solid #eaeaea;
       }
+      @media (max-width: 768px) {
+        .jumbotron h1 {
+          font-size: 32px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -46,7 +51,7 @@
        <h1>
           BBC News Labs <strong> Documentation</strong>
        </h1>
-       <p>Last updated on <strong><%= grunt.template.today('yyyy-mm-dd HH:MM:ss') %></strong></p>
+       <p><small>Last updated: <strong><%= grunt.template.today('yyyy-mm-dd HH:MM:ss') %></strong></small></p>
       </div>
     </div>
     <div class="container">
