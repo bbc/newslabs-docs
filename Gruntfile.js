@@ -7,14 +7,14 @@ module.exports = function(grunt) {
           },
           files: [{
             expand: true,
-            src: ['docs/*.md'],
+            src: ['docs/**/*.md'],
             dest: 'tmp',
             ext: '.html'
           }]
         }
       },
       watch: {
-         files: ['docs/*', 'layout.html'],
+         files: ['docs/**', 'layout.html'],
          tasks: ['default']
       },
       clean: {
