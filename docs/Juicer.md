@@ -45,7 +45,7 @@ All parameters are optional. If omitted, the endpoint will return the latest art
 #### Example Request
 
 ```
-http://data.bbc.co.uk/bbcrd-juicer/articles.json?text=London&product[]=NewsWeb&content_format[]=TextualFormat&recent_first=yes&apikey=ABC123
+http://data.bbc.co.uk/bbcrd-juicer/articles.json?text=London&product[]=NewsWeb&content_format[]=TextualFormat&recent_first=yes&apikey={{apikey}}
 ```
 
 ### 2. Get Article
@@ -63,7 +63,7 @@ http://data.bbc.co.uk/bbcrd-juicer/articles/{{article-id}}.json
 #### Example Request
 
 ```
-http://data.bbc.co.uk/bbcrd-juicer/articles/news_web_5da5811f84a8c718689bbb831f0098bc4c5e4a1c.json?apikey=ABC123
+http://data.bbc.co.uk/bbcrd-juicer/articles/news_web_5da5811f84a8c718689bbb831f0098bc4c5e4a1c.json?apikey={{apikey}}
 ```
 
 
@@ -82,5 +82,5 @@ http://data.bbc.co.uk/bbcrd-juicer/products.json
 #### Example Request
 
 ```
-http://data.bbc.co.uk/bbcrd-juicer/products.json?apikey=ABC123
+http://data.bbc.co.uk/bbcrd-juicer/products.json?apikey={{apikey}}
 ```

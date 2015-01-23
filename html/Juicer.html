@@ -32,6 +32,7 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-lg fa-fw fa-file-text"></i> Documentation <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="Juicer.html">Juicer API Documentation</a></li>
+                <li><a href="CANDY.html">BBC Content Store API</a></li>
               </ul>
             </li>
           </ul>
@@ -45,7 +46,7 @@
        <h1>
           BBC News Labs <strong> Documentation</strong>
        </h1>
-       <p>Last updated on <strong>2015-01-23 11:12:28</strong></p>
+       <p>Last updated on <strong>2015-01-23 12:16:31</strong></p>
       </div>
     </div>
     <div class="container">
@@ -81,21 +82,21 @@
 </ul>
 <p>All parameters are optional. If omitted, the endpoint will return the latest articles.</p>
 <h4 id="example-request">Example Request</h4>
-<pre><code>http://data.bbc.co.uk/bbcrd-juicer/articles.json?text=London&amp;product[]=NewsWeb&amp;content_format[]=TextualFormat&amp;recent_first=yes&amp;apikey=ABC123
+<pre><code>http://data.bbc.co.uk/bbcrd-juicer/articles.json?text=London&amp;product[]=NewsWeb&amp;content_format[]=TextualFormat&amp;recent_first=yes&amp;apikey={{apikey}}
 </code></pre><h3 id="2-get-article">2. Get Article</h3>
 <p>Get the full text of a specific article by its ID.</p>
 <p>The <code>id</code> in the URL is an article&#39;s ID (this property is sometimes called the <code>cps_id</code>.</p>
 <h4 id="url">URL</h4>
 <pre><code>http://data.bbc.co.uk/bbcrd-juicer/articles/{{article-id}}.json
 </code></pre><h4 id="example-request">Example Request</h4>
-<pre><code>http://data.bbc.co.uk/bbcrd-juicer/articles/news_web_5da5811f84a8c718689bbb831f0098bc4c5e4a1c.json?apikey=ABC123
+<pre><code>http://data.bbc.co.uk/bbcrd-juicer/articles/news_web_5da5811f84a8c718689bbb831f0098bc4c5e4a1c.json?apikey={{apikey}}
 </code></pre><h3 id="3-get-products">3. Get Products</h3>
 <p>Get the a list of &quot;products&quot; currently indexed and avalible from the Juicer.</p>
 <p>&quot;Products&quot; are newspapers, broadcast TV channels and other sources.</p>
 <h4 id="url">URL</h4>
 <pre><code>http://data.bbc.co.uk/bbcrd-juicer/products.json
 </code></pre><h4 id="example-request">Example Request</h4>
-<pre><code>http://data.bbc.co.uk/bbcrd-juicer/products.json?apikey=ABC123
+<pre><code>http://data.bbc.co.uk/bbcrd-juicer/products.json?apikey={{apikey}}
 </code></pre>
         </div>
       </div>
