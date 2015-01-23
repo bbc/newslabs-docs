@@ -6,7 +6,7 @@ Please note you will need an API key to access offical APIs, which you can obtai
 
 **Please you will need an API key to be able to make calls to these APIs.**
 
-## Offical BBC APIs
+## Official BBC APIs
 
 ### [Juicer API Documentation](Juicer.html)
 
@@ -18,7 +18,7 @@ The BBC Content Store API (aka CANDY) provides an interface to BBC News content.
 
 CANDY stands for "CPS and Dynamic", it integrates the Content Production System (CPS) with the Dynamic Semantic Publishing system (DSP).
 
-## Third Party Services
+## Other useful links
 
 * Vumi http://vumi.org
 * Mxit http://get.mxit.com
