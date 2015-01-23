@@ -19,13 +19,22 @@ module.exports = function(grunt) {
       },
       clean: {
           build: ['tmp'],
-          release: ['html']
+          release: ['html'],
+          releaseweb: ['html']
       },
       rename: {
           build: {
             src: 'tmp/docs',
             dest: 'html'
-        }
+          },
+          buildweb: {
+            src: 'tmp/docs',
+            dest: 'www'
+          },
+          buildwebindex: {
+            src: 'www/README.html',
+            dest: 'www/index.html'
+          }
       }
     });
 
@@ -35,4 +44,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-rename');
     
     grunt.registerTask('default', ['clean:release', 'clean:build', 'md2html', 'rename:build', 'clean:build']);
+    grunt.registerTask('www', ['clean:releaseweb', 'clean:build', 'md2html', 'rename:buildweb', 'rename:buildwebindex', 'clean:build']);
 };
