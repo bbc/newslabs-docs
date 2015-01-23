@@ -2,7 +2,7 @@
 
 The following information is intended for attendees of the [BBC Connected Studio: World Service](http://www.bbc.co.uk/corporate2/connectedstudio/events) event in Nairobi.
 
-## BBC Content
+## BBC Content APIs
 
 > **Please note:** You will need an API key to be able to make calls to these APIs.
 
@@ -28,7 +28,6 @@ CANDY stands for "CPS and Dynamic", it integrates the Content Production System 
      Alternatively we email numbers of the people/teams who want to access to Trushar who can add them. Requests through WhatsApp may be delayed. Subscribe by searching for the ID **BBC News** or by scanning this QR code:
      <br>
      ![QR Code ](http://qr-official.line.me/sid/L/bbcnews.png)
-
 
 ## BBC Programmes
 
