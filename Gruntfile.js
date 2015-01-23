@@ -20,7 +20,7 @@ module.exports = function(grunt) {
       clean: {
           build: ['tmp'],
           release: ['html'],
-          releaseweb: ['html']
+          releaseweb: ['_www']
       },
       rename: {
           build: {
@@ -44,5 +44,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-rename');
     
     grunt.registerTask('default', ['clean:release', 'clean:build', 'md2html', 'rename:buildindex', 'rename:build', 'clean:build']);
-    grunt.registerTask('www', ['clean:releaseweb', 'clean:build', 'md2html', 'rename:buildindex', 'rename:buildweb', 'clean:build']);
+    grunt.registerTask('www', ['clean:build', 'md2html', 'rename:buildindex', 'clean:releaseweb', 'rename:buildweb', 'clean:build']);
 };
