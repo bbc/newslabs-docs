@@ -83,6 +83,11 @@ http://data.bbc.co.uk/content/asset/news/world/technology?api_key={{apikey}}
 http://data.bbc.co.uk/content/asset/news/world/business?api_key={{apikey}}
 ```
 
+#### Sport: Football
+```
+http://data.bbc.co.uk/content/asset/sport/football?api_key={{apikey}}
+```
+
 ### Article URL Endpoint
 
 To get the full text of an article you can use it's "assetUri" to determine how to request an article in full:

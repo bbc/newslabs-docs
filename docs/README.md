@@ -1,8 +1,12 @@
-## [BBC Connected Studio: World Service - Nairobi](World-Service-Nairobi.html)
+# <i class="fa fa-calendar"></i> Event Information
 
-We've prepared some information for attendees of the BBC Connected Studio: World Service event in Nairobi.
+##[BBC Connected Studio: World Service - Nairobi](World-Service-Nairobi.html)
 
+ We've prepared some information for attendees of the BBC Connected Studio: World Service event in Nairobi.
+ 
 ---
+
+# <i class="fa fa-cogs"></i> API Documentation
 
 ## [Juicer API Documentation](Juicer.html)
 

@@ -2,7 +2,7 @@
 
 The following information is intended for attendees of the [BBC Connected Studio: World Service](http://www.bbc.co.uk/corporate2/connectedstudio/events) event in Nairobi.
 
-## Official BBC APIs
+## BBC Content
 
 > **Please note:** You will need an API key to be able to make calls to these APIs.
 
@@ -16,7 +16,7 @@ The BBC Content Store API (aka CANDY) provides an interface to BBC News content.
 
 CANDY stands for "CPS and Dynamic", it integrates the Content Production System (CPS) with the Dynamic Semantic Publishing system (DSP).
 
-### BBC Africa on Social Media
+## BBC Africa on Social Media
 
 * Facebook, "BBC Africa News" https://www.facebook.com/bbcafrica
 * Twitter https://twitter.com/BBCAfrica  and #BBCGoFigure
@@ -30,14 +30,14 @@ CANDY stands for "CPS and Dynamic", it integrates the Content Production System 
      ![QR Code ](http://qr-official.line.me/sid/L/bbcnews.png)
 
 
-### BBC Programmes
+## BBC Programmes
 
 * African programmes http://www.bbc.co.uk/programmes/p0107lkh 
 * Focus On Africa http://www.bbc.co.uk/programmes/p00gbjvb 
 * News Summaries http://www.bbc.co.uk/programmes/p002vsn1/episodes/player 
 * Podcast - AfricaToday http://www.bbc.co.uk/podcasts/series/africa 
 
-#### Learning English Resources
+### Learning English Resources
 
 * http://www.bbc.co.uk/learningenglish/ 
 * https://www.youtube.com/user/bbclearningenglish 
