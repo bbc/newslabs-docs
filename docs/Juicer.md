@@ -1,4 +1,4 @@
-# The Juicer API
+#  Juicer API Documentation
 
 ## About the Juicer
 
@@ -8,7 +8,14 @@ The public Juicer API allows you to specify start and end dates for articles, se
 
 [Read more about the Juicer](http://www.bbc.co.uk/partnersandsuppliers/connectedstudio/newslabs/projects/juicer.html)
 
-## API Endpoints
+## Juicer Client Libraries
+
+* There is a Juicer client library for node.js called [newsQuery](https://www.npmjs.com/package/newsquery)
+* There is also a [Juicer client GEM for Ruby](https://rubygems.org/gems/juicer-client)
+
+If you are not using Ruby or Node.JS (or just want to use the REST API directly) see the documentation for REST API endpoints below.
+
+## REST API Endpoints
 
 ### 1. Get Articles
 
