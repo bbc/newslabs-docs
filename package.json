@@ -1,6 +1,6 @@
 {
   "name": "juicer-docs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Documentation for the BBC News Labs Juicer APIs (and other useful related information)",
   "main": "Gruntfile.js",
   "directories": {
@@ -21,12 +21,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/BBC-News-Labs/juicer-docs.git"
+    "url": "https://github.com/BBC-News-Labs/docs.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/BBC-News-Labs/juicer-docs/issues"
+    "url": "https://github.com/BBC-News-Labs/docs/issues"
   },
-  "homepage": "https://github.com/BBC-News-Labs/juicer-docs"
+  "homepage": "http://docs.bbcnewslabs.co.uk"
 }
