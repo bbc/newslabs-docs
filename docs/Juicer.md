@@ -48,6 +48,15 @@ All parameters are optional. If parameters are omitted, the endpoint will just r
 http://data.bbc.co.uk/bbcrd-juicer/articles.json?text=London&product[]=NewsWeb&content_format[]=TextualFormat&recent_first=yes&apikey={{apikey}}
 ```
 
+#### Complex Query Example
+
+The Juicer supports doing complex queries across multiple sources. For example, the following query uses the search phrase `kenya OR nairobi AND (government OR president OR "Uhuru Kenyatta")` which returns articles only from the listed products that match that specific query.
+
+```
+http://data.bbc.co.uk/bbcrd-juicer/articles.json?&text=kenya+OR+nairobi+AND+%28government+OR+president+OR+%22Uhuru+Kenyatta%22%29&product[]=DailyNewsEgypt&product[]=KenyaBroadcastingCorporation&product[]=TechMoran&product[]=NigerDeltaStandard&product[]=NationalElectionCommissionSudan&content_format[]=TextualFormat&recent_first=yes&apikey={{apikey}}
+```
+
+
 ### 2. Get Article
 
 You can get the full text of a specific article by using it's `id` (this property is sometimes called the `cps_id`).

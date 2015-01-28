@@ -51,7 +51,7 @@
        <h1>
           BBC News Labs <strong> Documentation</strong>
        </h1>
-       <p><small>Last updated: <strong>2015-01-23 15:07:07</strong></small></p>
+       <p><small>Last updated: <strong>2015-01-28 13:25:49</strong></small></p>
       </div>
     </div>
     <div class="container">
@@ -88,6 +88,9 @@
 <p>All parameters are optional. If parameters are omitted, the endpoint will just return the latest articles.</p>
 <h4 id="example-request">Example Request</h4>
 <pre><code>http://data.bbc.co.uk/bbcrd-juicer/articles.json?text=London&amp;product[]=NewsWeb&amp;content_format[]=TextualFormat&amp;recent_first=yes&amp;apikey={{apikey}}
+</code></pre><h4 id="complex-query-example">Complex Query Example</h4>
+<p>The Juicer supports doing complex queries across multiple sources. For example, the following query uses the search phrase <code>kenya OR nairobi AND (government OR president OR &quot;Uhuru Kenyatta&quot;)</code> which returns articles only from the listed products that match that specific query.</p>
+<pre><code>http://data.bbc.co.uk/bbcrd-juicer/articles.json?&amp;text=kenya+OR+nairobi+AND+%28government+OR+president+OR+%22Uhuru+Kenyatta%22%29&amp;product[]=DailyNewsEgypt&amp;product[]=KenyaBroadcastingCorporation&amp;product[]=TechMoran&amp;product[]=NigerDeltaStandard&amp;product[]=NationalElectionCommissionSudan&amp;content_format[]=TextualFormat&amp;recent_first=yes&amp;apikey={{apikey}}
 </code></pre><h3 id="2-get-article">2. Get Article</h3>
 <p>You can get the full text of a specific article by using it&#39;s <code>id</code> (this property is sometimes called the <code>cps_id</code>).</p>
 <h4 id="url">URL</h4>
