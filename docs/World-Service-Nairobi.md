@@ -66,9 +66,9 @@ You can get images by using the BBC Juicer and Content APIs (which return images
 
 As they don't currently expose video or audio content externally, we've provided some sample content for use during the event.
 
-* Sample Video Content http://media.fnr.bbcnewslabs.co.uk/videos
-* Sample Shortform Video http://media.fnr.bbcnewslabs.co.uk/videos/BBC%20Shorts/
-* Sample Audio Content http://media.fnr.bbcnewslabs.co.uk/audio/
+* Sample Video Content http://media.bbcnewslabs.co.uk/videos/
+* Sample Short form Video http://media.bbcnewslabs.co.uk/shorts/
+* Sample Audio Content http://media.bbcnewslabs.co.uk/audio/
 
 ## External Links
 
