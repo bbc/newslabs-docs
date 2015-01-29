@@ -50,12 +50,11 @@ http://data.bbc.co.uk/bbcrd-juicer/articles.json?text=London&product[]=NewsWeb&c
 
 #### Complex Query Example
 
-The Juicer supports doing complex queries across multiple sources. For example, the following query uses the search phrase `kenya OR nairobi AND (government OR president OR "Uhuru Kenyatta")` which returns articles only from the listed products that match that specific query.
+The Juicer supports doing complex queries across multiple sources. For example, the following query uses the search phrase `kenya || nairobi AND (government || president || "Uhuru Kenyatta")` which returns articles only from the listed products that match that specific query.
 
 ```
-http://data.bbc.co.uk/bbcrd-juicer/articles.json?&text=kenya+OR+nairobi+AND+%28government+OR+president+OR+%22Uhuru+Kenyatta%22%29&product[]=DailyNewsEgypt&product[]=KenyaBroadcastingCorporation&product[]=TechMoran&product[]=NigerDeltaStandard&product[]=NationalElectionCommissionSudan&content_format[]=TextualFormat&recent_first=yes&apikey={{apikey}}
+http://data.bbc.co.uk/bbcrd-juicer/articles.json?&text=kenya+%7C%7C+nairobi+AND+%28government+%7C%7C+president+%7C%7C+%22Uhuru+Kenyatta%22%29&product[]=DailyNewsEgypt&product[]=KenyaBroadcastingCorporation&product[]=TechMoran&product[]=NigerDeltaStandard&product[]=NationalElectionCommissionSudan&content_format[]=TextualFormat&recent_first=yes&apikey={{apikey}}
 ```
-
 
 ### 2. Get Article
 
@@ -72,7 +71,6 @@ http://data.bbc.co.uk/bbcrd-juicer/articles/{{article-id}}.json
 ```
 http://data.bbc.co.uk/bbcrd-juicer/articles/news_web_5da5811f84a8c718689bbb831f0098bc4c5e4a1c.json?apikey={{apikey}}
 ```
-
 
 ### 3. Get Products
 
