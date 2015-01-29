@@ -60,6 +60,16 @@ CANDY stands for "CPS and Dynamic", it integrates the Content Production System 
 * http://www.bbc.co.uk/learningenglish/ 
 * https://www.youtube.com/user/bbclearningenglish 
 
+## Sample BBC News Video & Audio
+
+You can get images by using the BBC Juicer and Content APIs (which return images associated with articles).
+
+As they don't currently expose video or audio content externally, we've provided some sample content for use during the event.
+
+* Sample Video Content http://media.fnr.bbcnewslabs.co.uk/videos
+* Sample Shortform Video http://media.fnr.bbcnewslabs.co.uk/videos/BBC%20Shorts/
+* Sample Audio Content http://media.fnr.bbcnewslabs.co.uk/audio/
+
 ## External Links
 
 * Vumi http://vumi.org
@@ -70,30 +80,3 @@ CANDY stands for "CPS and Dynamic", it integrates the Content Production System 
 * RapidPro https://www.rapidpro.io
 * FrontlineSMS http://www.frontlinesms.com
 * BRCK http://shop.brck.com
-
-## Sample BBC News Videos
-
-We'll provide more appropriate video content at the event, but here is some sample content you can use as placeholders.
-
-* [Scotland 1](http://media.fnr.bbcnewslabs.co.uk/videos/Scotland/CAMPAIGN%20COOK%201700%2010%209-h264.mp4)
-* [Scotland 2](http://media.fnr.bbcnewslabs.co.uk/videos/Scotland/IDENTITY%20HOCKINGS%200500%2010%209-h264.mp4)
-* [Scotland 3](http://media.fnr.bbcnewslabs.co.uk/videos/Scotland/SCOT%20KENDALL%20RANT%201427%209%209-h264.mp4)
-* [Scotland 4](http://media.fnr.bbcnewslabs.co.uk/videos/Scotland/SCOTLAND%20EXPLAINER1%201700%2010%209-h264.mp4)
-* [Royal Baby 1](http://media.fnr.bbcnewslabs.co.uk/videos/Royal%20Baby/BABY%20HUNT%20SOT%201130%208%209-h264.mp4)
-* [Royal Baby 2](http://media.fnr.bbcnewslabs.co.uk/videos/Royal%20Baby/BABY%20MONTAGE_OD%201321%208%209-h264.mp4)
-* [Royal Baby 3](http://media.fnr.bbcnewslabs.co.uk/videos/Royal%20Baby/BABY%20VOXES%201400%208%209-h264.mp4)
-* [Royal Baby 4](http://media.fnr.bbcnewslabs.co.uk/videos/Royal%20Baby/BABY%20WITCHELL%201300%208%209-h264.mp4)
-* [Royal Baby 5](http://media.fnr.bbcnewslabs.co.uk/videos/Royal%20Baby/WILLIAM%20BABY-OD%201547%208%209-h264.mp4)
-* [Pistorious Trial 1](http://media.fnr.bbcnewslabs.co.uk/videos/Pistorious%20Trial/PISTOR%20HARDING%20OS%201800%2011%209-h264.mp4)
-* [Pistorious Trial 2](http://media.fnr.bbcnewslabs.co.uk/videos/Pistorious%20Trial/PISTORIUS%20BBCNEWS%201154%2012%209-h264.mp4)
-* [Pistorious Trial 3](http://media.fnr.bbcnewslabs.co.uk/videos/Pistorious%20Trial/PISTORIUS%20HARDING%202200%2011%209-h264.mp4)
-* [Pistorious Trial 4](http://media.fnr.bbcnewslabs.co.uk/videos/Pistorious%20Trial/PISTORIUS%20JUDGE%20SOT%200923%2012%209-h264.mp4)
-* [Pistorious Trial 5](http://media.fnr.bbcnewslabs.co.uk/videos/Pistorious%20Trial/PISTORIUS%20STILLS%20FL%201124%2012%209-h264.mp4)
-* [Imran Khan 1](http://media.fnr.bbcnewslabs.co.uk/videos/Pakistan%20-%20Imran%20Khan/PAKISTAN%20ABBAS%201400%2021%208-h264.mp4)
-* [Imran Khan 2](http://media.fnr.bbcnewslabs.co.uk/videos/Pakistan%20-%20Imran%20Khan/north%20protest%20pkg%200106%203%209-h264.mp4)
-* [Imran Khan 3](http://media.fnr.bbcnewslabs.co.uk/videos/Pakistan%20-%20Imran%20Khan/north-imran-khan%20interview%201026%203%209-h264.mp4)
-* [MH17 1](http://media.fnr.bbcnewslabs.co.uk/videos/MH17/MH17%20CHAIRMAN%20SOT%201630%209%209-h264.mp4)
-* [MH17 2](http://media.fnr.bbcnewslabs.co.uk/videos/MH17/MH17%20FOOTAGE_OD%201630%209%209-h264.mp4)
-* [MH17 3](http://media.fnr.bbcnewslabs.co.uk/videos/MH17/MH17%20HOLLIGAN%20RANT%201231%209%209-h264.mp4)
-* [MH17 4](http://media.fnr.bbcnewslabs.co.uk/videos/MH17/MH17%20SWEENEY%20SOT%201557%209%209-h264.mp4)
-* [MH17 5](http://media.fnr.bbcnewslabs.co.uk/videos/MH17/MH17%20WESTCOTT%201800%209%209-h264.mp4)
