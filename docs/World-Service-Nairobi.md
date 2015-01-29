@@ -28,7 +28,6 @@ For example, you can pass any of these options to the 'product[]' parameter:
 http://data.bbc.co.uk/bbcrd-juicer/articles.json?product[]=DailyNewsEgypt&product[]=KenyaBroadcastingCorporation&product[]=TechMoran&product[]=NigerDeltaStandard&product[]=NationalElectionCommissionSudan&content_format[]=TextualFormat&recent_first=yes&apikey={{apikey}}
 ```
 
-
 ### [BBC Content Store API](CANDY.html) 
 
 The BBC Content Store API (aka CANDY) provides an interface to BBC News content.
@@ -64,11 +63,11 @@ CANDY stands for "CPS and Dynamic", it integrates the Content Production System 
 
 You can get images by using the BBC Juicer and Content APIs (which return images associated with articles).
 
-As they don't currently expose video or audio content externally, we've provided some sample content for use during the event.
+Inaddtion, we've provided some sample video, shortform video (intended for mobile) and audio content for use during the event.
 
-* Sample Video Content http://media.bbcnewslabs.co.uk/videos/
-* Sample Short form Video http://media.bbcnewslabs.co.uk/shorts/
-* Sample Audio Content http://media.bbcnewslabs.co.uk/audio/
+* Sample video http://media.bbcnewslabs.co.uk/videos/
+* Sample short form video http://media.bbcnewslabs.co.uk/shorts/
+* Sample audio http://media.bbcnewslabs.co.uk/audio/
 
 ## External Links
 
