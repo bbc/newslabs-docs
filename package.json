@@ -6,7 +6,9 @@
   "directories": {
     "doc": "docs"
   },
-  "dependencies": {},
+  "dependencies": {
+    "grunt-contrib-copy": "^0.7.0"
+  },
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-contrib-clean": "^0.6.0",

@@ -98,6 +98,13 @@ To get the full text of an article you can use it's "assetUri" to determine how 
 http://data.bbc.co.uk/content/asset/news/world-middle-east-30945324?api_key={{apikey}}
 ```
 
+#### Content in other languages
+
+The Content Store also includes content in languages other than English, for example:
+
+````
+http://data.bbc.co.uk/content/asset/hausa/news/2015/01/150130_au_boko_haram
+````
 
 ### Example Index Request JSON Response
 
