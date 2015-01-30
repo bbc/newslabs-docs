@@ -2,7 +2,7 @@
 
 The following information is intended for attendees of the [BBC Connected Studio: World Service](http://www.bbc.co.uk/corporate2/connectedstudio/events) event in Nairobi.
 
-### Categories for this event
+## Categories for this event
 
 There are 5 categories for entries for this event:
 
@@ -56,11 +56,13 @@ The BBC Content Store API (aka CANDY) provides an interface to BBC News content 
 
 CANDY stands for "CPS and Dynamic", it integrates the Content Production System (CPS) with the Dynamic Semantic Publishing system (DSP).
 
-The Content Store API is a production platform, used internally by the BBC.
+The Content Store API is a production platform, used internally by the BBC on the BBC website and in BBC mobile apps.
+
+In addition to English, the Content Store includes articles written in a range of languages.
 
 [Check out the documentation for the Content Store API](CANDY.html) to get started.
 
-## Sample Video & Audio Content
+### Sample Video & Audio Content
 
 You can get images by using the Juicer and Content APIs (which return images associated with articles).
 

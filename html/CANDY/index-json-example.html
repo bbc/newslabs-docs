@@ -1,0 +1,1831 @@
+<!doctype html>
+<html>
+  <head>
+    <title>BBC News Labs Documentation</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="http://bootstrap.bbcnewslabs.co.uk/dist/css/bootstrap.min.css"/>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <style>
+      h3 {
+        padding-bottom: 5px;
+        border-bottom: 4px solid #eaeaea;
+      }
+      @media (max-width: 768px) {
+        .jumbotron h1 {
+          font-size: 32px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar navbar-default navbar-static-top no-margin">
+      <div class="container">        
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".header-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"><i class="fa fa-home"></i> Documentation Home</a>
+        </div>
+        <div class="collapse navbar-collapse header-collapse">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-lg fa-fw fa-file-text"></i> Documentation <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="Juicer.html">Juicer API Documentation</a></li>
+                <li><a href="CANDY.html">BBC Content Store API</a></li>
+              </ul>
+            </li>
+          </ul>
+          <p class="navbar-btn navbar-right"><a href="https://github.com/BBC-News-Labs/docs" target="_blank" class="btn btn-primary navbar-link"><i class="fa fa-lg fa-github"></i> GitHub</a></p>
+          <p class="navbar-btn navbar-right" style="margin-right: 5px;"><a href="http://twitter.com/BBC_News_Labs" target="_blank" class="btn btn-primary navbar-link"><i class="fa fa-lg fa-twitter"></i> @BBC_News_Labs</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="jumbotron clearfix">
+      <div class="container">
+       <h1>
+          BBC News Labs <strong> Documentation</strong>
+       </h1>
+       <p><small>Last updated: <strong>2015-01-30 13:27:41</strong></small></p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 id="content-api-api-example">Content API API Example</h1>
+<h2 id="example-index-request-json-response">Example Index Request JSON Response</h2>
+<pre><code>{
+  &quot;results&quot; : [ {
+    &quot;title&quot; : &quot;World&quot;,
+    &quot;type&quot; : &quot;IDX&quot;,
+    &quot;lastUpdated&quot; : &quot;2015-01-23T13:05:57+00:00&quot;,
+    &quot;firstCreated&quot; : &quot;2010-03-09T09:52:41+00:00&quot;,
+    &quot;groups&quot; : [ {
+      &quot;type&quot; : &quot;container-top-stories&quot;,
+      &quot;title&quot; : &quot;Top Stories&quot;,
+      &quot;items&quot; : [ {
+        &quot;assetId&quot; : &quot;30945324&quot;,
+        &quot;assetUri&quot; : &quot;/news/world-middle-east-30945324&quot;,
+        &quot;firstCreated&quot; : &quot;2015-01-22T23:20:38+00:00&quot;,
+        &quot;hasShortForm&quot; : true,
+        &quot;headline&quot; : &quot;Saudi Arabia&#39;s King Abdullah dies&quot;,
+        &quot;language&quot; : &quot;en-gb&quot;,
+        &quot;lastUpdated&quot; : &quot;2015-01-23T11:55:47+00:00&quot;,
+        &quot;media&quot; : {
+          &quot;images&quot; : {
+            &quot;index&quot; : {
+              &quot;80033566&quot; : {
+                &quot;height&quot; : 351,
+                &quot;width&quot; : 624,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80033000/jpg/_80033566_80028924.jpg&quot;,
+                &quot;altText&quot; : &quot;Saudi King Abdullah speaks at his private residence in the Red Sea city of in Jeddah, Saudi Arabia. 27 June 2014&quot;,
+                &quot;copyrightHolder&quot; : &quot;AP&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            },
+            &quot;index-thumbnail&quot; : {
+              &quot;80462971&quot; : {
+                &quot;height&quot; : 180,
+                &quot;width&quot; : 320,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80462000/jpg/_80462971_80028924.jpg&quot;,
+                &quot;altText&quot; : &quot;Saudi King Abdullah speaks at his private residence in the Red Sea city of in Jeddah, Saudi Arabia. 27 June 2014&quot;,
+                &quot;copyrightHolder&quot; : &quot;AP&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            }
+          }
+        },
+        &quot;options&quot; : {
+          &quot;isBreakingNews&quot; : true
+        },
+        &quot;prominence&quot; : &quot;standard&quot;,
+        &quot;relatedGroups&quot; : [ {
+          &quot;type&quot; : &quot;index&quot;,
+          &quot;items&quot; : [ {
+            &quot;assetId&quot; : &quot;30944812&quot;,
+            &quot;assetUri&quot; : &quot;/news/world-middle-east-30944812&quot;,
+            &quot;firstCreated&quot; : &quot;2015-01-23T01:12:53+00:00&quot;,
+            &quot;headline&quot; : &quot;What happens next in Saudi Arabia?&quot;,
+            &quot;language&quot; : &quot;en-gb&quot;,
+            &quot;lastUpdated&quot; : &quot;2015-01-23T01:12:53+00:00&quot;,
+            &quot;mediaType&quot; : &quot;Video&quot;,
+            &quot;overtypedHeadline&quot; : &quot;What happens next?&quot;,
+            &quot;section&quot; : {
+              &quot;name&quot; : &quot;Middle East&quot;,
+              &quot;id&quot; : &quot;99125&quot;,
+              &quot;uri&quot; : &quot;/news/world/middle_east&quot;,
+              &quot;urlIdentifier&quot; : &quot;/news/world/middle_east&quot;
+            },
+            &quot;summary&quot; : &quot;The BBC&#39;s Frank Gardner says the priority for Saudis following the death of King Abdullah will be to maintain stability.&quot;,
+            &quot;type&quot; : &quot;MAP&quot;
+          }, {
+            &quot;assetId&quot; : &quot;10214554&quot;,
+            &quot;assetUri&quot; : &quot;/news/world-middle-east-10214554&quot;,
+            &quot;firstCreated&quot; : &quot;2015-01-22T23:32:29+00:00&quot;,
+            &quot;headline&quot; : &quot;Obituary: King Abdullah&quot;,
+            &quot;language&quot; : &quot;en-gb&quot;,
+            &quot;lastUpdated&quot; : &quot;2015-01-23T07:29:23+00:00&quot;,
+            &quot;section&quot; : {
+              &quot;name&quot; : &quot;Middle East&quot;,
+              &quot;id&quot; : &quot;99125&quot;,
+              &quot;uri&quot; : &quot;/news/world/middle_east&quot;,
+              &quot;urlIdentifier&quot; : &quot;/news/world/middle_east&quot;
+            },
+            &quot;summary&quot; : &quot;A monarch who pursued a gentle process of reform against strong opposition from religious conservatives.&quot;,
+            &quot;type&quot; : &quot;STY&quot;
+          }, {
+            &quot;assetId&quot; : &quot;30945925&quot;,
+            &quot;assetUri&quot; : &quot;/news/world-middle-east-30945925&quot;,
+            &quot;firstCreated&quot; : &quot;2015-01-23T04:20:54+00:00&quot;,
+            &quot;headline&quot; : &quot;Profile: King Salman of Saudi Arabia&quot;,
+            &quot;language&quot; : &quot;en-gb&quot;,
+            &quot;lastUpdated&quot; : &quot;2015-01-23T11:59:20+00:00&quot;,
+            &quot;overtypedHeadline&quot; : &quot;Who takes over now?&quot;,
+            &quot;section&quot; : {
+              &quot;name&quot; : &quot;Middle East&quot;,
+              &quot;id&quot; : &quot;99125&quot;,
+              &quot;uri&quot; : &quot;/news/world/middle_east&quot;,
+              &quot;urlIdentifier&quot; : &quot;/news/world/middle_east&quot;
+            },
+            &quot;summary&quot; : &quot;A profile of King Salman bin Abdulaziz al-Saud, who has acceded to the Saudi throne on the death of his half-brother, King Abdullah.&quot;,
+            &quot;type&quot; : &quot;STY&quot;
+          }, {
+            &quot;assetId&quot; : &quot;29792691&quot;,
+            &quot;assetUri&quot; : &quot;/news/world-middle-east-29792691&quot;,
+            &quot;firstCreated&quot; : &quot;2014-11-18T01:41:11+00:00&quot;,
+            &quot;headline&quot; : &quot;Saudi Arabia: Why succession could become a princely tussle&quot;,
+            &quot;language&quot; : &quot;en-gb&quot;,
+            &quot;lastUpdated&quot; : &quot;2015-01-23T07:31:11+00:00&quot;,
+            &quot;overtypedHeadline&quot; : &quot;Analysis: Succession tussle&quot;,
+            &quot;section&quot; : {
+              &quot;name&quot; : &quot;Middle East&quot;,
+              &quot;id&quot; : &quot;99125&quot;,
+              &quot;uri&quot; : &quot;/news/world/middle_east&quot;,
+              &quot;urlIdentifier&quot; : &quot;/news/world/middle_east&quot;
+            },
+            &quot;summary&quot; : &quot;The need for smooth and orderly transfers of power in Saudi Arabia has become more crucial than ever - but who will inherit the kingdom in the coming years is a thorny issue yet to be resolved, says Gerald Butt.&quot;,
+            &quot;type&quot; : &quot;STY&quot;
+          } ]
+        } ],
+        &quot;section&quot; : {
+          &quot;name&quot; : &quot;Middle East&quot;,
+          &quot;id&quot; : &quot;99125&quot;,
+          &quot;uri&quot; : &quot;/news/world/middle_east&quot;,
+          &quot;urlIdentifier&quot; : &quot;/news/world/middle_east&quot;
+        },
+        &quot;summary&quot; : &quot;Saudi King Abdullah bin Abdulaziz has died in hospital, royal officials announce, weeks after being admitted with a lung infection.&quot;,
+        &quot;type&quot; : &quot;STY&quot;
+      }, {
+        &quot;assetId&quot; : &quot;30949527&quot;,
+        &quot;assetUri&quot; : &quot;/news/world-europe-30949527&quot;,
+        &quot;firstCreated&quot; : &quot;2015-01-23T09:31:04+00:00&quot;,
+        &quot;hasShortForm&quot; : true,
+        &quot;headline&quot; : &quot;Ukraine rebels &#39;reject truce talks&#39;&quot;,
+        &quot;language&quot; : &quot;en-gb&quot;,
+        &quot;lastUpdated&quot; : &quot;2015-01-23T12:02:53+00:00&quot;,
+        &quot;media&quot; : {
+          &quot;images&quot; : {
+            &quot;index&quot; : {
+              &quot;80468628&quot; : {
+                &quot;height&quot; : 351,
+                &quot;width&quot; : 624,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80468000/jpg/_80468628_donetsktroopsnewreut.jpg&quot;,
+                &quot;altText&quot; : &quot;Rebel tank, 22 Jan 14&quot;,
+                &quot;copyrightHolder&quot; : &quot;Reuters&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            },
+            &quot;index-thumbnail&quot; : {
+              &quot;80468630&quot; : {
+                &quot;height&quot; : 180,
+                &quot;width&quot; : 320,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80468000/jpg/_80468630_donetsktroopsnewreut.jpg&quot;,
+                &quot;altText&quot; : &quot;Rebel tank, 22 Jan 14&quot;,
+                &quot;copyrightHolder&quot; : &quot;Reuters&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            }
+          }
+        },
+        &quot;options&quot; : {
+          &quot;isBreakingNews&quot; : true
+        },
+        &quot;relatedGroups&quot; : [ {
+          &quot;type&quot; : &quot;index&quot;,
+          &quot;items&quot; : [ {
+            &quot;assetId&quot; : &quot;30901753&quot;,
+            &quot;assetUri&quot; : &quot;/news/world-europe-30901753&quot;,
+            &quot;firstCreated&quot; : &quot;2015-01-20T17:23:47+00:00&quot;,
+            &quot;headline&quot; : &quot;Is Russia pushing war in Ukraine or peace?&quot;,
+            &quot;language&quot; : &quot;en-gb&quot;,
+            &quot;lastUpdated&quot; : &quot;2015-01-20T17:23:47+00:00&quot;,
+            &quot;overtypedHeadline&quot; : &quot;Is Russia stoking war?&quot;,
+            &quot;section&quot; : {
+              &quot;name&quot; : &quot;Europe&quot;,
+              &quot;id&quot; : &quot;99123&quot;,
+              &quot;uri&quot; : &quot;/news/world/europe&quot;,
+              &quot;urlIdentifier&quot; : &quot;/news/world/europe&quot;
+            },
+            &quot;summary&quot; : &quot;Sarah Rainsford asks if Russia is stoking conflict in eastern Ukraine or if it is seeking an end to the violence.&quot;,
+            &quot;type&quot; : &quot;STY&quot;
+          }, {
+            &quot;assetId&quot; : &quot;27308526&quot;,
+            &quot;assetUri&quot; : &quot;/news/world-europe-27308526&quot;,
+            &quot;firstCreated&quot; : &quot;2014-05-09T00:14:52+00:00&quot;,
+            &quot;headline&quot; : &quot;Ukraine in maps: How the crisis spread&quot;,
+            &quot;language&quot; : &quot;en-gb&quot;,
+            &quot;lastUpdated&quot; : &quot;2014-11-04T15:25:42+00:00&quot;,
+            &quot;overtypedHeadline&quot; : &quot;Crisis mapped&quot;,
+            &quot;section&quot; : {
+              &quot;name&quot; : &quot;Europe&quot;,
+              &quot;id&quot; : &quot;99123&quot;,
+              &quot;uri&quot; : &quot;/news/world/europe&quot;,
+              &quot;urlIdentifier&quot; : &quot;/news/world/europe&quot;
+            },
+            &quot;summary&quot; : &quot;Find out how the crisis in Ukraine has spread since November 2013, from Kiev and cities in the west, to Crimea and the eastern regions and Odessa.&quot;,
+            &quot;type&quot; : &quot;STY&quot;
+          } ]
+        } ],
+        &quot;section&quot; : {
+          &quot;name&quot; : &quot;Europe&quot;,
+          &quot;id&quot; : &quot;99123&quot;,
+          &quot;uri&quot; : &quot;/news/world/europe&quot;,
+          &quot;urlIdentifier&quot; : &quot;/news/world/europe&quot;
+        },
+        &quot;summary&quot; : &quot;The main pro-Russian rebel leader in eastern Ukraine says his troops are on the offensive and he does not want truce talks.&quot;,
+        &quot;type&quot; : &quot;STY&quot;
+      }, {
+        &quot;assetId&quot; : &quot;30943377&quot;,
+        &quot;assetUri&quot; : &quot;/news/health-30943377&quot;,
+        &quot;byline&quot; : {
+          &quot;name&quot; : &quot;By Smitha Mundasad&quot;,
+          &quot;persons&quot; : [ {
+            &quot;name&quot; : &quot;Smitha Mundasad&quot;,
+            &quot;function&quot; : &quot;Health reporter&quot;
+          } ],
+          &quot;title&quot; : &quot;Health reporter, BBC News &quot;
+        },
+        &quot;firstCreated&quot; : &quot;2015-01-23T06:28:57+00:00&quot;,
+        &quot;hasShortForm&quot; : true,
+        &quot;headline&quot; : &quot;Ebola vaccine &#39;shipped to Liberia&#39;&quot;,
+        &quot;language&quot; : &quot;en-gb&quot;,
+        &quot;lastUpdated&quot; : &quot;2015-01-23T09:01:25+00:00&quot;,
+        &quot;media&quot; : {
+          &quot;images&quot; : {
+            &quot;index&quot; : {
+              &quot;80461434&quot; : {
+                &quot;height&quot; : 351,
+                &quot;width&quot; : 624,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80461000/jpg/_80461434_ebola_vaccine_trial-spl.jpg&quot;,
+                &quot;caption&quot; : &quot;The Ebola vaccine has been tested on 200 volunteers so far&quot;,
+                &quot;altText&quot; : &quot;A vaccine trial in the US&quot;,
+                &quot;copyrightHolder&quot; : &quot;NATIONAL INSTITUTES OF HEALTH/SPL&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            },
+            &quot;index-thumbnail&quot; : {
+              &quot;80461433&quot; : {
+                &quot;height&quot; : 180,
+                &quot;width&quot; : 320,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80461000/jpg/_80461433_ebola_vaccine_trial-spl.jpg&quot;,
+                &quot;caption&quot; : &quot;The Ebola vaccine has been tested on 200 volunteers so far&quot;,
+                &quot;altText&quot; : &quot;A vaccine trial in the US&quot;,
+                &quot;copyrightHolder&quot; : &quot;NATIONAL INSTITUTES OF HEALTH/SPL&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            }
+          }
+        },
+        &quot;options&quot; : {
+          &quot;isBreakingNews&quot; : false
+        },
+        &quot;section&quot; : {
+          &quot;name&quot; : &quot;Health&quot;,
+          &quot;id&quot; : &quot;99108&quot;,
+          &quot;uri&quot; : &quot;/news/health&quot;,
+          &quot;urlIdentifier&quot; : &quot;/news/health&quot;
+        },
+        &quot;summary&quot; : &quot;The first batch of a vaccine against Ebola is on its way to Liberia and trials are expected to start soon.&quot;,
+        &quot;type&quot; : &quot;STY&quot;
+      }, {
+        &quot;assetId&quot; : &quot;30928835&quot;,
+        &quot;assetUri&quot; : &quot;/news/world-asia-30928835&quot;,
+        &quot;firstCreated&quot; : &quot;2015-01-23T01:25:23+00:00&quot;,
+        &quot;hasShortForm&quot; : true,
+        &quot;headline&quot; : &quot;Thai ex-PM banned from politics&quot;,
+        &quot;language&quot; : &quot;en-gb&quot;,
+        &quot;lastUpdated&quot; : &quot;2015-01-23T09:54:06+00:00&quot;,
+        &quot;media&quot; : {
+          &quot;images&quot; : {
+            &quot;index&quot; : {
+              &quot;80440346&quot; : {
+                &quot;height&quot; : 351,
+                &quot;width&quot; : 624,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80440000/jpg/_80440346_025525409-1.jpg&quot;,
+                &quot;caption&quot; : &quot;Former PM Ms Yingluck was ousted in May 2014 days before the army seized control&quot;,
+                &quot;altText&quot; : &quot;Ousted Thai prime minister Yingluck Shinawatra looks on as she faces impeachment proceedings by the military-stacked National Legislative Assembly (NLA) at the parliament in Bangkok on 22 January 2015&quot;,
+                &quot;copyrightHolder&quot; : &quot;AFP&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            },
+            &quot;index-thumbnail&quot; : {
+              &quot;80440349&quot; : {
+                &quot;height&quot; : 180,
+                &quot;width&quot; : 320,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80440000/jpg/_80440349_025525409-1.jpg&quot;,
+                &quot;caption&quot; : &quot;Former PM Ms Yingluck was ousted in May 2014 days before the army seized control&quot;,
+                &quot;altText&quot; : &quot;Ousted Thai prime minister Yingluck Shinawatra looks on as she faces impeachment proceedings by the military-stacked National Legislative Assembly (NLA) at the parliament in Bangkok on 22 January 2015&quot;,
+                &quot;copyrightHolder&quot; : &quot;AFP&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            }
+          }
+        },
+        &quot;options&quot; : {
+          &quot;isBreakingNews&quot; : false
+        },
+        &quot;section&quot; : {
+          &quot;name&quot; : &quot;Asia&quot;,
+          &quot;id&quot; : &quot;101360&quot;,
+          &quot;uri&quot; : &quot;/news/world/asia&quot;,
+          &quot;urlIdentifier&quot; : &quot;/news/world/asia&quot;
+        },
+        &quot;summary&quot; : &quot;Thai authorities ban former PM Yingluck Shinawatra from office for five years and launch criminal charges that could see her jailed.&quot;,
+        &quot;type&quot; : &quot;STY&quot;
+      }, {
+        &quot;assetId&quot; : &quot;30949917&quot;,
+        &quot;assetUri&quot; : &quot;/news/world-europe-30949917&quot;,
+        &quot;firstCreated&quot; : &quot;2015-01-23T11:20:59+00:00&quot;,
+        &quot;hasShortForm&quot; : true,
+        &quot;headline&quot; : &quot;Paris attacker Coulibaly is buried&quot;,
+        &quot;language&quot; : &quot;en-gb&quot;,
+        &quot;lastUpdated&quot; : &quot;2015-01-23T11:20:59+00:00&quot;,
+        &quot;media&quot; : {
+          &quot;images&quot; : {
+            &quot;index&quot; : {
+              &quot;80470421&quot; : {
+                &quot;height&quot; : 351,
+                &quot;width&quot; : 624,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80470000/jpg/_80470421_80468859.jpg&quot;,
+                &quot;caption&quot; : &quot;Coulibaly is believed to have been involved in drug crime and knew one of the Kouachis&quot;,
+                &quot;altText&quot; : &quot;Amedy Coulibaly&quot;,
+                &quot;copyrightHolder&quot; : &quot;AP&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            },
+            &quot;index-thumbnail&quot; : {
+              &quot;80470423&quot; : {
+                &quot;height&quot; : 180,
+                &quot;width&quot; : 320,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80470000/jpg/_80470423_80468859.jpg&quot;,
+                &quot;caption&quot; : &quot;Coulibaly is believed to have been involved in drug crime and knew one of the Kouachis&quot;,
+                &quot;altText&quot; : &quot;Amedy Coulibaly&quot;,
+                &quot;copyrightHolder&quot; : &quot;AP&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            }
+          }
+        },
+        &quot;options&quot; : {
+          &quot;isBreakingNews&quot; : false
+        },
+        &quot;section&quot; : {
+          &quot;name&quot; : &quot;Europe&quot;,
+          &quot;id&quot; : &quot;99123&quot;,
+          &quot;uri&quot; : &quot;/news/world/europe&quot;,
+          &quot;urlIdentifier&quot; : &quot;/news/world/europe&quot;
+        },
+        &quot;summary&quot; : &quot;An Islamist militant shot dead by French commandos after he attacked a Jewish supermarket two weeks ago is buried near Paris.&quot;,
+        &quot;type&quot; : &quot;STY&quot;
+      }, {
+        &quot;assetId&quot; : &quot;30936940&quot;,
+        &quot;assetUri&quot; : &quot;/news/world-middle-east-30936940&quot;,
+        &quot;firstCreated&quot; : &quot;2015-01-22T17:15:50+00:00&quot;,
+        &quot;hasShortForm&quot; : true,
+        &quot;headline&quot; : &quot;Yemen&#39;s embattled president quits&quot;,
+        &quot;language&quot; : &quot;en-gb&quot;,
+        &quot;lastUpdated&quot; : &quot;2015-01-23T03:54:22+00:00&quot;,
+        &quot;media&quot; : {
+          &quot;images&quot; : {
+            &quot;index&quot; : {
+              &quot;80462125&quot; : {
+                &quot;height&quot; : 432,
+                &quot;width&quot; : 768,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80462000/jpg/_80462125_80462124.jpg&quot;,
+                &quot;altText&quot; : &quot;Shia Houthi rebels in Sanaa, 22 January&quot;,
+                &quot;copyrightHolder&quot; : &quot;Reuters&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            },
+            &quot;index-thumbnail&quot; : {
+              &quot;80462127&quot; : {
+                &quot;height&quot; : 180,
+                &quot;width&quot; : 320,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80462000/jpg/_80462127_80462124.jpg&quot;,
+                &quot;altText&quot; : &quot;Shia Houthi rebels in Sanaa, 22 January&quot;,
+                &quot;copyrightHolder&quot; : &quot;Reuters&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            }
+          }
+        },
+        &quot;options&quot; : {
+          &quot;isBreakingNews&quot; : false
+        },
+        &quot;section&quot; : {
+          &quot;name&quot; : &quot;Middle East&quot;,
+          &quot;id&quot; : &quot;99125&quot;,
+          &quot;uri&quot; : &quot;/news/world/middle_east&quot;,
+          &quot;urlIdentifier&quot; : &quot;/news/world/middle_east&quot;
+        },
+        &quot;summary&quot; : &quot;The president of Yemen resigns in protest at the takeover of the capital Sanaa by Shia Houthi rebels, creating a dangerous political vacuum.&quot;,
+        &quot;type&quot; : &quot;STY&quot;
+      }, {
+        &quot;assetId&quot; : &quot;30949074&quot;,
+        &quot;assetUri&quot; : &quot;/news/world-europe-30949074&quot;,
+        &quot;firstCreated&quot; : &quot;2015-01-23T12:27:28+00:00&quot;,
+        &quot;hasShortForm&quot; : true,
+        &quot;headline&quot; : &quot;Call for Greece to stay with Europe&quot;,
+        &quot;language&quot; : &quot;en-gb&quot;,
+        &quot;lastUpdated&quot; : &quot;2015-01-23T12:27:28+00:00&quot;,
+        &quot;media&quot; : {
+          &quot;images&quot; : {
+            &quot;index&quot; : {
+              &quot;80471356&quot; : {
+                &quot;height&quot; : 351,
+                &quot;width&quot; : 624,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80471000/jpg/_80471356_syr.jpg&quot;,
+                &quot;altText&quot; : &quot;Supporters of Syriza hold a banner saying \&quot;Change Greece, Change Europe\&quot; at a pre-election rally in central Athens on 22 January 2015&quot;,
+                &quot;copyrightHolder&quot; : &quot;Getty Images&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            },
+            &quot;index-thumbnail&quot; : {
+              &quot;80471358&quot; : {
+                &quot;height&quot; : 180,
+                &quot;width&quot; : 320,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80471000/jpg/_80471358_syr.jpg&quot;,
+                &quot;altText&quot; : &quot;Supporters of Syriza hold a banner saying \&quot;Change Greece, Change Europe\&quot; at a pre-election rally in central Athens on 22 January 2015&quot;,
+                &quot;copyrightHolder&quot; : &quot;Getty Images&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            }
+          }
+        },
+        &quot;options&quot; : {
+          &quot;isBreakingNews&quot; : false
+        },
+        &quot;section&quot; : {
+          &quot;name&quot; : &quot;Europe&quot;,
+          &quot;id&quot; : &quot;99123&quot;,
+          &quot;uri&quot; : &quot;/news/world/europe&quot;,
+          &quot;urlIdentifier&quot; : &quot;/news/world/europe&quot;
+        },
+        &quot;summary&quot; : &quot;German Chancellor Angela Merkel says she wants Greece to \&quot;remain part of our story\&quot; ahead of elections that could throw the country&#39;s eurozone future into doubt.&quot;,
+        &quot;type&quot; : &quot;STY&quot;
+      }, {
+        &quot;assetId&quot; : &quot;30945562&quot;,
+        &quot;assetUri&quot; : &quot;/news/business-30945562&quot;,
+        &quot;firstCreated&quot; : &quot;2015-01-23T02:11:49+00:00&quot;,
+        &quot;hasShortForm&quot; : true,
+        &quot;headline&quot; : &quot;Asian shares up on oil and ECB moves&quot;,
+        &quot;language&quot; : &quot;en-gb&quot;,
+        &quot;lastUpdated&quot; : &quot;2015-01-23T09:53:57+00:00&quot;,
+        &quot;media&quot; : {
+          &quot;images&quot; : {
+            &quot;index&quot; : {
+              &quot;80463430&quot; : {
+                &quot;height&quot; : 1152,
+                &quot;width&quot; : 2048,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80463000/jpg/_80463430_japan_shares.jpg&quot;,
+                &quot;altText&quot; : &quot;Japanese shares&quot;,
+                &quot;copyrightHolder&quot; : &quot;AFP&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            },
+            &quot;index-thumbnail&quot; : {
+              &quot;80463432&quot; : {
+                &quot;height&quot; : 180,
+                &quot;width&quot; : 320,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80463000/jpg/_80463432_japan_shares.jpg&quot;,
+                &quot;altText&quot; : &quot;Japanese shares&quot;,
+                &quot;copyrightHolder&quot; : &quot;AFP&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            }
+          }
+        },
+        &quot;options&quot; : {
+          &quot;isBreakingNews&quot; : false
+        },
+        &quot;section&quot; : {
+          &quot;name&quot; : &quot;Business&quot;,
+          &quot;id&quot; : &quot;99104&quot;,
+          &quot;uri&quot; : &quot;/news/business&quot;,
+          &quot;urlIdentifier&quot; : &quot;/news/business&quot;
+        },
+        &quot;summary&quot; : &quot;Asian shares rose on Friday encouraged by a rise in oil prices following news of the death of Saudi Arabia&#39;s King Abdullah.&quot;,
+        &quot;type&quot; : &quot;STY&quot;
+      }, {
+        &quot;assetId&quot; : &quot;30950628&quot;,
+        &quot;assetUri&quot; : &quot;/news/world-africa-30950628&quot;,
+        &quot;firstCreated&quot; : &quot;2015-01-23T11:34:29+00:00&quot;,
+        &quot;hasShortForm&quot; : true,
+        &quot;headline&quot; : &quot;UN &#39;not needed to defeat Boko Haram&#39;&quot;,
+        &quot;language&quot; : &quot;en-gb&quot;,
+        &quot;lastUpdated&quot; : &quot;2015-01-23T12:10:59+00:00&quot;,
+        &quot;media&quot; : {
+          &quot;images&quot; : {
+            &quot;index&quot; : {
+              &quot;80470641&quot; : {
+                &quot;height&quot; : 351,
+                &quot;width&quot; : 624,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80470000/jpg/_80470641_80470640.jpg&quot;,
+                &quot;altText&quot; : &quot;Nigeria soldiers in Borno state - June 2013&quot;,
+                &quot;copyrightHolder&quot; : &quot;AFP&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            },
+            &quot;index-thumbnail&quot; : {
+              &quot;80470643&quot; : {
+                &quot;height&quot; : 180,
+                &quot;width&quot; : 320,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80470000/jpg/_80470643_80470640.jpg&quot;,
+                &quot;altText&quot; : &quot;Nigeria soldiers in Borno state - June 2013&quot;,
+                &quot;copyrightHolder&quot; : &quot;AFP&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            }
+          }
+        },
+        &quot;options&quot; : {
+          &quot;isBreakingNews&quot; : false
+        },
+        &quot;section&quot; : {
+          &quot;name&quot; : &quot;Africa&quot;,
+          &quot;id&quot; : &quot;99121&quot;,
+          &quot;uri&quot; : &quot;/news/world/africa&quot;,
+          &quot;urlIdentifier&quot; : &quot;/news/world/africa&quot;
+        },
+        &quot;summary&quot; : &quot;Nigeria does not need the help of UN or African Union troops to take on Boko Haram, the country&#39;s national security adviser tells the BBC.&quot;,
+        &quot;type&quot; : &quot;STY&quot;
+      }, {
+        &quot;assetId&quot; : &quot;30946059&quot;,
+        &quot;assetUri&quot; : &quot;/news/world-asia-30946059&quot;,
+        &quot;firstCreated&quot; : &quot;2015-01-23T12:52:20+00:00&quot;,
+        &quot;hasShortForm&quot; : true,
+        &quot;headline&quot; : &quot;Philippines &#39;hid homeless from Pope&#39;&quot;,
+        &quot;language&quot; : &quot;en-gb&quot;,
+        &quot;lastUpdated&quot; : &quot;2015-01-23T12:52:20+00:00&quot;,
+        &quot;media&quot; : {
+          &quot;images&quot; : {
+            &quot;index&quot; : {
+              &quot;80474100&quot; : {
+                &quot;height&quot; : 351,
+                &quot;width&quot; : 624,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80474000/jpg/_80474100_025438977-1.jpg&quot;,
+                &quot;caption&quot; : &quot;Pope Francis met with street children during his recent visit to the Philippines&quot;,
+                &quot;altText&quot; : &quot;Pope Francis is pictured with youths at ANAK-Tnk foundation during his pastoral visit in Manila 16 January 2015&quot;,
+                &quot;copyrightHolder&quot; : &quot;Reuters&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            },
+            &quot;index-thumbnail&quot; : {
+              &quot;80474099&quot; : {
+                &quot;height&quot; : 180,
+                &quot;width&quot; : 320,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80474000/jpg/_80474099_025438977-1.jpg&quot;,
+                &quot;caption&quot; : &quot;Pope Francis met with street children during his recent visit to the Philippines&quot;,
+                &quot;altText&quot; : &quot;Pope Francis is pictured with youths at ANAK-Tnk foundation during his pastoral visit in Manila 16 January 2015&quot;,
+                &quot;copyrightHolder&quot; : &quot;Reuters&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            }
+          }
+        },
+        &quot;options&quot; : {
+          &quot;isBreakingNews&quot; : false
+        },
+        &quot;section&quot; : {
+          &quot;name&quot; : &quot;Asia&quot;,
+          &quot;id&quot; : &quot;101360&quot;,
+          &quot;uri&quot; : &quot;/news/world/asia&quot;,
+          &quot;urlIdentifier&quot; : &quot;/news/world/asia&quot;
+        },
+        &quot;summary&quot; : &quot;The government in the Philippines is facing calls for an inquiry after it temporarily relocated homeless people during Pope Francis&#39; visit.&quot;,
+        &quot;type&quot; : &quot;STY&quot;
+      }, {
+        &quot;assetId&quot; : &quot;30947880&quot;,
+        &quot;assetUri&quot; : &quot;/news/world-africa-30947880&quot;,
+        &quot;firstCreated&quot; : &quot;2015-01-23T10:23:02+00:00&quot;,
+        &quot;hasShortForm&quot; : true,
+        &quot;headline&quot; : &quot;Congo senate amends census law&quot;,
+        &quot;language&quot; : &quot;en-gb&quot;,
+        &quot;lastUpdated&quot; : &quot;2015-01-23T10:54:19+00:00&quot;,
+        &quot;media&quot; : {
+          &quot;images&quot; : {
+            &quot;index&quot; : {
+              &quot;80440138&quot; : {
+                &quot;height&quot; : 351,
+                &quot;width&quot; : 624,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80440000/jpg/_80440138_80440137.jpg&quot;,
+                &quot;altText&quot; : &quot;A man walks past a tyre set alight during a nationwide protest as opposition parties tried to block a change in the law that may delay elections - Goma, DR Congo, 19 January 2015&quot;,
+                &quot;copyrightHolder&quot; : &quot;Reuters&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            },
+            &quot;index-thumbnail&quot; : {
+              &quot;80440140&quot; : {
+                &quot;height&quot; : 180,
+                &quot;width&quot; : 320,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80440000/jpg/_80440140_80440137.jpg&quot;,
+                &quot;altText&quot; : &quot;A man walks past a tyre set alight during a nationwide protest as opposition parties tried to block a change in the law that may delay elections - Goma, DR Congo, 19 January 2015&quot;,
+                &quot;copyrightHolder&quot; : &quot;Reuters&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            }
+          }
+        },
+        &quot;options&quot; : {
+          &quot;isBreakingNews&quot; : false
+        },
+        &quot;section&quot; : {
+          &quot;name&quot; : &quot;Africa&quot;,
+          &quot;id&quot; : &quot;99121&quot;,
+          &quot;uri&quot; : &quot;/news/world/africa&quot;,
+          &quot;urlIdentifier&quot; : &quot;/news/world/africa&quot;
+        },
+        &quot;summary&quot; : &quot;The Democratic Republic of Congo senate amends a controversial census bill following four days of violent nationwide protests.&quot;,
+        &quot;type&quot; : &quot;STY&quot;
+      } ],
+      &quot;semanticGroupName&quot; : &quot;Top Stories&quot;
+    }, {
+      &quot;type&quot; : &quot;single-section-digest&quot;,
+      &quot;title&quot; : &quot;News event promotion&quot;,
+      &quot;strapline&quot; : {
+        &quot;name&quot; : &quot;Davos 2015&quot;,
+        &quot;links&quot; : {
+          &quot;enhancedmobile&quot; : &quot;http://www.bbc.co.uk/news/business-30776755&quot;,
+          &quot;desktop&quot; : &quot;http://www.bbc.co.uk/news/business-30776755&quot;,
+          &quot;highweb&quot; : &quot;http://www.bbc.co.uk/news/business-30776755&quot;,
+          &quot;mobile&quot; : &quot;http://www.bbc.co.uk/news/business-30776755&quot;
+        },
+        &quot;type&quot; : &quot;LINK&quot;
+      },
+      &quot;items&quot; : [ {
+        &quot;assetId&quot; : &quot;30907630&quot;,
+        &quot;assetUri&quot; : &quot;/news/business-30907630&quot;,
+        &quot;byline&quot; : {
+          &quot;name&quot; : &quot;By Joe Miller&quot;,
+          &quot;persons&quot; : [ {
+            &quot;name&quot; : &quot;Joe Miller&quot;,
+            &quot;function&quot; : &quot;BBC News&quot;
+          } ],
+          &quot;title&quot; : &quot;BBC News, Davos&quot;
+        },
+        &quot;firstCreated&quot; : &quot;2015-01-20T22:48:25+00:00&quot;,
+        &quot;hasShortForm&quot; : true,
+        &quot;headline&quot; : &quot;Ebola scientist warns business elite&quot;,
+        &quot;language&quot; : &quot;en-gb&quot;,
+        &quot;lastUpdated&quot; : &quot;2015-01-21T10:55:51+00:00&quot;,
+        &quot;media&quot; : {
+          &quot;images&quot; : {
+            &quot;index&quot; : {
+              &quot;77675945&quot; : {
+                &quot;height&quot; : 351,
+                &quot;width&quot; : 624,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/77675000/jpg/_77675945_77673083.jpg&quot;,
+                &quot;altText&quot; : &quot;Guinean health workers wearing protective suits at a hospital in Conakry - 14 September 2014&quot;,
+                &quot;copyrightHolder&quot; : &quot;AFP&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            },
+            &quot;index-thumbnail&quot; : {
+              &quot;80406513&quot; : {
+                &quot;height&quot; : 180,
+                &quot;width&quot; : 320,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80406000/jpg/_80406513_77673083.jpg&quot;,
+                &quot;altText&quot; : &quot;Guinean health workers wearing protective suits at a hospital in Conakry - 14 September 2014&quot;,
+                &quot;copyrightHolder&quot; : &quot;AFP&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            }
+          }
+        },
+        &quot;options&quot; : {
+          &quot;isBreakingNews&quot; : false
+        },
+        &quot;section&quot; : {
+          &quot;name&quot; : &quot;Business&quot;,
+          &quot;id&quot; : &quot;99104&quot;,
+          &quot;uri&quot; : &quot;/news/business&quot;,
+          &quot;urlIdentifier&quot; : &quot;/news/business&quot;
+        },
+        &quot;summary&quot; : &quot;Leading Ebola scientist Prof Peter Piot warns the World Economic Forum that developed nations are \&quot;vulnerable\&quot; to epidemics and must invest more in research.&quot;,
+        &quot;type&quot; : &quot;STY&quot;
+      }, {
+        &quot;assetId&quot; : &quot;30907627&quot;,
+        &quot;assetUri&quot; : &quot;/news/business-30907627&quot;,
+        &quot;byline&quot; : {
+          &quot;name&quot; : &quot;By Emily Young&quot;,
+          &quot;persons&quot; : [ {
+            &quot;name&quot; : &quot;Emily Young&quot;,
+            &quot;function&quot; : &quot;BBC News&quot;
+          } ],
+          &quot;title&quot; : &quot;BBC News, in Davos&quot;
+        },
+        &quot;firstCreated&quot; : &quot;2015-01-20T20:13:57+00:00&quot;,
+        &quot;hasShortForm&quot; : true,
+        &quot;headline&quot; : &quot;Bosses &#39;less optimistic&#39; on economy&quot;,
+        &quot;language&quot; : &quot;en-gb&quot;,
+        &quot;lastUpdated&quot; : &quot;2015-01-21T11:14:10+00:00&quot;,
+        &quot;media&quot; : {
+          &quot;images&quot; : {
+            &quot;index&quot; : {
+              &quot;80404227&quot; : {
+                &quot;height&quot; : 351,
+                &quot;width&quot; : 624,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80404000/jpg/_80404227_80404226.jpg&quot;,
+                &quot;altText&quot; : &quot;Davos logo&quot;,
+                &quot;copyrightHolder&quot; : &quot;European Photopress Agency&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            },
+            &quot;index-thumbnail&quot; : {
+              &quot;80414169&quot; : {
+                &quot;height&quot; : 180,
+                &quot;width&quot; : 320,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80414000/jpg/_80414169_80404226.jpg&quot;,
+                &quot;altText&quot; : &quot;Davos logo&quot;,
+                &quot;copyrightHolder&quot; : &quot;European Photopress Agency&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            }
+          }
+        },
+        &quot;options&quot; : {
+          &quot;isBreakingNews&quot; : false
+        },
+        &quot;section&quot; : {
+          &quot;name&quot; : &quot;Business&quot;,
+          &quot;id&quot; : &quot;99104&quot;,
+          &quot;uri&quot; : &quot;/news/business&quot;,
+          &quot;urlIdentifier&quot; : &quot;/news/business&quot;
+        },
+        &quot;summary&quot; : &quot;Chief executives are less optimistic about the economy this year than last, a survey unveiled at the World Economic Forum by PwC suggests.&quot;,
+        &quot;type&quot; : &quot;STY&quot;
+      }, {
+        &quot;assetId&quot; : &quot;30832627&quot;,
+        &quot;assetUri&quot; : &quot;/news/business-30832627&quot;,
+        &quot;byline&quot; : {
+          &quot;name&quot; : &quot;By Joe Miller&quot;,
+          &quot;persons&quot; : [ {
+            &quot;name&quot; : &quot;Joe Miller&quot;,
+            &quot;function&quot; : &quot;Technology Reporter&quot;
+          } ],
+          &quot;title&quot; : &quot;Business reporter&quot;
+        },
+        &quot;firstCreated&quot; : &quot;2015-01-15T12:46:34+00:00&quot;,
+        &quot;hasShortForm&quot; : true,
+        &quot;headline&quot; : &quot;Global conflicts top Davos agenda&quot;,
+        &quot;language&quot; : &quot;en-gb&quot;,
+        &quot;lastUpdated&quot; : &quot;2015-01-15T12:46:34+00:00&quot;,
+        &quot;media&quot; : {
+          &quot;images&quot; : {
+            &quot;index&quot; : {
+              &quot;80287625&quot; : {
+                &quot;height&quot; : 351,
+                &quot;width&quot; : 624,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80287000/jpg/_80287625_885afd59-a955-4d9c-bcbd-0cb9e012bf5c.jpg&quot;,
+                &quot;altText&quot; : &quot;Broken Glass&quot;,
+                &quot;copyrightHolder&quot; : &quot;Thinkstock&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            },
+            &quot;index-thumbnail&quot; : {
+              &quot;80287627&quot; : {
+                &quot;height&quot; : 180,
+                &quot;width&quot; : 320,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80287000/jpg/_80287627_885afd59-a955-4d9c-bcbd-0cb9e012bf5c.jpg&quot;,
+                &quot;altText&quot; : &quot;Broken Glass&quot;,
+                &quot;copyrightHolder&quot; : &quot;Thinkstock&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            }
+          }
+        },
+        &quot;options&quot; : {
+          &quot;isBreakingNews&quot; : false
+        },
+        &quot;section&quot; : {
+          &quot;name&quot; : &quot;Business&quot;,
+          &quot;id&quot; : &quot;99104&quot;,
+          &quot;uri&quot; : &quot;/news/business&quot;,
+          &quot;urlIdentifier&quot; : &quot;/news/business&quot;
+        },
+        &quot;summary&quot; : &quot;The risks posed by global conflicts will be at the top of the agenda when politicians and industry leaders meet in Switzerland next week.&quot;,
+        &quot;type&quot; : &quot;STY&quot;
+      }, {
+        &quot;assetId&quot; : &quot;30875633&quot;,
+        &quot;assetUri&quot; : &quot;/news/business-30875633&quot;,
+        &quot;firstCreated&quot; : &quot;2015-01-19T04:49:03+00:00&quot;,
+        &quot;hasShortForm&quot; : true,
+        &quot;headline&quot; : &quot;Richest 1% to own more than the rest&quot;,
+        &quot;includeComments&quot; : true,
+        &quot;language&quot; : &quot;en-gb&quot;,
+        &quot;lastUpdated&quot; : &quot;2015-01-19T12:52:59+00:00&quot;,
+        &quot;media&quot; : {
+          &quot;images&quot; : {
+            &quot;index&quot; : {
+              &quot;80354724&quot; : {
+                &quot;height&quot; : 1152,
+                &quot;width&quot; : 2048,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80354000/jpg/_80354724_wealthy_1.jpg&quot;,
+                &quot;altText&quot; : &quot;Homeless people beg in a street next to a luxury store in Paris&quot;,
+                &quot;copyrightHolder&quot; : &quot;AFP&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            },
+            &quot;index-thumbnail&quot; : {
+              &quot;80354726&quot; : {
+                &quot;height&quot; : 180,
+                &quot;width&quot; : 320,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80354000/jpg/_80354726_wealthy_1.jpg&quot;,
+                &quot;altText&quot; : &quot;Homeless people beg in a street next to a luxury store in Paris&quot;,
+                &quot;copyrightHolder&quot; : &quot;AFP&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            }
+          }
+        },
+        &quot;options&quot; : {
+          &quot;isBreakingNews&quot; : false
+        },
+        &quot;section&quot; : {
+          &quot;name&quot; : &quot;Business&quot;,
+          &quot;id&quot; : &quot;99104&quot;,
+          &quot;uri&quot; : &quot;/news/business&quot;,
+          &quot;urlIdentifier&quot; : &quot;/news/business&quot;
+        },
+        &quot;summary&quot; : &quot;Wealth amassed by the richest 1% will soon overtake the amount owned by everyone else in the world, says charity group Oxfam.&quot;,
+        &quot;type&quot; : &quot;STY&quot;
+      }, {
+        &quot;assetId&quot; : &quot;30802166&quot;,
+        &quot;assetUri&quot; : &quot;/news/business-30802166&quot;,
+        &quot;firstCreated&quot; : &quot;2015-01-13T21:05:21+00:00&quot;,
+        &quot;hasShortForm&quot; : true,
+        &quot;headline&quot; : &quot;World Bank cuts global growth forecast&quot;,
+        &quot;language&quot; : &quot;en-gb&quot;,
+        &quot;lastUpdated&quot; : &quot;2015-01-13T22:10:22+00:00&quot;,
+        &quot;media&quot; : {
+          &quot;images&quot; : {
+            &quot;index&quot; : {
+              &quot;80247563&quot; : {
+                &quot;height&quot; : 351,
+                &quot;width&quot; : 624,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80247000/jpg/_80247563_7b5671cd-c9bf-463c-a0cf-0c7125acc627.jpg&quot;,
+                &quot;caption&quot; : &quot;Cheaper oil creates economic \&quot;winners and losers\&quot; says the World Bank&quot;,
+                &quot;altText&quot; : &quot;oil refinery&quot;,
+                &quot;copyrightHolder&quot; : &quot;Reuters&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            },
+            &quot;index-thumbnail&quot; : {
+              &quot;80247565&quot; : {
+                &quot;height&quot; : 180,
+                &quot;width&quot; : 320,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80247000/jpg/_80247565_7b5671cd-c9bf-463c-a0cf-0c7125acc627.jpg&quot;,
+                &quot;caption&quot; : &quot;Cheaper oil creates economic \&quot;winners and losers\&quot; says the World Bank&quot;,
+                &quot;altText&quot; : &quot;oil refinery&quot;,
+                &quot;copyrightHolder&quot; : &quot;Reuters&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            }
+          }
+        },
+        &quot;options&quot; : {
+          &quot;isBreakingNews&quot; : false
+        },
+        &quot;section&quot; : {
+          &quot;name&quot; : &quot;Business&quot;,
+          &quot;id&quot; : &quot;99104&quot;,
+          &quot;uri&quot; : &quot;/news/business&quot;,
+          &quot;urlIdentifier&quot; : &quot;/news/business&quot;
+        },
+        &quot;summary&quot; : &quot;The World Bank has cut its global growth forecast, warning the US alone cannot drive an economic recovery.&quot;,
+        &quot;type&quot; : &quot;STY&quot;
+      } ],
+      &quot;semanticGroupName&quot; : &quot;News event promotion&quot;
+    }, {
+      &quot;type&quot; : &quot;av-stories-now&quot;,
+      &quot;title&quot; : &quot;Watch/Listen&quot;,
+      &quot;strapline&quot; : {
+        &quot;name&quot; : &quot;Watch/Listen&quot;
+      },
+      &quot;items&quot; : [ {
+        &quot;assetId&quot; : &quot;30946806&quot;,
+        &quot;assetUri&quot; : &quot;/news/world-africa-30946806&quot;,
+        &quot;firstCreated&quot; : &quot;2015-01-23T09:39:08+00:00&quot;,
+        &quot;headline&quot; : &quot;Foreign shops looted in Soweto&quot;,
+        &quot;language&quot; : &quot;en-gb&quot;,
+        &quot;lastUpdated&quot; : &quot;2015-01-23T09:39:08+00:00&quot;,
+        &quot;media&quot; : {
+          &quot;images&quot; : {
+            &quot;index&quot; : {
+              &quot;80467012&quot; : {
+                &quot;height&quot; : 360,
+                &quot;width&quot; : 640,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80467000/jpg/_80467012_80467010.jpg&quot;,
+                &quot;altText&quot; : &quot;Police stand guard&quot;,
+                &quot;copyrightHolder&quot; : &quot;BBC&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            },
+            &quot;index-thumbnail&quot; : {
+              &quot;80467014&quot; : {
+                &quot;height&quot; : 180,
+                &quot;width&quot; : 320,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80467000/jpg/_80467014_80467010.jpg&quot;,
+                &quot;altText&quot; : &quot;Police stand guard&quot;,
+                &quot;copyrightHolder&quot; : &quot;BBC&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            }
+          },
+          &quot;videos&quot; : {
+            &quot;primary&quot; : {
+              &quot;80467257&quot; : {
+                &quot;duration&quot; : &quot;PT1M49S&quot;,
+                &quot;available&quot; : true,
+                &quot;mimeType&quot; : &quot;application/xml&quot;,
+                &quot;image&quot; : {
+                  &quot;height&quot; : 360,
+                  &quot;width&quot; : 640,
+                  &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80467000/jpg/_80467011_80467010.jpg&quot;,
+                  &quot;altText&quot; : &quot;Police stand guard&quot;,
+                  &quot;copyrightHolder&quot; : &quot;BBC&quot;,
+                  &quot;originCode&quot; : &quot;mcs&quot;
+                },
+                &quot;href&quot; : &quot;http://playlists.bbc.co.uk/news/world-africa-30946806A/playlist.sxml&quot;,
+                &quot;externalId&quot; : &quot;p02hh6h1&quot;,
+                &quot;caption&quot; : &quot;Milton Nkosi reports from Soweto where a crowd had gathered outside a foreign shop&quot;,
+                &quot;allowOffSiteEmbedding&quot; : false,
+                &quot;live&quot; : false,
+                &quot;entityType&quot; : &quot;Version&quot;
+              }
+            }
+          }
+        },
+        &quot;mediaType&quot; : &quot;Video&quot;,
+        &quot;options&quot; : {
+          &quot;isBreakingNews&quot; : false
+        },
+        &quot;section&quot; : {
+          &quot;name&quot; : &quot;Africa&quot;,
+          &quot;id&quot; : &quot;99121&quot;,
+          &quot;uri&quot; : &quot;/news/world/africa&quot;,
+          &quot;urlIdentifier&quot; : &quot;/news/world/africa&quot;
+        },
+        &quot;summary&quot; : &quot;Milton Nkosi reports from Soweto where crowds have gathered outside foreign owned shops after a teenager was shot dead during an attempted robbery.&quot;,
+        &quot;type&quot; : &quot;MAP&quot;
+      }, {
+        &quot;assetId&quot; : &quot;30944814&quot;,
+        &quot;assetUri&quot; : &quot;/news/world-africa-30944814&quot;,
+        &quot;firstCreated&quot; : &quot;2015-01-23T06:44:54+00:00&quot;,
+        &quot;headline&quot; : &quot;Is this the world&#39;s oldest pupil?&quot;,
+        &quot;language&quot; : &quot;en-gb&quot;,
+        &quot;lastUpdated&quot; : &quot;2015-01-23T06:44:54+00:00&quot;,
+        &quot;media&quot; : {
+          &quot;images&quot; : {
+            &quot;index&quot; : {
+              &quot;80463990&quot; : {
+                &quot;height&quot; : 360,
+                &quot;width&quot; : 640,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80463000/jpg/_80463990_gogo2.jpg&quot;,
+                &quot;altText&quot; : &quot;90-year-old Kenyan student Priscilla Sitienei , in school uniform, holding a pencil&quot;,
+                &quot;copyrightHolder&quot; : &quot;BBC&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            },
+            &quot;index-thumbnail&quot; : {
+              &quot;80464010&quot; : {
+                &quot;height&quot; : 180,
+                &quot;width&quot; : 320,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80464000/jpg/_80464010_gogo2.jpg&quot;,
+                &quot;altText&quot; : &quot;90-year-old Kenyan student Priscilla Sitienei in school uniform, holding a pencil&quot;,
+                &quot;copyrightHolder&quot; : &quot;BBC&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            }
+          },
+          &quot;videos&quot; : {
+            &quot;primary&quot; : {
+              &quot;80464540&quot; : {
+                &quot;duration&quot; : &quot;PT2M34S&quot;,
+                &quot;available&quot; : true,
+                &quot;mimeType&quot; : &quot;application/xml&quot;,
+                &quot;image&quot; : {
+                  &quot;height&quot; : 360,
+                  &quot;width&quot; : 640,
+                  &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80463000/jpg/_80463989_gogo2.jpg&quot;,
+                  &quot;altText&quot; : &quot;90-year-old Kenyan student Priscilla Sitienei , in school uniform, holding a pencil&quot;,
+                  &quot;copyrightHolder&quot; : &quot;BBC&quot;,
+                  &quot;originCode&quot; : &quot;mcs&quot;
+                },
+                &quot;href&quot; : &quot;http://playlists.bbc.co.uk/news/world-africa-30944814A/playlist.sxml&quot;,
+                &quot;externalId&quot; : &quot;p02hgz2j&quot;,
+                &quot;caption&quot; : &quot;Priscilla Sitienei: \&quot;I want to inspire children\&quot;&quot;,
+                &quot;allowOffSiteEmbedding&quot; : false,
+                &quot;live&quot; : false,
+                &quot;entityType&quot; : &quot;Version&quot;
+              }
+            }
+          }
+        },
+        &quot;mediaType&quot; : &quot;Video&quot;,
+        &quot;options&quot; : {
+          &quot;isBreakingNews&quot; : false
+        },
+        &quot;section&quot; : {
+          &quot;name&quot; : &quot;Africa&quot;,
+          &quot;id&quot; : &quot;99121&quot;,
+          &quot;uri&quot; : &quot;/news/world/africa&quot;,
+          &quot;urlIdentifier&quot; : &quot;/news/world/africa&quot;
+        },
+        &quot;summary&quot; : &quot;Ninety-year-old Kenyan student Priscilla Sitienei says she wants to inspire children, especially girls, to get an education.&quot;,
+        &quot;type&quot; : &quot;MAP&quot;
+      }, {
+        &quot;assetId&quot; : &quot;30942485&quot;,
+        &quot;assetUri&quot; : &quot;/news/science-environment-30942485&quot;,
+        &quot;firstCreated&quot; : &quot;2015-01-22T21:11:08+00:00&quot;,
+        &quot;headline&quot; : &quot;Comet shows off its &#39;goosebumps&#39;&quot;,
+        &quot;language&quot; : &quot;en-gb&quot;,
+        &quot;lastUpdated&quot; : &quot;2015-01-22T21:11:08+00:00&quot;,
+        &quot;media&quot; : {
+          &quot;images&quot; : {
+            &quot;index&quot; : {
+              &quot;80460248&quot; : {
+                &quot;height&quot; : 360,
+                &quot;width&quot; : 640,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80460000/jpg/_80460248_80460247.jpg&quot;,
+                &quot;altText&quot; : &quot;Pitted surface of the comet&quot;,
+                &quot;copyrightHolder&quot; : &quot;ESA&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            },
+            &quot;index-thumbnail&quot; : {
+              &quot;80461668&quot; : {
+                &quot;height&quot; : 180,
+                &quot;width&quot; : 320,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80461000/jpg/_80461668_80460247.jpg&quot;,
+                &quot;altText&quot; : &quot;Pitted surface of the comet&quot;,
+                &quot;copyrightHolder&quot; : &quot;ESA&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            }
+          },
+          &quot;videos&quot; : {
+            &quot;primary&quot; : {
+              &quot;80461718&quot; : {
+                &quot;duration&quot; : &quot;PT2M30S&quot;,
+                &quot;available&quot; : true,
+                &quot;mimeType&quot; : &quot;application/xml&quot;,
+                &quot;image&quot; : {
+                  &quot;height&quot; : 360,
+                  &quot;width&quot; : 640,
+                  &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80460000/jpg/_80460248_80460247.jpg&quot;,
+                  &quot;altText&quot; : &quot;Pitted surface of the comet&quot;,
+                  &quot;copyrightHolder&quot; : &quot;ESA&quot;,
+                  &quot;originCode&quot; : &quot;mcs&quot;
+                },
+                &quot;href&quot; : &quot;http://playlists.bbc.co.uk/news/science-environment-30942485A/playlist.sxml&quot;,
+                &quot;externalId&quot; : &quot;p02hg13c&quot;,
+                &quot;caption&quot; : &quot;Scientists working on Europe&#39;s Rosetta probe, which is tracking Comet 67P, say they may have found evidence for how such icy objects were formed&quot;,
+                &quot;allowOffSiteEmbedding&quot; : false,
+                &quot;live&quot; : false,
+                &quot;entityType&quot; : &quot;Version&quot;
+              }
+            }
+          }
+        },
+        &quot;mediaType&quot; : &quot;Video&quot;,
+        &quot;options&quot; : {
+          &quot;isBreakingNews&quot; : false
+        },
+        &quot;section&quot; : {
+          &quot;name&quot; : &quot;Science &amp; Environment&quot;,
+          &quot;id&quot; : &quot;99110&quot;,
+          &quot;uri&quot; : &quot;/news/science_and_environment&quot;,
+          &quot;urlIdentifier&quot; : &quot;/news/science_and_environment&quot;
+        },
+        &quot;summary&quot; : &quot;Scientists working on Europe&#39;s Rosetta probe, which is tracking Comet 67P, say they may have found evidence for how such icy objects were formed.&quot;,
+        &quot;type&quot; : &quot;MAP&quot;
+      }, {
+        &quot;assetId&quot; : &quot;30949365&quot;,
+        &quot;assetUri&quot; : &quot;/news/world-middle-east-30949365&quot;,
+        &quot;firstCreated&quot; : &quot;2015-01-23T10:25:16+00:00&quot;,
+        &quot;headline&quot; : &quot;Archive: Saudi king speaks to BBC&quot;,
+        &quot;language&quot; : &quot;en-gb&quot;,
+        &quot;lastUpdated&quot; : &quot;2015-01-23T10:25:16+00:00&quot;,
+        &quot;media&quot; : {
+          &quot;images&quot; : {
+            &quot;index&quot; : {
+              &quot;80468906&quot; : {
+                &quot;height&quot; : 360,
+                &quot;width&quot; : 640,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80468000/jpg/_80468906_80468904.jpg&quot;,
+                &quot;altText&quot; : &quot;King Abdullah bin Abdulaziz in 2007&quot;,
+                &quot;copyrightHolder&quot; : &quot;BBC&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            },
+            &quot;index-thumbnail&quot; : {
+              &quot;80468908&quot; : {
+                &quot;height&quot; : 180,
+                &quot;width&quot; : 320,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80468000/jpg/_80468908_80468904.jpg&quot;,
+                &quot;altText&quot; : &quot;King Abdullah bin Abdulaziz in 2007&quot;,
+                &quot;copyrightHolder&quot; : &quot;BBC&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            }
+          },
+          &quot;videos&quot; : {
+            &quot;primary&quot; : {
+              &quot;80468901&quot; : {
+                &quot;duration&quot; : &quot;PT6M13S&quot;,
+                &quot;available&quot; : true,
+                &quot;mimeType&quot; : &quot;application/xml&quot;,
+                &quot;image&quot; : {
+                  &quot;height&quot; : 360,
+                  &quot;width&quot; : 640,
+                  &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80468000/jpg/_80468905_80468904.jpg&quot;,
+                  &quot;altText&quot; : &quot;King Abdullah bin Abdulaziz in 2007&quot;,
+                  &quot;copyrightHolder&quot; : &quot;BBC&quot;,
+                  &quot;originCode&quot; : &quot;mcs&quot;
+                },
+                &quot;href&quot; : &quot;http://playlists.bbc.co.uk/news/world-middle-east-30949365A/playlist.sxml&quot;,
+                &quot;externalId&quot; : &quot;p02hhb2h&quot;,
+                &quot;caption&quot; : &quot;King Abdullah spoke to the BBC&#39;s John Simpson in 2007&quot;,
+                &quot;allowOffSiteEmbedding&quot; : false,
+                &quot;live&quot; : false,
+                &quot;entityType&quot; : &quot;Version&quot;
+              }
+            }
+          }
+        },
+        &quot;mediaType&quot; : &quot;Video&quot;,
+        &quot;options&quot; : {
+          &quot;isBreakingNews&quot; : false
+        },
+        &quot;section&quot; : {
+          &quot;name&quot; : &quot;Middle East&quot;,
+          &quot;id&quot; : &quot;99125&quot;,
+          &quot;uri&quot; : &quot;/news/world/middle_east&quot;,
+          &quot;urlIdentifier&quot; : &quot;/news/world/middle_east&quot;
+        },
+        &quot;summary&quot; : &quot;The BBC&#39;s John Simpson interviewed Saudi Arabia&#39;s King Abdullah bin Abdulaziz in 2007, in the aftermath of the 7/7 London terrorist attacks.&quot;,
+        &quot;type&quot; : &quot;MAP&quot;
+      }, {
+        &quot;assetId&quot; : &quot;30946798&quot;,
+        &quot;assetUri&quot; : &quot;/news/world-europe-30946798&quot;,
+        &quot;firstCreated&quot; : &quot;2015-01-23T07:58:11+00:00&quot;,
+        &quot;headline&quot; : &quot;Ukraine troops withdraw from airport&quot;,
+        &quot;language&quot; : &quot;en-gb&quot;,
+        &quot;lastUpdated&quot; : &quot;2015-01-23T07:58:11+00:00&quot;,
+        &quot;media&quot; : {
+          &quot;images&quot; : {
+            &quot;index&quot; : {
+              &quot;80464993&quot; : {
+                &quot;height&quot; : 360,
+                &quot;width&quot; : 640,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80464000/jpg/_80464993_80464990.jpg&quot;,
+                &quot;altText&quot; : &quot;Ukrainian rebels&quot;,
+                &quot;copyrightHolder&quot; : &quot;Reuters&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            },
+            &quot;index-thumbnail&quot; : {
+              &quot;80466986&quot; : {
+                &quot;height&quot; : 180,
+                &quot;width&quot; : 320,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80466000/jpg/_80466986_80464990.jpg&quot;,
+                &quot;altText&quot; : &quot;Ukrainian rebels&quot;,
+                &quot;copyrightHolder&quot; : &quot;Reuters&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            }
+          },
+          &quot;videos&quot; : {
+            &quot;primary&quot; : {
+              &quot;80466394&quot; : {
+                &quot;duration&quot; : &quot;PT2M3S&quot;,
+                &quot;available&quot; : true,
+                &quot;mimeType&quot; : &quot;application/xml&quot;,
+                &quot;image&quot; : {
+                  &quot;height&quot; : 360,
+                  &quot;width&quot; : 640,
+                  &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80464000/jpg/_80464992_80464990.jpg&quot;,
+                  &quot;altText&quot; : &quot;Ukrainian rebels&quot;,
+                  &quot;copyrightHolder&quot; : &quot;Reuters&quot;,
+                  &quot;originCode&quot; : &quot;mcs&quot;
+                },
+                &quot;href&quot; : &quot;http://playlists.bbc.co.uk/news/world-europe-30946798A/playlist.sxml&quot;,
+                &quot;externalId&quot; : &quot;p02hh3xf&quot;,
+                &quot;caption&quot; : &quot;As Laura Westbrook reports, civilians are caught in the crossfire&quot;,
+                &quot;allowOffSiteEmbedding&quot; : false,
+                &quot;live&quot; : false,
+                &quot;entityType&quot; : &quot;Version&quot;
+              }
+            }
+          }
+        },
+        &quot;mediaType&quot; : &quot;Video&quot;,
+        &quot;options&quot; : {
+          &quot;isBreakingNews&quot; : false
+        },
+        &quot;section&quot; : {
+          &quot;name&quot; : &quot;Europe&quot;,
+          &quot;id&quot; : &quot;99123&quot;,
+          &quot;uri&quot; : &quot;/news/world/europe&quot;,
+          &quot;urlIdentifier&quot; : &quot;/news/world/europe&quot;
+        },
+        &quot;summary&quot; : &quot;Ukrainian troops have withdrawn from the main terminal of Donetsk Airport, the scene of bitter fighting in recent weeks.&quot;,
+        &quot;type&quot; : &quot;MAP&quot;
+      }, {
+        &quot;assetId&quot; : &quot;30939917&quot;,
+        &quot;assetUri&quot; : &quot;/news/science-environment-30939917&quot;,
+        &quot;firstCreated&quot; : &quot;2015-01-23T08:38:50+00:00&quot;,
+        &quot;headline&quot; : &quot;Jellyfish reveal swimming secrets&quot;,
+        &quot;language&quot; : &quot;en-gb&quot;,
+        &quot;lastUpdated&quot; : &quot;2015-01-23T10:42:13+00:00&quot;,
+        &quot;media&quot; : {
+          &quot;images&quot; : {
+            &quot;index&quot; : {
+              &quot;80452672&quot; : {
+                &quot;height&quot; : 360,
+                &quot;width&quot; : 640,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80452000/jpg/_80452672_80452669.jpg&quot;,
+                &quot;altText&quot; : &quot;Tagged jellyfish (c) Graeme Hays&quot;,
+                &quot;copyrightHolder&quot; : &quot;Graeme Hays&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            },
+            &quot;index-thumbnail&quot; : {
+              &quot;80452674&quot; : {
+                &quot;height&quot; : 180,
+                &quot;width&quot; : 320,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80452000/jpg/_80452674_80452669.jpg&quot;,
+                &quot;altText&quot; : &quot;Tagged jellyfish (c) Graeme Hays&quot;,
+                &quot;copyrightHolder&quot; : &quot;Graeme Hays&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            }
+          },
+          &quot;videos&quot; : {
+            &quot;primary&quot; : {
+              &quot;80469393&quot; : {
+                &quot;duration&quot; : &quot;PT50S&quot;,
+                &quot;available&quot; : true,
+                &quot;mimeType&quot; : &quot;application/xml&quot;,
+                &quot;image&quot; : {
+                  &quot;height&quot; : 360,
+                  &quot;width&quot; : 640,
+                  &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80452000/jpg/_80452671_80452669.jpg&quot;,
+                  &quot;altText&quot; : &quot;Tagged jellyfish (c) Graeme Hays&quot;,
+                  &quot;copyrightHolder&quot; : &quot;Graeme Hays&quot;,
+                  &quot;originCode&quot; : &quot;mcs&quot;
+                },
+                &quot;href&quot; : &quot;http://playlists.bbc.co.uk/news/science-environment-30939917A/playlist.sxml&quot;,
+                &quot;externalId&quot; : &quot;p02hhc7t&quot;,
+                &quot;caption&quot; : &quot;The swimming jellyfish were tagged with data loggers fitted to their bodies with cable ties&quot;,
+                &quot;allowOffSiteEmbedding&quot; : false,
+                &quot;live&quot; : false,
+                &quot;entityType&quot; : &quot;Version&quot;
+              }
+            }
+          }
+        },
+        &quot;mediaType&quot; : &quot;Video&quot;,
+        &quot;options&quot; : {
+          &quot;isBreakingNews&quot; : false
+        },
+        &quot;section&quot; : {
+          &quot;name&quot; : &quot;Science &amp; Environment&quot;,
+          &quot;id&quot; : &quot;99110&quot;,
+          &quot;uri&quot; : &quot;/news/science_and_environment&quot;,
+          &quot;urlIdentifier&quot; : &quot;/news/science_and_environment&quot;
+        },
+        &quot;summary&quot; : &quot;Jellyfish tagging study reveals the creatures&#39; ability to swim against the current, researchers say.&quot;,
+        &quot;type&quot; : &quot;MAP&quot;
+      }, {
+        &quot;assetId&quot; : &quot;30944815&quot;,
+        &quot;assetUri&quot; : &quot;/news/world-middle-east-30944815&quot;,
+        &quot;firstCreated&quot; : &quot;2015-01-23T07:07:03+00:00&quot;,
+        &quot;headline&quot; : &quot;King Tut&#39;s beard raises concerns&quot;,
+        &quot;language&quot; : &quot;en-gb&quot;,
+        &quot;lastUpdated&quot; : &quot;2015-01-23T07:07:03+00:00&quot;,
+        &quot;media&quot; : {
+          &quot;images&quot; : {
+            &quot;index&quot; : {
+              &quot;80464756&quot; : {
+                &quot;height&quot; : 360,
+                &quot;width&quot; : 640,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80464000/jpg/_80464756_80464754.jpg&quot;,
+                &quot;altText&quot; : &quot;File image of King Tutankhamen&#39;s death mask&quot;,
+                &quot;copyrightHolder&quot; : &quot;BBC&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            },
+            &quot;index-thumbnail&quot; : {
+              &quot;80464758&quot; : {
+                &quot;height&quot; : 180,
+                &quot;width&quot; : 320,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80464000/jpg/_80464758_80464754.jpg&quot;,
+                &quot;altText&quot; : &quot;File image of King Tutankhamen&#39;s death mask&quot;,
+                &quot;copyrightHolder&quot; : &quot;BBC&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            }
+          },
+          &quot;videos&quot; : {
+            &quot;primary&quot; : {
+              &quot;80464964&quot; : {
+                &quot;duration&quot; : &quot;PT2M21S&quot;,
+                &quot;available&quot; : true,
+                &quot;mimeType&quot; : &quot;application/xml&quot;,
+                &quot;image&quot; : {
+                  &quot;height&quot; : 360,
+                  &quot;width&quot; : 640,
+                  &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80463000/jpg/_80463880_tut2.jpg&quot;,
+                  &quot;altText&quot; : &quot;Close up of King Tutankhamen&#39;s death mask showing repair to beard&quot;,
+                  &quot;copyrightHolder&quot; : &quot;Al-Araby Al-Jadeed&quot;,
+                  &quot;originCode&quot; : &quot;mcs&quot;
+                },
+                &quot;href&quot; : &quot;http://playlists.bbc.co.uk/news/world-middle-east-30944815A/playlist.sxml&quot;,
+                &quot;externalId&quot; : &quot;p02hh0hb&quot;,
+                &quot;caption&quot; : &quot;The incident has raised concerns about how Egypt&#39;s ancient treasures are being treated, reports Orla Guerin from Cairo&quot;,
+                &quot;allowOffSiteEmbedding&quot; : false,
+                &quot;live&quot; : false,
+                &quot;entityType&quot; : &quot;Version&quot;
+              }
+            }
+          }
+        },
+        &quot;mediaType&quot; : &quot;Video&quot;,
+        &quot;options&quot; : {
+          &quot;isBreakingNews&quot; : false
+        },
+        &quot;section&quot; : {
+          &quot;name&quot; : &quot;Middle East&quot;,
+          &quot;id&quot; : &quot;99125&quot;,
+          &quot;uri&quot; : &quot;/news/world/middle_east&quot;,
+          &quot;urlIdentifier&quot; : &quot;/news/world/middle_east&quot;
+        },
+        &quot;summary&quot; : &quot;Reports that the burial mask of King Tutankhamen has been damaged and badly repaired are raising concerns about how Egypt&#39;s ancient treasures are being treated.&quot;,
+        &quot;type&quot; : &quot;MAP&quot;
+      }, {
+        &quot;assetId&quot; : &quot;30944817&quot;,
+        &quot;assetUri&quot; : &quot;/news/world-asia-30944817&quot;,
+        &quot;firstCreated&quot; : &quot;2015-01-23T06:33:20+00:00&quot;,
+        &quot;headline&quot; : &quot;Impeachment for Thai ex-leader&quot;,
+        &quot;language&quot; : &quot;en-gb&quot;,
+        &quot;lastUpdated&quot; : &quot;2015-01-23T11:34:25+00:00&quot;,
+        &quot;media&quot; : {
+          &quot;images&quot; : {
+            &quot;index&quot; : {
+              &quot;80464184&quot; : {
+                &quot;height&quot; : 360,
+                &quot;width&quot; : 640,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80464000/jpg/_80464184_hi025526160.jpg&quot;,
+                &quot;altText&quot; : &quot;Yingluck Shinawatra greeted by supporters as she arrives for impeachment hearing&quot;,
+                &quot;copyrightHolder&quot; : &quot;PORNCHAI KITTIWONGSAKUL&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            },
+            &quot;index-thumbnail&quot; : {
+              &quot;80464186&quot; : {
+                &quot;height&quot; : 180,
+                &quot;width&quot; : 320,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80464000/jpg/_80464186_hi025526160.jpg&quot;,
+                &quot;altText&quot; : &quot;Yingluck Shinawatra greeted by supporters as she arrives for impeachment hearing&quot;,
+                &quot;copyrightHolder&quot; : &quot;PORNCHAI KITTIWONGSAKUL&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            }
+          },
+          &quot;videos&quot; : {
+            &quot;primary&quot; : {
+              &quot;80469062&quot; : {
+                &quot;duration&quot; : &quot;PT1M33S&quot;,
+                &quot;available&quot; : true,
+                &quot;mimeType&quot; : &quot;application/xml&quot;,
+                &quot;image&quot; : {
+                  &quot;height&quot; : 360,
+                  &quot;width&quot; : 640,
+                  &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80468000/jpg/_80468081_80468080.jpg&quot;,
+                  &quot;altText&quot; : &quot;National Legislative Assembly members vote on impeaching&quot;,
+                  &quot;copyrightHolder&quot; : &quot;Reuters&quot;,
+                  &quot;originCode&quot; : &quot;mcs&quot;
+                },
+                &quot;href&quot; : &quot;http://playlists.bbc.co.uk/news/world-asia-30944817A/playlist.sxml&quot;,
+                &quot;externalId&quot; : &quot;p02hhb7p&quot;,
+                &quot;caption&quot; : &quot;Jonathan Head said the impeachment sent a clear signal from the Thai military&quot;,
+                &quot;guidance&quot; : &quot;This video contains flash photography&quot;,
+                &quot;allowOffSiteEmbedding&quot; : false,
+                &quot;live&quot; : false,
+                &quot;entityType&quot; : &quot;Version&quot;
+              }
+            }
+          }
+        },
+        &quot;mediaType&quot; : &quot;Video&quot;,
+        &quot;options&quot; : {
+          &quot;isBreakingNews&quot; : false
+        },
+        &quot;section&quot; : {
+          &quot;name&quot; : &quot;Asia&quot;,
+          &quot;id&quot; : &quot;101360&quot;,
+          &quot;uri&quot; : &quot;/news/world/asia&quot;,
+          &quot;urlIdentifier&quot; : &quot;/news/world/asia&quot;
+        },
+        &quot;summary&quot; : &quot;Thailand&#39;s attorney general says the country&#39;s former prime minister, Yingluck Shinawatra, is to face a criminal corruption charge over her controversial rice subsidy scheme.&quot;,
+        &quot;type&quot; : &quot;MAP&quot;
+      } ],
+      &quot;semanticGroupName&quot; : &quot;Watch/Listen&quot;
+    }, {
+      &quot;type&quot; : &quot;feature-main&quot;,
+      &quot;title&quot; : &quot;Features&quot;,
+      &quot;strapline&quot; : {
+        &quot;name&quot; : &quot;Features &amp; Analysis&quot;
+      },
+      &quot;items&quot; : [ {
+        &quot;assetId&quot; : &quot;30935874&quot;,
+        &quot;assetUri&quot; : &quot;/news/world-africa-30935874&quot;,
+        &quot;byline&quot; : {
+          &quot;name&quot; : &quot;By Ed Thomas&quot;,
+          &quot;persons&quot; : [ {
+            &quot;name&quot; : &quot;Ed Thomas&quot;,
+            &quot;function&quot; : &quot;BBC News, Kenya&quot;
+          } ],
+          &quot;title&quot; : &quot;BBC News, Ndalat, Kenya&quot;
+        },
+        &quot;firstCreated&quot; : &quot;2015-01-23T00:41:40+00:00&quot;,
+        &quot;headline&quot; : &quot;Kenyan grandmother at school with her great-great-grandchildren&quot;,
+        &quot;language&quot; : &quot;en-gb&quot;,
+        &quot;lastUpdated&quot; : &quot;2015-01-23T00:41:40+00:00&quot;,
+        &quot;media&quot; : {
+          &quot;images&quot; : {
+            &quot;index&quot; : {
+              &quot;80454398&quot; : {
+                &quot;height&quot; : 351,
+                &quot;width&quot; : 624,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80454000/jpg/_80454398_photo4_.jpg&quot;,
+                &quot;altText&quot; : &quot;Priscilla Sitienei&quot;,
+                &quot;copyrightHolder&quot; : &quot;BBC&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            },
+            &quot;index-thumbnail&quot; : {
+              &quot;80460866&quot; : {
+                &quot;height&quot; : 180,
+                &quot;width&quot; : 320,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80460000/jpg/_80460866_photo4_.jpg&quot;,
+                &quot;altText&quot; : &quot;Priscilla Sitienei&quot;,
+                &quot;copyrightHolder&quot; : &quot;BBC&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            }
+          }
+        },
+        &quot;options&quot; : {
+          &quot;isBreakingNews&quot; : false
+        },
+        &quot;overtypedHeadline&quot; : &quot;World&#39;s oldest pupil?&quot;,
+        &quot;overtypedSummary&quot; : &quot;The 90-year-old Kenyan at school with her great great grandchildren&quot;,
+        &quot;section&quot; : {
+          &quot;name&quot; : &quot;Africa&quot;,
+          &quot;id&quot; : &quot;99121&quot;,
+          &quot;uri&quot; : &quot;/news/world/africa&quot;,
+          &quot;urlIdentifier&quot; : &quot;/news/world/africa&quot;
+        },
+        &quot;summary&quot; : &quot;A 90-year-old Kenyan woman, who goes to class with six of her great-great-grandchildren, is believed to be the oldest primary school pupil in the world, writes the BBC&#39;s Ed Thomas.&quot;,
+        &quot;type&quot; : &quot;STY&quot;
+      }, {
+        &quot;assetId&quot; : &quot;30924409&quot;,
+        &quot;assetUri&quot; : &quot;/news/world-europe-30924409&quot;,
+        &quot;byline&quot; : {
+          &quot;name&quot; : &quot;By Hugh Schofield&quot;,
+          &quot;persons&quot; : [ {
+            &quot;name&quot; : &quot;Hugh Schofield&quot;,
+            &quot;function&quot; : &quot;BBC News, Paris&quot;
+          } ],
+          &quot;title&quot; : &quot;BBC News, Paris&quot;
+        },
+        &quot;firstCreated&quot; : &quot;2015-01-23T02:02:16+00:00&quot;,
+        &quot;headline&quot; : &quot;Can France integrate humiliated suburbs?&quot;,
+        &quot;language&quot; : &quot;en-gb&quot;,
+        &quot;lastUpdated&quot; : &quot;2015-01-23T02:02:16+00:00&quot;,
+        &quot;media&quot; : {
+          &quot;images&quot; : {
+            &quot;index&quot; : {
+              &quot;80461217&quot; : {
+                &quot;height&quot; : 351,
+                &quot;width&quot; : 624,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80461000/jpg/_80461217_025319927-1.jpg&quot;,
+                &quot;altText&quot; : &quot;Flag outside Charlie Hebdo offices (8 Jan)&quot;,
+                &quot;copyrightHolder&quot; : &quot;AFP&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            },
+            &quot;index-thumbnail&quot; : {
+              &quot;80461219&quot; : {
+                &quot;height&quot; : 180,
+                &quot;width&quot; : 320,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80461000/jpg/_80461219_025319927-1.jpg&quot;,
+                &quot;altText&quot; : &quot;Flag outside Charlie Hebdo offices (8 Jan)&quot;,
+                &quot;copyrightHolder&quot; : &quot;AFP&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            }
+          }
+        },
+        &quot;options&quot; : {
+          &quot;isBreakingNews&quot; : false
+        },
+        &quot;overtypedHeadline&quot; : &quot;&#39;Apartheid France&#39;&quot;,
+        &quot;overtypedSummary&quot; : &quot;Can disaffected suburbs be integrated after Paris attacks?&quot;,
+        &quot;section&quot; : {
+          &quot;name&quot; : &quot;Europe&quot;,
+          &quot;id&quot; : &quot;99123&quot;,
+          &quot;uri&quot; : &quot;/news/world/europe&quot;,
+          &quot;urlIdentifier&quot; : &quot;/news/world/europe&quot;
+        },
+        &quot;summary&quot; : &quot;Members of France&#39;s impoverished banlieues were glaringly absent from France&#39;s march in support of Charlie victims, writes Hugh Schofield.&quot;,
+        &quot;type&quot; : &quot;STY&quot;
+      }, {
+        &quot;assetId&quot; : &quot;30937495&quot;,
+        &quot;assetUri&quot; : &quot;/news/world-middle-east-30937495&quot;,
+        &quot;byline&quot; : {
+          &quot;name&quot; : &quot;By Frank  Gardner&quot;,
+          &quot;persons&quot; : [ {
+            &quot;name&quot; : &quot;Frank Gardner&quot;,
+            &quot;function&quot; : &quot;BBC security correspondent&quot;
+          } ],
+          &quot;title&quot; : &quot;BBC security correspondent&quot;
+        },
+        &quot;firstCreated&quot; : &quot;2015-01-22T19:22:03+00:00&quot;,
+        &quot;headline&quot; : &quot;Yemen proves security nightmare for US&quot;,
+        &quot;language&quot; : &quot;en-gb&quot;,
+        &quot;lastUpdated&quot; : &quot;2015-01-22T19:22:03+00:00&quot;,
+        &quot;media&quot; : {
+          &quot;images&quot; : {
+            &quot;index&quot; : {
+              &quot;80459169&quot; : {
+                &quot;height&quot; : 351,
+                &quot;width&quot; : 624,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80459000/jpg/_80459169_yemenct2003.jpg&quot;,
+                &quot;altText&quot; : &quot;Yemen’s Counter-terrorism forces have been trained by US Special Forces for years.&quot;,
+                &quot;copyrightHolder&quot; : &quot;Frank Gardner&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            },
+            &quot;index-thumbnail&quot; : {
+              &quot;80459974&quot; : {
+                &quot;height&quot; : 180,
+                &quot;width&quot; : 320,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80459000/jpg/_80459974_yemenct2003.jpg&quot;,
+                &quot;altText&quot; : &quot;Yemen’s Counter-terrorism forces have been trained by US Special Forces for years.&quot;,
+                &quot;copyrightHolder&quot; : &quot;Frank Gardner&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            }
+          }
+        },
+        &quot;options&quot; : {
+          &quot;isBreakingNews&quot; : false
+        },
+        &quot;overtypedHeadline&quot; : &quot;Security nightmare&quot;,
+        &quot;overtypedSummary&quot; : &quot;The conflict in Yemen between Shia rebels and Sunni tribes causes headaches in Washington &quot;,
+        &quot;section&quot; : {
+          &quot;name&quot; : &quot;Middle East&quot;,
+          &quot;id&quot; : &quot;99125&quot;,
+          &quot;uri&quot; : &quot;/news/world/middle_east&quot;,
+          &quot;urlIdentifier&quot; : &quot;/news/world/middle_east&quot;
+        },
+        &quot;summary&quot; : &quot;The chaos in Yemen shows no sign of letting up and a looming showdown between Shia rebels and Sunni tribes will cause headaches in Washington, says the BBC&#39;s Frank Gardner.&quot;,
+        &quot;type&quot; : &quot;STY&quot;
+      }, {
+        &quot;assetId&quot; : &quot;30941638&quot;,
+        &quot;assetUri&quot; : &quot;/news/magazine-30941638&quot;,
+        &quot;byline&quot; : {
+          &quot;name&quot; : &quot;By Athar  Ahmad&quot;,
+          &quot;persons&quot; : [ {
+            &quot;name&quot; : &quot;Athar Ahmad&quot;,
+            &quot;function&quot; : &quot;BBC Asian Network&quot;
+          } ],
+          &quot;title&quot; : &quot;BBC Asian Network&quot;
+        },
+        &quot;firstCreated&quot; : &quot;2015-01-23T01:15:59+00:00&quot;,
+        &quot;headline&quot; : &quot;Captain America dons a turban&quot;,
+        &quot;language&quot; : &quot;en-gb&quot;,
+        &quot;lastUpdated&quot; : &quot;2015-01-23T01:15:59+00:00&quot;,
+        &quot;media&quot; : {
+          &quot;images&quot; : {
+            &quot;index&quot; : {
+              &quot;80461090&quot; : {
+                &quot;height&quot; : 549,
+                &quot;width&quot; : 976,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80461000/jpg/_80461090_sikh_captain_america.jpg&quot;,
+                &quot;altText&quot; : &quot;Vishavjit Singh&quot;,
+                &quot;copyrightHolder&quot; : &quot;BBC&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            },
+            &quot;index-thumbnail&quot; : {
+              &quot;80461092&quot; : {
+                &quot;height&quot; : 180,
+                &quot;width&quot; : 320,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80461000/jpg/_80461092_sikh_captain_america.jpg&quot;,
+                &quot;altText&quot; : &quot;Vishavjit Singh&quot;,
+                &quot;copyrightHolder&quot; : &quot;BBC&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            }
+          }
+        },
+        &quot;options&quot; : {
+          &quot;isBreakingNews&quot; : false
+        },
+        &quot;overtypedHeadline&quot; : &quot;Captain America&#39;s turban&quot;,
+        &quot;overtypedSummary&quot; : &quot;A superhero Sikh fights stereotypes&quot;,
+        &quot;section&quot; : {
+          &quot;name&quot; : &quot;Magazine&quot;,
+          &quot;id&quot; : &quot;99189&quot;,
+          &quot;uri&quot; : &quot;/news/magazine&quot;,
+          &quot;urlIdentifier&quot; : &quot;/news/magazine&quot;
+        },
+        &quot;summary&quot; : &quot;A new film chronicles the experience of Vishavjit Singh, who walks the streets of New York dressed as the superhero Captain America.&quot;,
+        &quot;type&quot; : &quot;STY&quot;
+      }, {
+        &quot;assetId&quot; : &quot;30922080&quot;,
+        &quot;assetUri&quot; : &quot;/news/magazine-30922080&quot;,
+        &quot;firstCreated&quot; : &quot;2015-01-22T22:03:44+00:00&quot;,
+        &quot;headline&quot; : &quot;FreeSpeechStories: &#39;A message for the Taliban&#39;&quot;,
+        &quot;language&quot; : &quot;en-gb&quot;,
+        &quot;lastUpdated&quot; : &quot;2015-01-22T22:03:44+00:00&quot;,
+        &quot;media&quot; : {
+          &quot;images&quot; : {
+            &quot;index&quot; : {
+              &quot;80429328&quot; : {
+                &quot;height&quot; : 351,
+                &quot;width&quot; : 624,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80429000/jpg/_80429328_talibanphoto.jpg&quot;,
+                &quot;altText&quot; : &quot;You will be scared now, Taliban&quot;,
+                &quot;copyrightHolder&quot; : &quot;Tamasha Productions&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            },
+            &quot;index-thumbnail&quot; : {
+              &quot;80429412&quot; : {
+                &quot;height&quot; : 180,
+                &quot;width&quot; : 320,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80429000/jpg/_80429412_talibanphoto.jpg&quot;,
+                &quot;altText&quot; : &quot;You will be scared now, Taliban&quot;,
+                &quot;copyrightHolder&quot; : &quot;Tamasha Productions&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            }
+          },
+          &quot;videos&quot; : {
+            &quot;primary&quot; : {
+              &quot;80426966&quot; : {
+                &quot;duration&quot; : &quot;PT2M16S&quot;,
+                &quot;available&quot; : true,
+                &quot;mimeType&quot; : &quot;application/xml&quot;,
+                &quot;image&quot; : {
+                  &quot;height&quot; : 360,
+                  &quot;width&quot; : 640,
+                  &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80429000/jpg/_80429418_talibanphoto.jpg&quot;,
+                  &quot;altText&quot; : &quot;You will be scared now, Taliban&quot;,
+                  &quot;copyrightHolder&quot; : &quot;Tamasha Productions&quot;,
+                  &quot;originCode&quot; : &quot;mcs&quot;
+                },
+                &quot;href&quot; : &quot;http://playlists.bbc.co.uk/news/magazine-30922080A/playlist.sxml&quot;,
+                &quot;externalId&quot; : &quot;p02hcp8t&quot;,
+                &quot;caption&quot; : &quot;&quot;,
+                &quot;allowOffSiteEmbedding&quot; : true,
+                &quot;live&quot; : false,
+                &quot;entityType&quot; : &quot;Version&quot;
+              }
+            }
+          }
+        },
+        &quot;mediaType&quot; : &quot;Video&quot;,
+        &quot;options&quot; : {
+          &quot;isBreakingNews&quot; : false
+        },
+        &quot;overtypedHeadline&quot; : &quot;&#39;You&#39;ll be scared&#39;&quot;,
+        &quot;overtypedSummary&quot; : &quot;Young Pakistani filmmakers use Facebook to confront Taliban&quot;,
+        &quot;section&quot; : {
+          &quot;name&quot; : &quot;Magazine&quot;,
+          &quot;id&quot; : &quot;99189&quot;,
+          &quot;uri&quot; : &quot;/news/magazine&quot;,
+          &quot;urlIdentifier&quot; : &quot;/news/magazine&quot;
+        },
+        &quot;summary&quot; : &quot;Two young Pakistani filmmakers are using Facebook to confront the extremist group.&quot;,
+        &quot;type&quot; : &quot;MAP&quot;
+      }, {
+        &quot;assetId&quot; : &quot;30939543&quot;,
+        &quot;assetUri&quot; : &quot;/news/world-europe-30939543&quot;,
+        &quot;byline&quot; : {
+          &quot;name&quot; : &quot;By Richard Galpin&quot;,
+          &quot;persons&quot; : [ {
+            &quot;name&quot; : &quot;Richard Galpin&quot;,
+            &quot;function&quot; : &quot;BBC News, near Utoeya&quot;,
+            &quot;thumbnail&quot; : &quot;http://news.bbcimg.co.uk/media/images/66450000/jpg/_66450019_66450018.jpg&quot;
+          } ],
+          &quot;title&quot; : &quot;BBC News Correspondent&quot;
+        },
+        &quot;firstCreated&quot; : &quot;2015-01-23T01:09:41+00:00&quot;,
+        &quot;headline&quot; : &quot;Refugee&#39;s &#39;Moscow agent&#39; claims&quot;,
+        &quot;language&quot; : &quot;en-gb&quot;,
+        &quot;lastUpdated&quot; : &quot;2015-01-23T01:09:41+00:00&quot;,
+        &quot;media&quot; : {
+          &quot;images&quot; : {
+            &quot;index&quot; : {
+              &quot;80452788&quot; : {
+                &quot;height&quot; : 351,
+                &quot;width&quot; : 624,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80452000/jpg/_80452788_strasbourg.jpg&quot;,
+                &quot;caption&quot; : &quot;The French city of Strasbourg, where the abduction and torture allegedly took place&quot;,
+                &quot;altText&quot; : &quot;Picture of the Strasbourg&#39;s cathedral taken on June 29, 2009&quot;,
+                &quot;copyrightHolder&quot; : &quot;AFP&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            },
+            &quot;index-thumbnail&quot; : {
+              &quot;80454584&quot; : {
+                &quot;height&quot; : 180,
+                &quot;width&quot; : 320,
+                &quot;href&quot; : &quot;http://news.bbcimg.co.uk/media/images/80454000/jpg/_80454584_img_0645.jpg&quot;,
+                &quot;altText&quot; : &quot;Said Emin Ibragimov&quot;,
+                &quot;copyrightHolder&quot; : &quot;BBC&quot;,
+                &quot;originCode&quot; : &quot;mcs&quot;
+              }
+            }
+          }
+        },
+        &quot;options&quot; : {
+          &quot;isBreakingNews&quot; : false
+        },
+        &quot;overtypedHeadline&quot; : &quot;&#39;Nowhere to run&#39;&quot;,
+        &quot;overtypedSummary&quot; : &quot;Chechen dissident says Moscow agents tortured him&quot;,
+        &quot;section&quot; : {
+          &quot;name&quot; : &quot;Europe&quot;,
+          &quot;id&quot; : &quot;99123&quot;,
+          &quot;uri&quot; : &quot;/news/world/europe&quot;,
+          &quot;urlIdentifier&quot; : &quot;/news/world/europe&quot;
+        },
+        &quot;summary&quot; : &quot;A Chechen refugee in France says he was tortured by agents he believes were sent by Moscow.&quot;,
+        &quot;type&quot; : &quot;STY&quot;
+      } ],
+      &quot;semanticGroupName&quot; : &quot;Features&quot;
+    } ],
+    &quot;options&quot; : {
+      &quot;allowAdvertising&quot; : true
+    },
+    &quot;language&quot; : &quot;en-gb&quot;,
+    &quot;id&quot; : &quot;http://www.bbc.co.uk/asset/b5c53243-7126-e059-e040-850a02846523/mobile/domestic&quot;,
+    &quot;assetUri&quot; : &quot;/news/world&quot;,
+    &quot;platform&quot; : &quot;mobile&quot;,
+    &quot;audience&quot; : &quot;domestic&quot;,
+    &quot;assetId&quot; : &quot;10059378&quot;,
+    &quot;section&quot; : {
+      &quot;name&quot; : &quot;World&quot;,
+      &quot;id&quot; : &quot;99115&quot;,
+      &quot;uri&quot; : &quot;/news/world&quot;,
+      &quot;urlIdentifier&quot; : &quot;/news/world&quot;
+    },
+    &quot;site&quot; : {
+      &quot;name&quot; : &quot;BBC News&quot;,
+      &quot;code&quot; : &quot;news-v6&quot;,
+      &quot;urlIdentifier&quot; : &quot;/news&quot;,
+      &quot;frontPageUri&quot; : &quot;/news/front_page&quot;
+    },
+    &quot;primaryConceptId&quot; : &quot;http://www.bbc.co.uk/things/9b85dc4b-a14c-4e13-b45b-977d68301562#id&quot;,
+    &quot;workerCallingCard&quot; : &quot;NOLAPPS571-6003&quot;,
+    &quot;iStatsCounterName&quot; : &quot;news.world.page&quot;
+  } ]
+}
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
