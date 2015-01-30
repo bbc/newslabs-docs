@@ -103,8 +103,12 @@ http://data.bbc.co.uk/content/asset/news/world-middle-east-30945324?api_key={{ap
 The Content Store also includes content in languages other than English, for example:
 
 ````
-http://data.bbc.co.uk/content/asset/hausa/news/2015/01/150130_au_boko_haram
+http://data.bbc.co.uk/content/asset/hausa/news/2015/01/150130_au_boko_haram?api_key={{apikey}}
 ````
+
+## Examples
+
+Below are just some examples of what the responses from the Content Store API look like.
 
 ### Example Index Request JSON Response
 
