@@ -51,7 +51,7 @@
        <h1>
           BBC News Labs <strong> Documentation</strong>
        </h1>
-       <p><small>Last updated: <strong>2015-01-29 16:53:31</strong></small></p>
+       <p><small>Last updated: <strong>2015-01-30 12:51:26</strong></small></p>
       </div>
     </div>
     <div class="container">
@@ -59,14 +59,34 @@
         <div class="col-md-12">
           <h1 id="bbc-connected-studio-world-service-nairobi">BBC Connected Studio: World Service - Nairobi</h1>
 <p>The following information is intended for attendees of the <a href="http://www.bbc.co.uk/corporate2/connectedstudio/events">BBC Connected Studio: World Service</a> event in Nairobi.</p>
+<h3 id="categories-for-this-event">Categories for this event</h3>
+<p>There are 5 categories for entries for this event:</p>
+<ul>
+<li><h4 id="best-hack-using-chatapp-social-media">Best hack using ChatApp/Social Media</h4>
+</li>
+<li><h4 id="best-hack-using-sms-and-or-ussd">Best hack using SMS and/or USSD</h4>
+</li>
+<li><h4 id="most-cost-effective-solution-offline-functionality">Most cost effective solution/offline functionality</h4>
+</li>
+<li><h4 id="best-for-community-building-sharing-interaction">Best for community building/sharing/interaction</h4>
+</li>
+<li><h4 id="surprise-us-">Surprise us!</h4>
+</li>
+</ul>
 <h2 id="bbc-content-apis">BBC Content APIs</h2>
+<h3 id="api-key">API Key</h3>
+<p>To use the BBC APIs you will need an API Key, which we have created for this event:</p>
 <blockquote>
-<p><strong>Please note:</strong> You will need an API key to be able to make calls to these APIs.</p>
+<p>   <code>uzRM4XVTTDeAwQ8CJJDQVfqOfeNtbb0h</code></p>
 </blockquote>
+<p>You should replace the text <code>{{apikey}}</code> in the examples with this key.</p>
 <h3 id="-juicer-api-documentation-juicer-html-"><a href="Juicer.html">Juicer API Documentation</a></h3>
-<p>You can check out the documentation for the BBC News Labs <a href="Juicer.html">Juicer REST API</a> to started quickly with BBC content. It will allow you to search </p>
+<p><em>Please note that content from the Juicer is suitable for use only for Research and Development purposes.</em></p>
+<p>The Juicer is tool for automatic entity extraction and artchiving from BBC News Labs.</p>
+<p>You can use it fetch the latest news as well running queries for news coverage from the BBC and other news organisations.</p>
+<p><a href="Juicer.html">Check out the documentation for the Juicer API</a> to get started.</p>
 <h4 id="regional-sources">Regional Sources</h4>
-<p>In addition to being able to specify the &#39;NewsWeb&#39; as the &#39;Product&#39; to get BBC News content, you can also search from other publishers from the Juicer.</p>
+<p>In addition to being able to specify the &#39;NewsWeb&#39; as the &#39;Product&#39; to get BBC News content, you can also search content from other sources.</p>
 <p>For example, you can pass any of these options to the &#39;product[]&#39; parameter:</p>
 <ul>
 <li>KenyaBroadcastingCorporation</li>
@@ -75,11 +95,21 @@
 <li>DailyNewsEgypt</li>
 <li>TechMoran </li>
 </ul>
-<h5 id="example-of-searching-content-from-multiple-other-publications">Example of searching content from multiple other publications</h5>
+<h5 id="example">Example</h5>
 <pre><code>http://data.bbc.co.uk/bbcrd-juicer/articles.json?product[]=DailyNewsEgypt&amp;product[]=KenyaBroadcastingCorporation&amp;product[]=TechMoran&amp;product[]=NigerDeltaStandard&amp;product[]=NationalElectionCommissionSudan&amp;content_format[]=TextualFormat&amp;recent_first=yes&amp;apikey={{apikey}}
-</code></pre><h3 id="-bbc-content-store-api-candy-html-"><a href="CANDY.html">BBC Content Store API</a></h3>
-<p>The BBC Content Store API (aka CANDY) provides an interface to BBC News content.</p>
+</code></pre><h3 id="-content-store-api-candy-html-"><a href="CANDY.html">Content Store API</a></h3>
+<p>The BBC Content Store API (aka CANDY) provides an interface to BBC News content with structured metadata.</p>
 <p>CANDY stands for &quot;CPS and Dynamic&quot;, it integrates the Content Production System (CPS) with the Dynamic Semantic Publishing system (DSP).</p>
+<p>The Content Store API is a production platform, used internally by the BBC.</p>
+<p><a href="CANDY.html">Check out the documentation for the Content Store API</a> to get started.</p>
+<h2 id="sample-video-audio-content">Sample Video &amp; Audio Content</h2>
+<p>You can get images by using the Juicer and Content APIs (which return images associated with articles).</p>
+<p>In addtion, we&#39;ve provided some sample video, shortform video (intended for mobile) and audio content for use during the event.</p>
+<ul>
+<li>Sample video <a href="http://media.bbcnewslabs.co.uk/videos/">http://media.bbcnewslabs.co.uk/videos/</a></li>
+<li>Sample short form video <a href="http://media.bbcnewslabs.co.uk/shorts/">http://media.bbcnewslabs.co.uk/shorts/</a></li>
+<li>Sample audio <a href="http://media.bbcnewslabs.co.uk/audio/">http://media.bbcnewslabs.co.uk/audio/</a></li>
+</ul>
 <h2 id="bbc-africa-on-social-media">BBC Africa on Social Media</h2>
 <ul>
 <li>Facebook, &quot;BBC Africa News&quot; <a href="https://www.facebook.com/bbcafrica">https://www.facebook.com/bbcafrica</a></li>
@@ -104,14 +134,6 @@
 <ul>
 <li><a href="http://www.bbc.co.uk/learningenglish/">http://www.bbc.co.uk/learningenglish/</a> </li>
 <li><a href="https://www.youtube.com/user/bbclearningenglish">https://www.youtube.com/user/bbclearningenglish</a> </li>
-</ul>
-<h2 id="sample-bbc-news-video-audio">Sample BBC News Video &amp; Audio</h2>
-<p>You can get images by using the BBC Juicer and Content APIs (which return images associated with articles).</p>
-<p>Inaddtion, we&#39;ve provided some sample video, shortform video (intended for mobile) and audio content for use during the event.</p>
-<ul>
-<li>Sample video <a href="http://media.bbcnewslabs.co.uk/videos/">http://media.bbcnewslabs.co.uk/videos/</a></li>
-<li>Sample short form video <a href="http://media.bbcnewslabs.co.uk/shorts/">http://media.bbcnewslabs.co.uk/shorts/</a></li>
-<li>Sample audio <a href="http://media.bbcnewslabs.co.uk/audio/">http://media.bbcnewslabs.co.uk/audio/</a></li>
 </ul>
 <h2 id="external-links">External Links</h2>
 <ul>

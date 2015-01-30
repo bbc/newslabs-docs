@@ -1,10 +1,12 @@
-#  BBC Content Store API
+#  Content Store API (aka CANDY)
 
 ## About the Content Store API
 
-The BBC Content Store API (aka CANDY) provides an interface to BBC News content.
+The Content Store API (aka CANDY) provides an interface to BBC News content.
 
 CANDY stands for "CPS and Dynamic", it integrates the Content Production System (CPS) with the Dynamic Semantic Publishing system (DSP).
+
+The Content Store API is a production platform, used internally by the BBC.
 
 ## REST API Endpoints
 

@@ -2,17 +2,39 @@
 
 The following information is intended for attendees of the [BBC Connected Studio: World Service](http://www.bbc.co.uk/corporate2/connectedstudio/events) event in Nairobi.
 
+### Categories for this event
+
+There are 5 categories for entries for this event:
+
+* ####Best hack using ChatApp/Social Media
+* ####Best hack using SMS and/or USSD
+* ####Most cost effective solution/offline functionality
+* ####Best for community building/sharing/interaction
+* ####Surprise us!
+
 ## BBC Content APIs
 
-> **Please note:** You will need an API key to be able to make calls to these APIs.
+### API Key
+
+To use the BBC APIs you will need an API Key, which we have created for this event:
+
+>    `uzRM4XVTTDeAwQ8CJJDQVfqOfeNtbb0h`
+
+You should replace the text `{{apikey}}` in the examples with this key.
 
 ### [Juicer API Documentation](Juicer.html)
 
-You can check out the documentation for the BBC News Labs [Juicer REST API](Juicer.html) to started quickly with BBC content. It will allow you to search 
+*Please note that content from the Juicer is suitable for use only for Research and Development purposes.*
+
+The Juicer is tool for automatic entity extraction and artchiving from BBC News Labs.
+
+You can use it fetch the latest news as well running queries for news coverage from the BBC and other news organisations.
+
+[Check out the documentation for the Juicer API](Juicer.html) to get started.
 
 #### Regional Sources
 
-In addition to being able to specify the 'NewsWeb' as the 'Product' to get BBC News content, you can also search from other publishers from the Juicer.
+In addition to being able to specify the 'NewsWeb' as the 'Product' to get BBC News content, you can also search content from other sources.
 
 For example, you can pass any of these options to the 'product[]' parameter:
 
@@ -22,17 +44,31 @@ For example, you can pass any of these options to the 'product[]' parameter:
 * DailyNewsEgypt
 * TechMoran 
 
-##### Example of searching content from multiple other publications
+##### Example
 
 ```
 http://data.bbc.co.uk/bbcrd-juicer/articles.json?product[]=DailyNewsEgypt&product[]=KenyaBroadcastingCorporation&product[]=TechMoran&product[]=NigerDeltaStandard&product[]=NationalElectionCommissionSudan&content_format[]=TextualFormat&recent_first=yes&apikey={{apikey}}
 ```
 
-### [BBC Content Store API](CANDY.html) 
+### [Content Store API](CANDY.html) 
 
-The BBC Content Store API (aka CANDY) provides an interface to BBC News content.
+The BBC Content Store API (aka CANDY) provides an interface to BBC News content with structured metadata.
 
 CANDY stands for "CPS and Dynamic", it integrates the Content Production System (CPS) with the Dynamic Semantic Publishing system (DSP).
+
+The Content Store API is a production platform, used internally by the BBC.
+
+[Check out the documentation for the Content Store API](CANDY.html) to get started.
+
+## Sample Video & Audio Content
+
+You can get images by using the Juicer and Content APIs (which return images associated with articles).
+
+In addtion, we've provided some sample video, shortform video (intended for mobile) and audio content for use during the event.
+
+* Sample video http://media.bbcnewslabs.co.uk/videos/
+* Sample short form video http://media.bbcnewslabs.co.uk/shorts/
+* Sample audio http://media.bbcnewslabs.co.uk/audio/
 
 ## BBC Africa on Social Media
 
@@ -58,16 +94,6 @@ CANDY stands for "CPS and Dynamic", it integrates the Content Production System 
 
 * http://www.bbc.co.uk/learningenglish/ 
 * https://www.youtube.com/user/bbclearningenglish 
-
-## Sample BBC News Video & Audio
-
-You can get images by using the BBC Juicer and Content APIs (which return images associated with articles).
-
-Inaddtion, we've provided some sample video, shortform video (intended for mobile) and audio content for use during the event.
-
-* Sample video http://media.bbcnewslabs.co.uk/videos/
-* Sample short form video http://media.bbcnewslabs.co.uk/shorts/
-* Sample audio http://media.bbcnewslabs.co.uk/audio/
 
 ## External Links
 

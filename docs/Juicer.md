@@ -2,7 +2,7 @@
 
 ## About the Juicer
 
-The BBC Labs News Juicer is the software responsible for fetching content from the web – articles, videos and images from the BBC, other news sites, Twitter, etc. – parsing content and tagging it with people, organisations and places that correspond to DBpedia entries.
+The BBC Labs News Juicer is the software responsible for fetching content from the web - articles, videos and images from the BBC and other sources - parsing the content and tagging it with people, organisations and places that correspond to DBpedia entries.
 
 The public Juicer API allows you to specify start and end dates for articles, select which sources or concepts you wish to search for and to free text search in real time, as articles, tweets and other content is ingested.
 
@@ -14,6 +14,18 @@ The public Juicer API allows you to specify start and end dates for articles, se
 * There is also a [Juicer client GEM for Ruby](https://rubygems.org/gems/juicer-client)
 
 If you are not using Ruby or Node.JS (or just want to use the REST API directly) see the documentation for REST API endpoints below.
+
+## Juicer Postman Collection
+
+If you install the free [Postman REST Client](https://www.getpostman.com) you can import the Juicer API into using this URL:
+
+**https://www.getpostman.com/collections/051237f056d1124d75b0**
+
+This allows you to easily try out the API and explore how it works without writing any code.
+
+You will need to configure an "Environment" within Postman to be able to make calls:
+
+<img src=" ./img/juicer-postman.png" height="300" />
 
 ## REST API Endpoints
 

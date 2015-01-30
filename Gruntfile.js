@@ -35,14 +35,29 @@ module.exports = function(grunt) {
             src: 'tmp/docs',
             dest: '_www'
           }
+      },
+      copy: {
+          images: {
+            cwd: 'docs/img',
+            src: '**/*',
+            dest: 'html/img/',
+            expand: true
+          },
+          webimages: {
+            cwd: 'docs/img',
+            src: '**/*',
+            dest: '_www/img/',
+            expand: true
+          }
       }
     });
 
     grunt.loadNpmTasks('grunt-md2html');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-rename');
     
-    grunt.registerTask('default', ['clean:release', 'clean:build', 'md2html', 'rename:buildindex', 'rename:build', 'clean:build']);
-    grunt.registerTask('www', ['clean:build', 'md2html', 'rename:buildindex', 'clean:releaseweb', 'rename:buildweb', 'clean:build']);
+    grunt.registerTask('default', ['clean:release', 'clean:build', 'md2html', 'rename:buildindex', 'rename:build', 'copy:images', 'clean:build']);
+    grunt.registerTask('www', ['clean:build', 'md2html', 'rename:buildindex', 'clean:releaseweb', 'rename:buildweb', 'copy:webimages', 'clean:build']);
 };
