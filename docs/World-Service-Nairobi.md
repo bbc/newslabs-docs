@@ -34,6 +34,8 @@ You can use it fetch the latest news as well running queries for news coverage f
 
 #### Regional Sources
 
+If you specify 'NewsWeb' as the 'Product' you will get BBC News content in English and a range of other languages, including Swahili.
+
 In addition to being able to specify the 'NewsWeb' as the 'Product' to get BBC News content, you can also search content from other sources.
 
 For example, you can pass any of these options to the 'product[]' parameter:
@@ -58,7 +60,7 @@ CANDY stands for "CPS and Dynamic", it integrates the Content Production System 
 
 The Content Store API is a production platform, used internally by the BBC on the BBC website and in BBC mobile apps.
 
-In addition to English, the Content Store includes articles written in a range of languages.
+In addition to English, the Content Store includes articles written in several languages.
 
 [Check out the documentation for the Content Store API](CANDY.html) to get started.
 
@@ -92,18 +94,33 @@ In addtion, we've provided some sample video, shortform video (intended for mobi
 * News Summaries http://www.bbc.co.uk/programmes/p002vsn1/episodes/player 
 * Podcast - AfricaToday http://www.bbc.co.uk/podcasts/series/africa 
 
-### Learning English Resources
+## BBC Learning English resources
 
 * http://www.bbc.co.uk/learningenglish/ 
 * https://www.youtube.com/user/bbclearningenglish 
 
-## External Links
+## Other resources
 
-* Vumi http://vumi.org
-* Mxit http://get.mxit.com
-* Wechat http://www.wechat.com
-* Wechat builder http://www.wechatbuilder.com
-* Mara mesenger https://messenger.mara.com
-* RapidPro https://www.rapidpro.io
-* FrontlineSMS http://www.frontlinesms.com
-* BRCK http://shop.brck.com
+You can find some links to platforms and services that might come in useful below.
+
+These services are not endorsed by the BBC and you do not need to use them, you are free to use other platforms, services and frameworks.
+
+#### Chat clients and content platforms
+
+* [WeChat](http://www.wechat.com)
+* [WeChat Builder](http://www.wechatbuilder.com)
+* [Mxit](http://get.mxit.com) (see also their [Developer Documentation](https://dev.mxit.com/docs))
+* [Vumi](http://vumi.org)
+* [Mara mesenger](https://messenger.mara.com)
+
+#### SMS platforms
+
+* [FrontlineSMS](http://www.frontlinesms.com)
+* [RapidPro](https://www.rapidpro.io)
+
+#### Other
+
+* [BRCK](http://brck.com)
+* [BBC News Labs Bootstrap](http://bootstrap.bbcnewslabs.co.uk)
+* [BBC GEL](http://www.bbc.co.uk/gel)
+  
