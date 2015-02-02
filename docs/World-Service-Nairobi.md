@@ -105,13 +105,13 @@ You can find some links to platforms and services that might come in useful belo
 
 These services are not endorsed by the BBC and you do not need to use them, you are free to use other platforms, services and frameworks.
 
-#### Chat clients and content platforms
+#### Messaging clients and content platforms
 
 * [WeChat](http://www.wechat.com)
 * [WeChat Builder](http://www.wechatbuilder.com)
 * [Mxit](http://get.mxit.com) (see also their [Developer Documentation](https://dev.mxit.com/docs))
 * [Vumi](http://vumi.org)
-* [Mara mesenger](https://messenger.mara.com)
+* [Mara messenger](https://messenger.mara.com)
 
 #### SMS platforms
 
