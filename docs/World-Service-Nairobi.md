@@ -118,11 +118,11 @@ These services are not endorsed by the BBC and you do not need to use them, you 
 * [FrontlineSMS](http://www.frontlinesms.com)
 * [RapidPro](https://www.rapidpro.io)
 
-#### Other
+#### Other resources
 
-* [BRCK](http://brck.com)
 * [BBC News Labs Bootstrap](http://bootstrap.bbcnewslabs.co.uk)
 * [BBC GEL](http://www.bbc.co.uk/gel)
 * [JSONProxy](https://jsonp.nodejitsu.com) (You may find this useful to use for prototyping with the BBC Content API)
-
-  
+* [Kenya Open Data](https://www.opendata.go.ke)
+* [BRCK](http://brck.com)
+ 
