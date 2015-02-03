@@ -18,7 +18,7 @@ There are 5 categories for entries for this event:
 
 To use the BBC APIs you will need an API Key, which we have created for this event:
 
->    `uzRM4XVTTDeAwQ8CJJDQVfqOfeNtbb0h`
+>    `o4t8FNmk02fngjizZPAzZNPt7oy2Adup`
 
 You should replace the text `{{apikey}}` in the examples with this key.
 
