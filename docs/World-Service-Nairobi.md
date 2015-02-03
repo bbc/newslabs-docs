@@ -34,7 +34,7 @@ You can use it fetch the latest news as well running queries for news coverage f
 
 #### Regional Sources
 
-If you specify 'NewsWeb' as the 'Product' you will get BBC News content in English and a range of other languages, including Swahili.
+If you specify 'NewsWeb' as the 'Product' you will get BBC News content in English and a range of other languages.
 
 In addition to being able to specify the 'NewsWeb' as the 'Product' to get BBC News content, you can also search content from other sources.
 
