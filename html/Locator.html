@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+  <head>
+    <title>BBC News Labs Documentation</title>
+    <meta name="viewport" content="width=device-width"/>
+    <link rel="stylesheet" href="http://bootstrap.bbcnewslabs.co.uk/dist/css/bootstrap.min.css"/>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <style>
+      body { 
+         overflow-x: hidden;
+      }
+      h3 {
+        padding-bottom: 5px;
+        border-bottom: 4px solid #eaeaea;
+      }
+      @media (max-width: 768px) {
+        .jumbotron h1 {
+          font-size: 32px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar navbar-default navbar-static-top no-margin">
+      <div class="container">        
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".header-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"><i class="fa fa-home"></i> Documentation Home</a>
+        </div>
+        <div class="collapse navbar-collapse header-collapse">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-lg fa-fw fa-file-text"></i> Documentation <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="Juicer.html">Juicer API Documentation</a></li>
+                <li><a href="CANDY.html">BBC Content Store API</a></li>
+              </ul>
+            </li>
+          </ul>
+          <p class="navbar-btn navbar-right"><a href="https://github.com/BBC-News-Labs/docs" target="_blank" class="btn btn-primary navbar-link"><i class="fa fa-lg fa-github"></i> GitHub</a></p>
+          <p class="navbar-btn navbar-right" style="margin-right: 5px;"><a href="http://twitter.com/BBC_News_Labs" target="_blank" class="btn btn-primary navbar-link"><i class="fa fa-lg fa-twitter"></i> @BBC_News_Labs</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="jumbotron clearfix">
+      <div class="container">
+       <h1>
+          BBC News Labs <strong> Documentation</strong>
+       </h1>
+       <p><small>Last updated: <strong>2015-03-05 17:14:54</strong></small></p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 id="locator-api-documentation">Locator API Documentation</h1>
+<h2 id="about-locator">About Locator</h2>
+<p>The Locator service is a HTTP API that allows you to discover and ask geospatial questions about places and other entities such as postcodes, news regions, councils etc.</p>
+<h3 id="core-concepts">Core Concepts</h3>
+<h4 id="locations">Locations</h4>
+<p>A location entity is either a place or a post code for which we provide key properties such as a name, location (lat/lon point), country, timezone etc. Our location data is a subset of the Geonames gazetteer. We use the centre point of a postcode to determine it&#39;s location.</p>
+<p>We provide mechanisms by which you may discover locations eg search, auto-complete, reverse-geocode (nearest location to a lat/lon).</p>
+<h4 id="details">Details</h4>
+<p>We use the term &#39;details&#39; to describe other data sets eg news regions, weather forecast locations, administrative geography etc. We often hold such data for our customers eg weather station locations for /weather.</p>
+<p>We can answer geospatial queries that relate a location entity to a detail dataset eg &quot;which BBC news region is Cardiff within&quot;.</p>
+<h2 id="locator-postman-collection">Locator Postman Collection</h2>
+<p>If you install the free <a href="https://www.getpostman.com">Postman REST Client</a> you can import the Juicer API into using this URL:</p>
+<p><strong><a href="https://www.getpostman.com/collections/8c9e9a7d1f142c477181">https://www.getpostman.com/collections/8c9e9a7d1f142c477181</a></strong></p>
+<p>This allows you to easily try out the API and explore how it works without writing any code.</p>
+<p>You will need to configure an &quot;Environment&quot; within Postman to be able to make calls. You will need to set a host parameter with value <a href="http://data.bbc.co.uk/locservices-locator">http://data.bbc.co.uk/locservices-locator</a> and an apikey.</p>
+<p><img src=" ./img/locator-postman.png" height="300" /></p>
+<h2 id="rest-api-endpoints">REST API Endpoints</h2>
+<h3 id="1-locations">1. Locations</h3>
+<p>Used to discover locations eg placename search, reverse-geocode.</p>
+<h4 id="url">URL</h4>
+<pre><code>http://data.bbc.co.uk/locservices-locator/locations
+</code></pre><h5 id="examples">Examples</h5>
+<h6 id="search-for-a-placename">Search for a placename</h6>
+<p><a href="http://data.bbc.co.uk/locservices-locator/locations?apikey={{apikey}}&amp;vv=2&amp;format=json&amp;order=importance&amp;filter=domestic&amp;search=cardiff">http://data.bbc.co.uk/locservices-locator/locations?apikey={{apikey}}&amp;vv=2&amp;format=json&amp;order=importance&amp;filter=domestic&amp;search=cardiff</a></p>
+<h6 id="auto-complete-a-partial-placename">Auto-complete a partial placename</h6>
+<p><a href="http://data.bbc.co.uk/locservices-locator/locations?apikey={{apikey}}&amp;vv=2&amp;format=json&amp;order=importance&amp;filter=domestic&amp;auto=true&amp;search=car">http://data.bbc.co.uk/locservices-locator/locations?apikey={{apikey}}&amp;vv=2&amp;format=json&amp;order=importance&amp;filter=domestic&amp;auto=true&amp;search=car</a></p>
+<h6 id="search-with-co-ordinated-reverse-geocode-">Search with co-ordinated (reverse-geocode)</h6>
+<p><a href="http://data.bbc.co.uk/locservices-locator/locations?apikey={{apikey}}&amp;vv=2&amp;format=json&amp;order=importance&amp;filter=domestic&amp;longitude=-3.18&amp;latitude=51.48">http://data.bbc.co.uk/locservices-locator/locations?apikey={{apikey}}&amp;vv=2&amp;format=json&amp;order=importance&amp;filter=domestic&amp;longitude=-3.18&amp;latitude=51.48</a></p>
+<h4 id="options">Options</h4>
+<p>You can filter and sort the articles returned from the <code>articles</code> endpoint. Parameters can be provided in the query string.</p>
+<p>Available parameters:</p>
+<ul>
+<li><code>search</code>: a search term eg &#39;cardiff&#39;</li>
+<li><code>auto</code>: when set to &#39;true&#39; will return auto-complete results for the search value</li>
+<li><code>longitude</code>: longitude value for reverse-geocode request</li>
+<li><code>latitude</code>: latitude value for reverse-geocode request</li>
+<li><code>format</code>: reponse format of either &#39;xml&#39; (default) or &#39;json&#39;</li>
+<li><code>order</code>: sort the results by one of &#39;term&#39; (default) or &#39;importance&#39;</li>
+<li><code>filter</code>: a filter combines both place-types and countries. May be one of of &#39;domestic&#39; (countries set to &#39;GB, GG, JE, IM&#39;, placetype set to &#39;settlement, airport&#39;) or &#39;international&#39; (countries set to &#39;GB, GG, JE, IM&#39;, placetype set to &#39;settlement, airport, country&#39;)</li>
+<li><code>place-types</code>: filter by placetype eg &#39;settlement&#39;, &#39;airport&#39;, &#39;country&#39;, &#39;other&#39;. You can specify multiple values eg &#39;airport,settlement&#39;</li>
+<li><code>countries</code>: filter by country eg &#39;GB&#39;, &#39;FR&#39;. You can specify multiple values eg &#39;GB,GG,JE,IM&#39;</li>
+<li><code>start</code>: specify a result start offset (default 0)</li>
+<li><code>rows</code>: specify how many results to return (default 10)</li>
+<li><code>vv</code>: view version. use &#39;2&#39; for a friendlier result format</li>
+</ul>
+<h3 id="2-location-details">2. Location Details</h3>
+<p>Allows you to ask geospatial queries about a location.</p>
+<h4 id="url">URL</h4>
+<pre><code>http://data.bbc.co.uk/locservices-locator/locations/&lt;location Id&gt;/details/&lt;detailTypes&gt;?apikey={{apikey}}&amp;vv=2&amp;format=json&amp;op=&lt;operator&gt;
+</code></pre><h4 id="examples">Examples</h4>
+<h6 id="nearest-rail-stations-for-a-location">Nearest Rail Stations for a location</h6>
+<p><a href="http://data.bbc.co.uk/locservices-locator/locations/CF5 2YQ/details/railstation?apikey={{apikey}}&amp;vv=2&amp;format=json">http://data.bbc.co.uk/locservices-locator/locations/CF5 2YQ/details/railstation?apikey={{apikey}}&amp;vv=2&amp;format=json</a></p>
+<h6 id="bbc-tv-radio-service-s-for-a-location">BBC Tv &amp; Radio Service(s) for a location</h6>
+<p><a href="http://data.bbc.co.uk/locservices-locator/locations/2636432/details/tv,radio?apikey={{apikey}}&amp;vv=2&amp;format=json&amp;operation=intersect">http://data.bbc.co.uk/locservices-locator/locations/2636432/details/tv,radio?apikey={{apikey}}&amp;vv=2&amp;format=json&amp;operation=intersect</a></p>
+<h6 id="bbc-news-organisation-s-for-a-location">BBC News Organisation(s) for a location</h6>
+<p><a href="http://data.bbc.co.uk/locservices-locator/locations/CF5 2YQ/details/news-organisation?apikey={{apikey}}&amp;vv=2&amp;format=json&amp;operation=intersect">http://data.bbc.co.uk/locservices-locator/locations/CF5 2YQ/details/news-organisation?apikey={{apikey}}&amp;vv=2&amp;format=json&amp;operation=intersect</a></p>
+<p>Available parameters:</p>
+<ul>
+<li><code>operation</code>: geospatial operation. one of &#39;nearest&#39; (default) or &#39;intersect&#39;</li>
+<li><code>start</code>: specify a result start offset (default 0)</li>
+<li><code>rows</code>: specify how many results to return (default 10)</li>
+<li><code>vv</code>: view version. use &#39;2&#39; for a friendlier result format</li>
+</ul>
+
+          <hr/>
+          <h2><i class="fa fa-comments"></i> Questions and Feedback</h2>
+          <p>
+            <i>All comments are moderated for approval.</i>
+          </p>
+          <div id="disqus_thread"></div>
+          <script type="text/javascript">
+              /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+              var disqus_shortname = 'bbcnewslabs'; // required: replace example with your forum shortname
+
+              /* * * DON'T EDIT BELOW THIS LINE * * */
+              (function() {
+                  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+              })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
