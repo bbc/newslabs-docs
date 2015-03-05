@@ -25,7 +25,7 @@ This allows you to easily try out the API and explore how it works without writi
 
 You will need to configure an "Environment" within Postman to be able to make calls:
 
-<img src=" ./img/juicer-postman.png" height="300" />
+<img src=" ./img/juicer-postman.png" class="img-responsive" style="max-height: 300px !important;" />
 
 ## REST API Endpoints
 

@@ -87,7 +87,7 @@ In addtion, we've provided some sample video, shortform video (intended for mobi
 
      Alternatively we email numbers of the people/teams who want to access to Trushar who can add them. Requests through WhatsApp may be delayed. Subscribe by searching for the ID **BBC News** or by scanning this QR code:
      <br>
-     ![QR Code ](http://qr-official.line.me/sid/L/bbcnews.png)
+     <img src="http://qr-official.line.me/sid/L/bbcnews.png" alt="QR code" class="img-responsive" style="max-height: 300px !important;" />
 
 ## BBC Programmes
 
