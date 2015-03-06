@@ -48,7 +48,7 @@ If you install the free [Postman REST Client](https://www.getpostman.com) you ca
 
 This allows you to easily try out the API and explore how it works without writing any code.
 
-You will need to configure an "Environment" within Postman to be able to make calls. You will need to set a host parameter with value http://data.bbc.co.uk/travel-incidents and an apikey.
+<!--#You will need to configure an "Environment" within Postman to be able to make calls. You will need to set a host parameter with value http://travel-newshack-api.cloud.bbc.co.uk/ and an apikey.-->
 
 <img src=" ./img/travel-postman.png" height="300" />
 
@@ -61,42 +61,42 @@ Used to discover incidents for a [location](./Locator.html#locations)
 #### URL
 
 ```
-http://data.bbc.co.uk/travel-incidents/location/:location_id/incidents
+http://travel-newshack-api.cloud.bbc.co.uk/location/:location_id/incidents
 ```
 
 ##### Examples
 
 ###### Search for incidents near a location
 
-http://data.bbc.co.uk/travel-incidents/location/2636432/incidents?apikey={{apikey}}
+http://travel-newshack-api.cloud.bbc.co.uk/location/2636432/incidents
 
 ###### Search for incidents near a post code
 
-http://data.bbc.co.uk/travel-incidents/location/CF24/incidents?apikey={{apikey}}
+http://travel-newshack-api.cloud.bbc.co.uk/location/CF24/incidents
 
 #### Parameters
 
-The location is passed to the Travel API in the URL.  In the sample URL we've denoted named this `location_id`.  The location_id parameter can either be a Geoname ID or a post code.  The Geoname ID can be obtained from the [Locator API](./Locator.html).
+The location is passed to the Travel API in the URL.  In the sample URL we've denoted named this `location_id`.  The location_id parameter can either be a Geoname ID or a post code.  The Geoname ID can be obtained from the [Locator API](./Locator.html).  We've compiled a [list of sample list of locations](./Travel/sample-locations.html) within the UK but locaations can be dynamically retrieved from the Locator API.
 
 ### 2. BBC News region
 
-Allows you to ask for incidents occurring within a BBC News region
+Allows you to ask for incidents occurring within a BBC News region.
 
 #### URL
 
 ```
-http://data.bbc.co.uk/travel-incidents/news/:news_region
+http://travel-newshack-api.cloud.bbc.co.uk/news/:news_region
 ```
 
 #### Examples
 
 ###### Search for incidents within a BBC News region
 
-http://data.bbc.co.uk/travel-incidents/news/northeastwales?apikey={{apikey}}
+http://travel-newshack-api.cloud.bbc.co.uk/news/northeastwales
 
 #### Parameters
 
-The BBC News region is passed to the Travel API in the URL.  In the sample URL we've named this `news_region`.
+The BBC News region is passed to the Travel API in the URL.  In the sample URL we've named this `news_region`.  We've made available a [list of  BBC News regions](./Travel/bbc-news-regions.html) in the Travel API.  BBC News regions are also available from the [Locator API](./Locator.html).
 
 ### 3. Public Transport Operators
 
@@ -105,15 +105,14 @@ Allows you to ask for incidents occurring for a public transport operator
 #### URL
 
 ```
-http://data.bbc.co.uk/travel-incidents/tags/operator/:operator/incidents
+http://travel-newshack-api.cloud.bbc.co.uk/tags/operator/:operator/incidents
 ```
 
 #### Examples
 
 ###### Search for incidents within a BBC News region
 
-http://data.bbc.co.uk/travel-incidents/tags/operator/crosscountry/incidents?apikey={{apikey}}
-
+http://travel-newshack-api.cloud.bbc.co.uk/tags/operator/crosscountry/incidents
 #### Parameters
 
 The public transport operator is passed to the Travel API in the URL.  In the sample URL we've named this `operator`, we've made available the [full list of available operators](./Travel/public-transport-operators.html).
