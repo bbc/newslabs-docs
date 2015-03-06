@@ -98,7 +98,7 @@ http://travel-newshack-api.cloud.bbc.co.uk/news/northeastwales
 
 The BBC News region is passed to the Travel API in the URL.  In the sample URL we've named this `news_region`.  We've made available a [list of  BBC News regions](./Travel/bbc-news-regions.html) in the Travel API.  BBC News regions are also available from the [Locator API](./Locator.html).
 
-### 3. Public Transport Operators
+### 3. Public Transport Operator
 
 Allows you to ask for incidents occurring for a public transport operator
 
