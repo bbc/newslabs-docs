@@ -4,13 +4,7 @@
 We are inviting Universities from around Wales to make, create and write the future of news and to explore the art of the possible with our APIs, innovative data services, and a wealth of content. 
 </p>
 
-<p class="lead">
-BBC Connected Studio & BBC News Labs are holding two collaborative #newsHACK events - **University #newsHACK V** (North Wales) and **University #newsHACK VI** (South Wales).
-</p>
-
-<p class="lead">
-**[See the #newsHACK site for more information...](http://newshack.co.uk/university-newshack-wales/)**
-</p>
+**[See the #newsHACK site for more information](http://newshack.co.uk/university-newshack-wales/)**
 
 ## API Documentation
 
