@@ -6,6 +6,10 @@ We are inviting Universities from around Wales to make, create and write the fut
 
 **[See the #newsHACK site for more information](http://newshack.co.uk/university-newshack-wales/)**
 
+## [<i class="fa fa-youtube"></i> Explainer Videos](Videos.html)
+
+We've put together some [explainer videos](Videos.html) for our APIs which give a quick overview of the different services and API endpoints available.
+
 ## API Documentation
 
 ### API Key
@@ -32,7 +36,6 @@ The Locator service is a HTTP API that allows you to discover and ask geospatial
 
 [Check out the documentation for the Locator API](Locator.html)
 
-
 ### [Content Store API](CANDY.html) 
 
 The BBC Content Store API (aka CANDY) provides an interface to BBC News content with structured metadata.
@@ -50,4 +53,3 @@ In addition to English, the Content Store includes articles written in several l
 * #### [How to get forecast data for next 24 hours (in 3 hour intervals)](Weather-3-Hourly-Forecast.html)
 
 * #### [How to get forecast data for next 3 days](Weather-3-Day-Forecast.html)
-
