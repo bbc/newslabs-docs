@@ -44,7 +44,7 @@ Locations within the Travel API are closely linked to the [locations in the Loca
 
 If you install the free [Postman REST Client](https://www.getpostman.com) you can import the Travel API into using this URL:
 
-**https://www.getpostman.com/collections/8c9e9a7d1f142c477181**
+**https://www.getpostman.com/collections/1b1ff24c4e6af0e98df8**
 
 This allows you to easily try out the API and explore how it works without writing any code.
 
