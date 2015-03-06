@@ -1,7 +1,7 @@
 # University #newsHACK Wales
 
 <p class="lead">
-We are inviting Universities from around Wales to make, create and write the future of news and to explore the art of the possible with our APIs, innovative data services, and a wealth of content. 
+We are inviting Universities from around Wales to make, create and write the future of news and to explore the art of the possible with our APIs, innovative data services, and a wealth of content.
 </p>
 
 **[See the #newsHACK site for more information](http://newshack.co.uk/university-newshack-wales/)**
@@ -36,7 +36,7 @@ The Locator service is a HTTP API that allows you to discover and ask geospatial
 
 [Check out the documentation for the Locator API](Locator.html)
 
-### [Content Store API](CANDY.html) 
+### [Content Store API](CANDY.html)
 
 The BBC Content Store API (aka CANDY) provides an interface to BBC News content with structured metadata.
 
@@ -47,6 +47,10 @@ The Content Store API is a production platform, used internally by the BBC on th
 In addition to English, the Content Store includes articles written in several languages.
 
 [Check out the documentation for the Content Store API](CANDY.html)
+
+### [Travel API Documentation](Travel.html)
+
+The Travel service is a HTTP API that allows you to discover real-time travel incidents throughout the UK.  The Travel API can be queried by location, post code district, BBC News region or public transport operator.
 
 ### Weather Forecast Data
 
