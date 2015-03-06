@@ -239,4 +239,4 @@ The following properties are included in the JSON:
 
 ## Example URL
 
-http://open.live.bbc.co.uk/weather/feeds/en/2655985/3hourlyforecast.json
+http://weather-api-proxy.cloud.bbc.co.uk/weather/feeds/en/2655981/3hourlyforecast.json
