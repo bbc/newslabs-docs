@@ -1,0 +1,587 @@
+<!doctype html>
+<html>
+  <head>
+    <title>BBC News Labs Documentation</title>
+    <meta name="viewport" content="width=device-width"/>
+    <link rel="stylesheet" href="http://bootstrap.bbcnewslabs.co.uk/dist/css/bootstrap.min.css"/>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <style>
+      body {
+         overflow-x: hidden;
+      }
+      h3 {
+        padding-bottom: 5px;
+        border-bottom: 4px solid #eaeaea;
+      }
+      @media (max-width: 768px) {
+        .jumbotron h1 {
+          font-size: 32px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar navbar-default navbar-static-top no-margin">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".header-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"><i class="fa fa-home"></i> BBC News Labs Docs</a>
+        </div>
+        <div class="collapse navbar-collapse header-collapse">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-lg fa-fw fa-file-text"></i> Documentation <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="Juicer.html">Juicer API Documentation</a></li>
+                <li><a href="CANDY.html">BBC Content Store API</a></li>
+                <li><a href="Locator.html">Locator API</a></li>
+                <li><a href="Travel.html">Travel API</a></li>
+              </ul>
+            </li>
+          </ul>
+          <p class="navbar-btn navbar-right"><a href="https://github.com/BBC-News-Labs/docs" target="_blank" class="btn btn-primary navbar-link"><i class="fa fa-lg fa-github"></i> GitHub</a></p>
+          <p class="navbar-btn navbar-right" style="margin-right: 5px;"><a href="http://twitter.com/BBC_News_Labs" target="_blank" class="btn btn-primary navbar-link"><i class="fa fa-lg fa-twitter"></i> @BBC_News_Labs</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="jumbotron clearfix">
+      <div class="container">
+       <h1>
+          BBC News Labs <strong> Documentation</strong>
+       </h1>
+       <p>Documentation for BBC News Labs APIs &amp; #newsHACK events</p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 id="travel-api-documentation-bbc-news-regions">Travel API Documentation - BBC News Regions</h1>
+<p>Below are a list of all available BBC News regions within the Travel API:</p>
+<table class="table table-striped" cellspacing="0" cellpadding="0">
+  <tbody>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p5"><span class="s2"><b>Name</b></span></p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p5"><span class="s2"><b>Parameter Value</b></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td7">
+        <p class="p5"><span class="s1">Beds, Herts &amp; Bucks<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="top" class="td8">
+        <p class="p5"><span class="s1">threecounties</span></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" class="td7">
+        <p class="p5"><span class="s1">Cornwall<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="top" class="td8">
+        <p class="p5"><span class="s1">cornwall</span></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" class="td7">
+        <p class="p5"><span class="s1">Coventry &amp; Warwickshire<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="top" class="td8">
+        <p class="p5"><span class="s1">coventry</span></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" class="td7">
+        <p class="p5"><span class="s1">Cumbria<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="top" class="td8">
+        <p class="p5"><span class="s1">cumbria</span></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" class="td7">
+        <p class="p5"><span class="s1">Derby<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="top" class="td8">
+        <p class="p5"><span class="s1">derby</span></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" class="td7">
+        <p class="p5"><span class="s1">Devon<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="top" class="td8">
+        <p class="p5"><span class="s1">devon</span></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" class="td7">
+        <p class="p5"><span class="s1">Dorset<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="top" class="td8">
+        <p class="p5"><span class="s1">dorset</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td7">
+        <p class="p5"><span class="s1">Edinburgh, Fife &amp; East<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="top" class="td8">
+        <p class="p5"><span class="s1">edinburghandeastscotland</span></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" class="td7">
+        <p class="p5"><span class="s1">Essex<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="top" class="td8">
+        <p class="p5"><span class="s1">essex</span></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" class="td7">
+        <p class="p5"><span class="s1">Northern Ireland<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="top" class="td8">
+        <p class="p5"><span class="s1">northernireland</span></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" class="td7">
+        <p class="p5"><span class="s1">Glasgow &amp; West<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="top" class="td8">
+        <p class="p5"><span class="s1">glasgowandwestscotland</span></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" class="td7">
+        <p class="p5"><span class="s1">Gloucestershire<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="top" class="td8">
+        <p class="p5"><span class="s1">gloucestershire</span></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" class="td7">
+        <p class="p5"><span class="s1">Guernsey<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="top" class="td8">
+        <p class="p5"><span class="s1">guernsey</span></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" class="td7">
+        <p class="p5"><span class="s1">Hampshire &amp; Isle of Wight<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="top" class="td8">
+        <p class="p5"><span class="s1">hampshire</span></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" class="td7">
+        <p class="p5"><span class="s1">Hereford &amp; Worcester<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="top" class="td8">
+        <p class="p5"><span class="s1">herefordandworcester</span></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" class="td7">
+        <p class="p5"><span class="s1">Berkshire<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="top" class="td8">
+        <p class="p5"><span class="s1">berkshire</span></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" class="td7">
+        <p class="p5"><span class="s1">Highlands &amp; Islands<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="top" class="td8">
+        <p class="p5"><span class="s1">highlandsandislands</span></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" class="td7">
+        <p class="p5"><span class="s1">Humberside<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="top" class="td8">
+        <p class="p5"><span class="s1">humberside</span></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" class="td7">
+        <p class="p5"><span class="s1">Isle of Man/Ellan Vannin<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="top" class="td8">
+        <p class="p5"><span class="s1">isleofman</span></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" class="td7">
+        <p class="p5"><span class="s1">Jersey<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="top" class="td8">
+        <p class="p5"><span class="s1">jersey</span></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" class="td7">
+        <p class="p5"><span class="s1">Kent<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="top" class="td8">
+        <p class="p5"><span class="s1">kent</span></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" class="td7">
+        <p class="p5"><span class="s1">Lancashire<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="top" class="td8">
+        <p class="p5"><span class="s1">lancashire</span></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" class="td7">
+        <p class="p5"><span class="s1">Leeds &amp; West Yorkshire<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="top" class="td8">
+        <p class="p5"><span class="s1">leeds</span></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" class="td7">
+        <p class="p5"><span class="s1">Leicester<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="top" class="td8">
+        <p class="p5"><span class="s1">leicester</span></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" class="td7">
+        <p class="p5"><span class="s1">Lincolnshire<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="top" class="td8">
+        <p class="p5"><span class="s1">lincolnshire</span></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" class="td7">
+        <p class="p5"><span class="s1">Liverpool<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="top" class="td8">
+        <p class="p5"><span class="s1">liverpool</span></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" class="td7">
+        <p class="p5"><span class="s1">Birmingham &amp; Black Country<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="top" class="td8">
+        <p class="p5"><span class="s1">birmingham</span></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" class="td7">
+        <p class="p5"><span class="s1">London<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="top" class="td8">
+        <p class="p5"><span class="s1">london</span></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" class="td7">
+        <p class="p5"><span class="s1">Manchester<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="top" class="td8">
+        <p class="p5"><span class="s1">manchester</span></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" class="td7">
+        <p class="p5"><span class="s1">Mid Wales<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="top" class="td8">
+        <p class="p5"><span class="s1">midwales</span></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" class="td7">
+        <p class="p5"><span class="s1">Norfolk<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="top" class="td8">
+        <p class="p5"><span class="s1">norfolk</span></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" class="td7">
+        <p class="p5"><span class="s1">Northampton<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="top" class="td8">
+        <p class="p5"><span class="s1">northampton</span></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" class="td7">
+        <p class="p5"><span class="s1">North East, Orkney &amp; Shetland<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="top" class="td8">
+        <p class="p5"><span class="s1">northeastscotlandnorthernisles</span></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" class="td7">
+        <p class="p5"><span class="s1">North East Wales<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="top" class="td8">
+        <p class="p5"><span class="s1">northeastwales</span></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" class="td7">
+        <p class="p5"><span class="s1">North West Wales<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="top" class="td8">
+        <p class="p5"><span class="s1">northwestwales</span></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" class="td7">
+        <p class="p5"><span class="s1">York &amp; North Yorkshire<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="top" class="td8">
+        <p class="p5"><span class="s1">york</span></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" class="td7">
+        <p class="p5"><span class="s1">Nottingham<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="top" class="td8">
+        <p class="p5"><span class="s1">nottingham</span></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" class="td7">
+        <p class="p5"><span class="s1">Oxford<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="top" class="td8">
+        <p class="p5"><span class="s1">oxford</span></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" class="td7">
+        <p class="p5"><span class="s1">Shropshire<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="top" class="td8">
+        <p class="p5"><span class="s1">shropshire</span></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" class="td7">
+        <p class="p5"><span class="s1">Somerset<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="top" class="td8">
+        <p class="p5"><span class="s1">somerset</span></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" class="td7">
+        <p class="p5"><span class="s1">South East Wales<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="top" class="td8">
+        <p class="p5"><span class="s1">southeastwales</span></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" class="td7">
+        <p class="p5"><span class="s1">South Scotland<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="top" class="td8">
+        <p class="p5"><span class="s1">southscotland</span></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" class="td7">
+        <p class="p5"><span class="s1">South West Wales<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="top" class="td8">
+        <p class="p5"><span class="s1">southwestwales</span></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" class="td7">
+        <p class="p5"><span class="s1">Sheffield &amp; South Yorkshire<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="top" class="td8">
+        <p class="p5"><span class="s1">sheffield</span></p>
+      </td>
+    </tr>
+
+
+    <tr>
+      <td valign="top" class="td7">
+        <p class="p5"><span class="s1">Stoke &amp; Staffordshire<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="top" class="td8">
+        <p class="p5"><span class="s1">stoke</span></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" class="td7">
+        <p class="p5"><span class="s1">Suffolk<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="top" class="td8">
+        <p class="p5"><span class="s1">suffolk</span></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" class="td7">
+        <p class="p5"><span class="s1">Sussex<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="top" class="td8">
+        <p class="p5"><span class="s1">sussex</span></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" class="td7">
+        <p class="p5"><span class="s1">Tayside &amp; Central<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="top" class="td8">
+        <p class="p5"><span class="s1">taysideandcentralscotland</span></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" class="td7">
+        <p class="p5"><span class="s1">Tees<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="top" class="td8">
+        <p class="p5"><span class="s1">tees</span></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" class="td7">
+        <p class="p5"><span class="s1">Tyne &amp; Wear<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="top" class="td8">
+        <p class="p5"><span class="s1">tyne</span></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" class="td7">
+        <p class="p5"><span class="s1">Wiltshire<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="top" class="td8">
+        <p class="p5"><span class="s1">wiltshire</span></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" class="td7">
+        <p class="p5"><span class="s1">Surrey<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="top" class="td8">
+        <p class="p5"><span class="s1">surrey</span></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" class="td7">
+        <p class="p5"><span class="s1">Bristol<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="top" class="td8">
+        <p class="p5"><span class="s1">bristol</span></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" class="td7">
+        <p class="p5"><span class="s1">Cambridgeshire<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="top" class="td8">
+        <p class="p5"><span class="s1">cambridgeshire</span></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+          <hr/>
+          <h2><i class="fa fa-comments"></i> Questions and Feedback</h2>
+          <p>
+            <i>All comments are moderated for approval.</i>
+          </p>
+          <div id="disqus_thread"></div>
+          <script type="text/javascript">
+              /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+              var disqus_shortname = 'bbcnewslabs'; // required: replace example with your forum shortname
+
+              /* * * DON'T EDIT BELOW THIS LINE * * */
+              (function() {
+                  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+              })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
