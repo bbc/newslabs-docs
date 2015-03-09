@@ -1,4 +1,6 @@
-#  Juicer API Documentation
+#  Juicer v1 API Documentation
+
+> **NEW! [Try out the new Juicer v2 API](Juicer-2.html)**
 
 ## About the Juicer
 
