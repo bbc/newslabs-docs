@@ -95,36 +95,36 @@
 <p>If you install the free <a href="https://www.getpostman.com">Postman REST Client</a> you can import the Travel API into using this URL:</p>
 <p><strong><a href="https://www.getpostman.com/collections/1b1ff24c4e6af0e98df8">https://www.getpostman.com/collections/1b1ff24c4e6af0e98df8</a></strong></p>
 <p>This allows you to easily try out the API and explore how it works without writing any code.</p>
-<!--#You will need to configure an "Environment" within Postman to be able to make calls. You will need to set a host parameter with value http://travel-newshack-api.cloud.bbc.co.uk/ and an apikey.-->
+<p>You will need to configure an &quot;Environment&quot; within Postman to be able to make calls. You will need to set a host parameter with value <a href="http://data.bbc.co.uk/">http://data.bbc.co.uk/</a> and an apikey.</p>
 <p><img src=" ./img/travel-postman.png" height="300" /></p>
 <h2 id="rest-api-endpoints">REST API Endpoints</h2>
 <h3 id="1-location">1. Location</h3>
 <p>Used to discover incidents for a <a href="./Locator.html#locations">location</a></p>
 <h4 id="url">URL</h4>
-<pre><code>http://travel-newshack-api.cloud.bbc.co.uk/location/:location_id/incidents
+<pre><code>http://data.bbc.co.uk/travel/location/:location_id/incidents?apikey={{apiKey}}
 </code></pre><h5 id="examples">Examples</h5>
 <h6 id="search-for-incidents-near-a-location">Search for incidents near a location</h6>
-<p><a href="http://travel-newshack-api.cloud.bbc.co.uk/location/2636432/incidents">http://travel-newshack-api.cloud.bbc.co.uk/location/2636432/incidents</a></p>
+<p><a href="http://data.bbc.co.uk/travel/location/2636432/incidents?apikey={{apiKey}}">http://data.bbc.co.uk/travel/location/2636432/incidents?apikey={{apiKey}}</a></p>
 <h6 id="search-for-incidents-near-a-post-code">Search for incidents near a post code</h6>
-<p><a href="http://travel-newshack-api.cloud.bbc.co.uk/location/CF24/incidents">http://travel-newshack-api.cloud.bbc.co.uk/location/CF24/incidents</a></p>
+<p><a href="http://data.bbc.co.uk/travel/location/CF24/incidents?apikey={{apiKey}}">http://data.bbc.co.uk/travel/location/CF24/incidents?apikey={{apiKey}}</a></p>
 <h4 id="parameters">Parameters</h4>
 <p>The location is passed to the Travel API in the URL.  In the sample URL we&#39;ve denoted named this <code>location_id</code>.  The location_id parameter can either be a Geoname ID or a post code.  The Geoname ID can be obtained from the <a href="./Locator.html">Locator API</a>.  We&#39;ve compiled a <a href="./Travel/sample-locations.html">list of sample list of locations</a> within the UK but locaations can be dynamically retrieved from the Locator API.</p>
 <h3 id="2-bbc-news-region">2. BBC News region</h3>
 <p>Allows you to ask for incidents occurring within a BBC News region.</p>
 <h4 id="url">URL</h4>
-<pre><code>http://travel-newshack-api.cloud.bbc.co.uk/news/:news_region
+<pre><code>http://data.bbc.co.uk/travel/news/:news_region?apikey={{apiKey}}
 </code></pre><h4 id="examples">Examples</h4>
 <h6 id="search-for-incidents-within-a-bbc-news-region">Search for incidents within a BBC News region</h6>
-<p><a href="http://travel-newshack-api.cloud.bbc.co.uk/news/northeastwales">http://travel-newshack-api.cloud.bbc.co.uk/news/northeastwales</a></p>
+<p><a href="http://data.bbc.co.uk/travel/news/northeastwales?apikey={{apiKey}}">http://data.bbc.co.uk/travel/news/northeastwales?apikey={{apiKey}}</a></p>
 <h4 id="parameters">Parameters</h4>
 <p>The BBC News region is passed to the Travel API in the URL.  In the sample URL we&#39;ve named this <code>news_region</code>.  We&#39;ve made available a <a href="./Travel/bbc-news-regions.html">list of  BBC News regions</a> in the Travel API.  BBC News regions are also available from the <a href="./Locator.html">Locator API</a>.</p>
 <h3 id="3-public-transport-operator">3. Public Transport Operator</h3>
 <p>Allows you to ask for incidents occurring for a public transport operator</p>
 <h4 id="url">URL</h4>
-<pre><code>http://travel-newshack-api.cloud.bbc.co.uk/tags/operator/:operator/incidents
+<pre><code>http://data.bbc.co.uk/travel/tags/operator/:operator/incidents?apikey={{apiKey}}
 </code></pre><h4 id="examples">Examples</h4>
 <h6 id="search-for-incidents-within-a-bbc-news-region">Search for incidents within a BBC News region</h6>
-<p><a href="http://travel-newshack-api.cloud.bbc.co.uk/tags/operator/crosscountry/incidents">http://travel-newshack-api.cloud.bbc.co.uk/tags/operator/crosscountry/incidents</a></p>
+<p><a href="http://data.bbc.co.uk/travel/tags/operator/crosscountry/incidents?apikey={{apiKey}}">http://data.bbc.co.uk/travel/tags/operator/crosscountry/incidents?apikey={{apiKey}}</a></p>
 <h4 id="parameters">Parameters</h4>
 <p>The public transport operator is passed to the Travel API in the URL.  In the sample URL we&#39;ve named this <code>operator</code>, we&#39;ve made available the <a href="./Travel/public-transport-operators.html">full list of available operators</a>.</p>
 

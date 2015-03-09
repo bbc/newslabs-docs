@@ -48,7 +48,7 @@ If you install the free [Postman REST Client](https://www.getpostman.com) you ca
 
 This allows you to easily try out the API and explore how it works without writing any code.
 
-<!--#You will need to configure an "Environment" within Postman to be able to make calls. You will need to set a host parameter with value http://travel-newshack-api.cloud.bbc.co.uk/ and an apikey.-->
+You will need to configure an "Environment" within Postman to be able to make calls. You will need to set a host parameter with value http://data.bbc.co.uk/ and an apikey.
 
 <img src=" ./img/travel-postman.png" height="300" />
 
@@ -61,18 +61,18 @@ Used to discover incidents for a [location](./Locator.html#locations)
 #### URL
 
 ```
-http://travel-newshack-api.cloud.bbc.co.uk/location/:location_id/incidents
+http://data.bbc.co.uk/travel/location/:location_id/incidents?apikey={{apiKey}}
 ```
 
 ##### Examples
 
 ###### Search for incidents near a location
 
-http://travel-newshack-api.cloud.bbc.co.uk/location/2636432/incidents
+http://data.bbc.co.uk/travel/location/2636432/incidents?apikey={{apiKey}}
 
 ###### Search for incidents near a post code
 
-http://travel-newshack-api.cloud.bbc.co.uk/location/CF24/incidents
+http://data.bbc.co.uk/travel/location/CF24/incidents?apikey={{apiKey}}
 
 #### Parameters
 
@@ -85,14 +85,14 @@ Allows you to ask for incidents occurring within a BBC News region.
 #### URL
 
 ```
-http://travel-newshack-api.cloud.bbc.co.uk/news/:news_region
+http://data.bbc.co.uk/travel/news/:news_region?apikey={{apiKey}}
 ```
 
 #### Examples
 
 ###### Search for incidents within a BBC News region
 
-http://travel-newshack-api.cloud.bbc.co.uk/news/northeastwales
+http://data.bbc.co.uk/travel/news/northeastwales?apikey={{apiKey}}
 
 #### Parameters
 
@@ -105,14 +105,15 @@ Allows you to ask for incidents occurring for a public transport operator
 #### URL
 
 ```
-http://travel-newshack-api.cloud.bbc.co.uk/tags/operator/:operator/incidents
+http://data.bbc.co.uk/travel/tags/operator/:operator/incidents?apikey={{apiKey}}
 ```
 
 #### Examples
 
 ###### Search for incidents within a BBC News region
 
-http://travel-newshack-api.cloud.bbc.co.uk/tags/operator/crosscountry/incidents
+http://data.bbc.co.uk/travel/tags/operator/crosscountry/incidents?apikey={{apiKey}}
+
 #### Parameters
 
 The public transport operator is passed to the Travel API in the URL.  In the sample URL we've named this `operator`, we've made available the [full list of available operators](./Travel/public-transport-operators.html).
