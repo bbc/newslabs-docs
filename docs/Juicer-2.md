@@ -23,9 +23,10 @@ This allows you to easily try out the API and explore how it works without writi
 You will need to configure an "Environment" within Postman to be able to make calls:
 
 ```
-host: http://data.test.bbc.co.uk/bbcrd-juicer/
 apikey: YOUR API KEY
 ```
+
+Also you will need to use the server's Basic Auth on every request
 
 ## REST API Endpoints
 
