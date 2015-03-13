@@ -12,6 +12,22 @@ The Juicer API allows you search articles by text and filter by concepts, dates,
 
 You will need a Juicer API Key to access this API. These are the same keys as for the v1.0 API. Keys are available from the BBC News Labs team [BBC News Labs team](http://twitter.com/BBC_News_Labs).
 
+## Juicer Postman Collection
+
+If you install the free [Postman REST Client](https://www.getpostman.com) you can import the Juicer 2 API into using this URL:
+
+**https://www.getpostman.com/collections/cebe998a209d9862135b**
+
+This allows you to easily try out the API and explore how it works without writing any code.
+
+You will need to configure an "Environment" within Postman to be able to make calls:
+
+```
+apikey: YOUR API KEY
+```
+
+Also you will need to use the server's Basic Auth on every request
+
 ## REST API Endpoints
 
 ### 1. Get Articles
