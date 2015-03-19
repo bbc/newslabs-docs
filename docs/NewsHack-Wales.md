@@ -30,6 +30,10 @@ You can use it fetch the latest news as well running queries for news coverage f
 
 [Check out the documentation for the Juicer API](Juicer.html)
 
+##### [Need geospatial or semantic multi-hop queries?](Triplestore.html)
+
+[Check out the documentation for the Juicer Triplestore API](Triplestore.html)
+
 ### [Locator API](Locator.html)
 
 The Locator service is a HTTP API that allows you to discover and ask geospatial questions about places and other entities such as postcodes, news regions, councils etc.
