@@ -43,6 +43,8 @@ apikey: YOUR API KEY
 ## REST API Endpoints
 **NOTE: All request parameters must be URLEncoded**
 
+Examples for all of these can be found in the Postman collection referenced above.
+
 ### 1. GET a concept from the knowledge base
 ##### Gets a concept from the knowledge base, and the most recent creative works tagged with it.
 
@@ -54,7 +56,22 @@ apikey: YOUR API KEY
  
 *Note, the NewsService must be supplied in URI form http://www.bbc.co.uk/things/{UUID}#id  where {UUID} identifies the NewsService source from the Juicer APIs.*
 
-### 2. Find Creative Works
+### 2. FIND concepts from the knowledge base
+###### Finds concepts in the knowledge base using a full text search term. Useful for building type ahead fields to find things. Returns only concepts that have been tagged on creative works. Use a multihop join to find concepts via some relationship in the wider DBpedia knowledge graph.
+*Response is in OpenSearch Suggestions 1.1 JSON format*
+*Typical use-case is for type-ahead find widgets*
+
+*Parameters are:*
+
+ - **q** : string - a full text search term
+ - **limit** : integer - max num of suggestions to return
+ - **type** : optional URI defining the ontology class to filter concepts on - multiple types can be specified
+ - **join-predicate** : optional predicate URI from DBpedia ontology that concepts found will be joined with
+ - **join-object** : optional concept URI from DBpedia ontology that concepts found will be joined with via the join-predicate
+
+*The example below finds people associated with the conservative party with 'dav' in their mame*
+
+### 3. Find Creative Works
 ##### A semantic search for creative work using tagged concepts
 
 *Parameters are:*
@@ -70,7 +87,73 @@ apikey: YOUR API KEY
 *Headers are:*
 
  - **Accept** : application/json | application/ld+json
-____
+
+### 4. Find Creative Works Using Graph Multi-Hop
+##### A multi-hop semantic search for creative work via the graph of tagged concepts
+
+*The DBpedia ontology is used extensively as a backing knowledge graph. All classes and predicates from this ontology are exposed. See : [http://dbpedia.org/ontology](http://dbpedia.org/ontology)*
+
+*Parameters are:*
+
+ - **about-tag-type**: Ontology class URI, find creative works by the type (class) of thing they are tagged with, eg http://dbpedia.org/ontology/Person
+ - **about-tag-predicate**: Ontology predicate URI - find creative works tagged with concepts that have wider associations with this predicate. eg http://dbpedia.org/ontology/party</li>
+ - **about-tag-object**: Concept URI - find creative works tagged with concepts that have wider associations where the about-tag-predicate is associated with this object/concept. eg http://dbpedia.org/resource/Conservative_Party_(UK)
+ - **tag**: URI of a concept - multiple tag parameters can be used
+ - **tagop** : {and | or | fingerprint} The operations to apply to the supplied tags. Default is 'and'. 'fingerprint' returns creative works best matching the set of tags supplied. (Warning fingerprint search is not fast!)
+ - **before** : optional date in YYYY-MM-DD format defining the date before which articles were published
+ - **after** : optional date in YYYY-MM-DD format defining the date after which articles were published
+ - **createdBy** : optionally filter by NewsService (source) using cwork:createdBy URIs
+ - **limit** : integer - max number of articles to return, default 10
+ - **offset** : integer - offset to start results from to allow for paging / infinite scroll
+
+*Headers are:*
+
+ - **Accept** : application/json | application/ld+json
+
+### 5. Find Creative Works Geospatially
+##### A geospatial semantic search for creative work. Finds creative works tagged with places with a radius of a supplied latitude and longitude.
+
+*Parameters are:*
+
+ - **point**: {lat,long}, eg:  51.5,-1.0
+ - **radius**: {Nmi|km}, eg 10mi , 20km
+ - **tag**: URI of a concept - multiple tag parameters can be used
+ - **tagop** : {and | or | fingerprint} The operations to apply to the supplied tags. Default is 'and'. 'fingerprint' returns creative works best matching the set of tags supplied. (Warning fingerprint search is not fast!)
+ - **before** : optional date in YYYY-MM-DD format defining the date before which articles were published
+ - **after** : optional date in YYYY-MM-DD format defining the date after which articles were published
+ - **createdBy** : optionally filter by NewsService (source) using cwork:createdBy URIs
+ - **limit** : integer - max number of articles to return, default 10
+ - **offset** : integer - offset to start results from to allow for paging / infinite scroll
+
+*Headers are:*
+
+ - **Accept** : application/json | application/ld+json
+
+*The exmaple below finds creative works tagged with places within 15Km of Sheffield*
+
+### 6. Find Creative Works Geospatially using Multi-Hop Graph joins
+#### Combining geospatial with graph search.
+##### A geospatial multi-hop semantic search for creative work via the graph of tagged concepts within a radius of some location.
+
+*Parameters are:*
+
+ - **point**: {lat,long}, eg:  51.5,-1.0
+ - **radius**: {Nmi|km}, eg 10mi , 20km
+ - **about-tag-type**: Ontology class URI, find creative works by the type (class) of thing they are tagged with, eg http://dbpedia.org/ontology/Person
+ - **about-tag-predicate**: Ontology predicate URI - find creative works tagged with concepts that have wider associations with this predicate. eg http://dbpedia.org/ontology/party</li>
+ - **about-tag-object**: Concept URI - find creative works tagged with concepts that have wider associations where the about-tag-predicate is associated with this object/concept. eg http://dbpedia.org/resource/Conservative_Party_(UK)
+ - **tag**: URI of a concept - multiple tag parameters can be used
+ - **tagop** : {and | or | fingerprint} The operations to apply to the supplied tags. Default is 'and'. 'fingerprint' returns creative works best matching the set of tags supplied. (Warning fingerprint search is not fast!)
+ - **before** : optional date in YYYY-MM-DD format defining the date before which articles were published
+ - **after** : optional date in YYYY-MM-DD format defining the date after which articles were published
+ - **createdBy** : optionally filter by NewsService (source) using cwork:createdBy URIs
+ - **limit** : integer - max number of articles to return, default 10
+ - **offset** : integer - offset to start results from to allow for paging / infinite scroll
+
+*Headers are:*
+
+ - **Accept** : application/json | application/ld+json
+
 
 
 
