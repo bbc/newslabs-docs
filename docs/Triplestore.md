@@ -14,18 +14,8 @@ If you install the free [Postman REST Client](https://www.getpostman.com) you ca
 
 This allows you to easily try out the API and explore how it works without writing any code.
 
-## REST API Endpoints
-
-### 1. TBC
-
-____
-
-#### URL
+**Make sure you set the `host` environment variable in Postman to**
 
 ```
-http://data.test.bbc.co.uk/v1/bbcrd-newslabs`
+http://data.test.bbc.co.uk/v1/bbcrd-newslabs
 ```
-
-
-
-
