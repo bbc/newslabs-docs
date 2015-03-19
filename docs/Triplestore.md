@@ -43,6 +43,8 @@ apikey: YOUR API KEY
 ## REST API Endpoints
 **NOTE: All request parameters must be URLEncoded**
 
+The Response format for all the Creative Work API requests is [JSON-LD](http://json-ld.org/)
+
 Examples for all of these can be found in the Postman collection referenced above.
 
 ### 1. GET a concept from the knowledge base
