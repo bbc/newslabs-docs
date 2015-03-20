@@ -76,13 +76,13 @@ You can get the full text of a specific article by using its `id`. The `id` is a
 #### URL
 
 ```
-http://data.test.bbc.co.uk/bbcrd-juicer/articles/{{article-id}}?apikey={apikey}
+http://data.test.bbc.co.uk/bbcrd-juicer/articles/{article-id}?apikey={apikey}
 ```
 
 #### Example Request
 
 ```
-http://data.test.bbc.co.uk/bbcrd-juicer/articles/414adf52b72e2eac9ffd9beaf6eb02725053e9c4
+http://data.test.bbc.co.uk/bbcrd-juicer/articles/414adf52b72e2eac9ffd9beaf6eb02725053e9c4&apikey={apikey}
 ```
 
 ### 2. Get Similar Articles
