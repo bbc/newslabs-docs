@@ -20,13 +20,7 @@ If you install the free [Postman REST Client](https://www.getpostman.com) you ca
 
 This allows you to easily try out the API and explore how it works without writing any code.
 
-You will need to configure an "Environment" within Postman to be able to make calls:
-
-```
-apikey: YOUR API KEY
-```
-
-Also you will need to use the server's Basic Auth on every request
+You will need to configure an "Environment" within Postman to be able to make calls, add `apikey` as a key and your Juicer API key as the value, this will replace {{apikey}} in the requests and the URL variables to your key.
 
 ## REST API Endpoints
 
