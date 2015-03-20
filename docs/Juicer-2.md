@@ -71,7 +71,7 @@ http://data.test.bbc.co.uk/bbcrd-juicer/articles?q=kenya%20OR%20nairobi%20AND%20
 
 ### 2. Get Article
 
-You can get the full text of a specific article by using its `id`.
+You can get the full text of a specific article by using its `id`. The `id` is a SHA1 hash of the fully resolved URL of an article. E.g the SHA1 (the `id`) for an article located at http://www.bbc.co.uk/news/business-31980802 is `414adf52b72e2eac9ffd9beaf6eb02725053e9c4`.
 
 #### URL
 
@@ -82,7 +82,7 @@ http://data.test.bbc.co.uk/bbcrd-juicer/articles/{{article-id}}?apikey={apikey}
 #### Example Request
 
 ```
-http://data.test.bbc.co.uk/bbcrd-juicer/articles/792c35d51f3f8d3c01bf74d940aaf4e2893fc968
+http://data.test.bbc.co.uk/bbcrd-juicer/articles/414adf52b72e2eac9ffd9beaf6eb02725053e9c4
 ```
 
 ### 2. Get Similar Articles
