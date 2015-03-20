@@ -29,7 +29,7 @@ The ontology used to describe the content is the [BBC Creative Work Ontology](ht
 
 If you install the free [Postman REST Client](https://www.getpostman.com) you can import the Semantic API examples using this URL:
 
-**https://www.getpostman.com/collections/45b8263f16422ddd9794**
+**https://www.getpostman.com/collections/aed791f5221f839728b6**
 
 This allows you to easily try out the API and explore how it works without writing any code.
 
@@ -58,20 +58,37 @@ Examples for all of these can be found in the Postman collection referenced abov
  
 *Note, the NewsService must be supplied in URI form http://www.bbc.co.uk/things/{UUID}#id  where {UUID} identifies the NewsService source from the Juicer APIs.*
 
-### 2. FIND concepts from the knowledge base
+### 2. FIND tagged concepts from the knowledge base
 ###### Finds concepts in the knowledge base using a full text search term. Useful for building type ahead fields to find things. Returns only concepts that have been tagged on creative works. Use a multihop join to find concepts via some relationship in the wider DBpedia knowledge graph.
 *Response is in OpenSearch Suggestions 1.1 JSON format*
 *Typical use-case is for type-ahead find widgets*
 
 *Parameters are:*
 
- - **q** : string - a full text search term
+ - **q** : string - optional a full text search term
  - **limit** : integer - max num of suggestions to return
  - **type** : optional URI defining the ontology class to filter concepts on - multiple types can be specified
  - **join-predicate** : optional predicate URI from DBpedia ontology that concepts found will be joined with
  - **join-object** : optional concept URI from DBpedia ontology that concepts found will be joined with via the join-predicate
 
 *The example below finds people associated with the conservative party with 'dav' in their mame*
+
+
+### 2a. FIND any concept in the knowledge base
+###### Finds concepts in the knowledge base using a full text search term. Useful for building type ahead fields to find things. Use a multihop join to find concepts via some relationship in the wider DBpedia knowledge graph.
+*Response is in OpenSearch Suggestions 1.1 JSON format*
+*Typical use-case is for type-ahead find widgets*
+*Useful for finding All politicians members of a specific party, or all players of a football team etc.*
+
+*Parameters are:*
+
+ - **q** : string - optional a full text search term
+ - **limit** : integer - max num of suggestions to return
+ - **type** : optional URI defining the ontology class to filter concepts on - multiple types can be specified
+ - **join-predicate** : optional predicate URI from DBpedia ontology that concepts found will be joined with
+ - **join-object** : optional concept URI from DBpedia ontology that concepts found will be joined with via the join-predicate
+
+
 
 ### 3. Find Creative Works
 ##### A semantic search for creative work using tagged concepts
@@ -131,7 +148,6 @@ Examples for all of these can be found in the Postman collection referenced abov
 
  - **Accept** : application/json | application/ld+json
 
-*The exmaple below finds creative works tagged with places within 15Km of Sheffield*
 
 ### 6. Find Creative Works Geospatially using Multi-Hop Graph joins
 #### Combining geospatial with graph search.
