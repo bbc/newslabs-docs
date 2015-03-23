@@ -157,7 +157,7 @@ Examples for all of these can be found in the Postman collection referenced abov
  - **join-predicate** : optional predicate URI from DBpedia ontology that things found will be joined with
  - **join-object** : optional concept URI from DBpedia ontology that things found will be joined with via the join-predicate
 
-*The example in thr postman collection finds people associated with the conservative party with 'dav' in their mame*
+*The example in the postman collection finds people associated with the conservative party with 'dav' in their mame*
 
 
 ### 7. Find Things Multi-hop
@@ -204,6 +204,6 @@ Defaults to the last week until now.
  - **join-predicate** : optional predicate URI from DBpedia ontology that things found will be joined with
  - **join-object** : optional thing URI from DBpedia ontology that things found will be joined with via the join-predicate
 
-*The example below finds the most frequently occurrring Labour party people in the news co-occuring with Len McClusky in 2015*
+*The example below finds the most frequently occurring Labour party people in the news co-occuring with Len McClusky in 2015*
 
 Date range defaults to the last week until now.
