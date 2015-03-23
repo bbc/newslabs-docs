@@ -186,7 +186,7 @@ Examples for all of these can be found in the Postman collection referenced abov
  - **join-predicate** : optional predicate URI from DBpedia ontology that things found will be joined with
  - **join-object** : optional thing URI from DBpedia ontology that things found will be joined with via the join-predicate
 
-*The example below finds the most frequently occurring conservative MPs in the news in the last week*
+*The example in the postman collection finds the most frequently occurring conservative MPs in the news in the last week*
 
 NOTE, quite a heavy weight query so don't expect this to be rocket fast, please keep date ranges narrow.
 Defaults to the last week until now.
@@ -204,6 +204,6 @@ Defaults to the last week until now.
  - **join-predicate** : optional predicate URI from DBpedia ontology that things found will be joined with
  - **join-object** : optional thing URI from DBpedia ontology that things found will be joined with via the join-predicate
 
-*The example below finds the most frequently occurring Labour party people in the news co-occuring with Len McClusky in 2015*
+*The example in the postman collection finds the most frequently occurring Labour party people in the news co-occuring with Len McClusky in 2015*
 
 Date range defaults to the last week until now.
