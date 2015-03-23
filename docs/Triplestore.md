@@ -29,7 +29,7 @@ The ontology used to describe the content is the [BBC Creative Work Ontology](ht
 
 If you install the free [Postman REST Client](https://www.getpostman.com) you can import the Semantic API examples using this URL:
 
-**https://www.getpostman.com/collections/aed791f5221f839728b6**
+**https://www.getpostman.com/collections/a2e4c51efa0005564fca**
 
 This allows you to easily try out the API and explore how it works without writing any code.
 
@@ -48,49 +48,18 @@ The Response format for all the Creative Work API requests is [JSON-LD](http://j
 Examples for all of these can be found in the Postman collection referenced above.
 
 ### 1. GET a concept from the knowledge base
-##### Gets a concept from the knowledge base, and the most recent creative works tagged with it.
+##### Gets a Thing from the knowledge base, and the most recent creative works tagged with it.
 
 *Parameters :*
 
- - **uri** : The URI of the concept to retrieve
- - **limit** : integer - max number of creative works to return with the concept
- - **createdBy** : filter associated creative works by the NewsService (source) they were createdBy
- 
+ - **uri** : The URI of the thing to retrieve
+ - **limit** : integer - max number of creative works to return
+ - **createdBy** : URI - optional filter associated creative works by the NewsService (source) they were createdBy
+
 *Note, the NewsService must be supplied in URI form http://www.bbc.co.uk/things/{UUID}#id  where {UUID} identifies the NewsService source from the Juicer APIs.*
 
-### 2. FIND tagged concepts from the knowledge base
-###### Finds concepts in the knowledge base using a full text search term. Useful for building type ahead fields to find things. Returns only concepts that have been tagged on creative works. Use a multihop join to find concepts via some relationship in the wider DBpedia knowledge graph.
-*Response is in OpenSearch Suggestions 1.1 JSON format*
-*Typical use-case is for type-ahead find widgets*
 
-*Parameters are:*
-
- - **q** : string - optional a full text search term
- - **limit** : integer - max num of suggestions to return
- - **type** : optional URI defining the ontology class to filter concepts on - multiple types can be specified
- - **join-predicate** : optional predicate URI from DBpedia ontology that concepts found will be joined with
- - **join-object** : optional concept URI from DBpedia ontology that concepts found will be joined with via the join-predicate
-
-*The example below finds people associated with the conservative party with 'dav' in their mame*
-
-
-### 2a. FIND any concept in the knowledge base
-###### Finds concepts in the knowledge base using a full text search term. Useful for building type ahead fields to find things. Use a multihop join to find concepts via some relationship in the wider DBpedia knowledge graph.
-*Response is in OpenSearch Suggestions 1.1 JSON format*
-*Typical use-case is for type-ahead find widgets*
-*Useful for finding All politicians members of a specific party, or all players of a football team etc.*
-
-*Parameters are:*
-
- - **q** : string - optional a full text search term
- - **limit** : integer - max num of suggestions to return
- - **type** : optional URI defining the ontology class to filter concepts on - multiple types can be specified
- - **join-predicate** : optional predicate URI from DBpedia ontology that concepts found will be joined with
- - **join-object** : optional concept URI from DBpedia ontology that concepts found will be joined with via the join-predicate
-
-
-
-### 3. Find Creative Works
+### 2. Find Creative Works
 ##### A semantic search for creative work using tagged concepts
 
 *Parameters are:*
@@ -107,7 +76,7 @@ Examples for all of these can be found in the Postman collection referenced abov
 
  - **Accept** : application/json | application/ld+json
 
-### 4. Find Creative Works Using Graph Multi-Hop
+### 3. Find Creative Works Using Graph Multi-Hop
 ##### A multi-hop semantic search for creative work via the graph of tagged concepts
 
 *The DBpedia ontology is used extensively as a backing knowledge graph. All classes and predicates from this ontology are exposed. See : [http://dbpedia.org/ontology](http://dbpedia.org/ontology)*
@@ -128,8 +97,10 @@ Examples for all of these can be found in the Postman collection referenced abov
 *Headers are:*
 
  - **Accept** : application/json | application/ld+json
+ 
+*The example in the postman collection finds creative works tagged with people associated with the Conservative Party* 
 
-### 5. Find Creative Works Geospatially
+### 4. Find Creative Works Geospatially
 ##### A geospatial semantic search for creative work. Finds creative works tagged with places with a radius of a supplied latitude and longitude.
 
 *Parameters are:*
@@ -149,7 +120,7 @@ Examples for all of these can be found in the Postman collection referenced abov
  - **Accept** : application/json | application/ld+json
 
 
-### 6. Find Creative Works Geospatially using Multi-Hop Graph joins
+### 5. Find Creative Works Geospatially using Multi-Hop Graph joins
 #### Combining geospatial with graph search.
 ##### A geospatial multi-hop semantic search for creative work via the graph of tagged concepts within a radius of some location.
 
@@ -171,9 +142,68 @@ Examples for all of these can be found in the Postman collection referenced abov
 *Headers are:*
 
  - **Accept** : application/json | application/ld+json
+ 
+*The example in the postman collection finds creative works tagged with people who have played for Manchester United football club and also tagged with a place within 15km of Sheffield*
+
+### 6. Find Tagged Things Multi-hop
+###### Finds things in the knowledge base using a full text search term. Useful for building type ahead fields to find things. Returns only things that have been tagged on creative works. Use an optional multi-hop join to find things via some relationship in the wider DBpedia knowledge graph.
+*Typical use-case is for type-ahead find widgets*
+
+*Parameters are:*
+
+ - **q** : string - optional -a full text search term
+ - **limit** : integer - max num of suggested things to return
+ - **type** : optional URI defining the ontology class to filter things on - multiple types can be specified
+ - **join-predicate** : optional predicate URI from DBpedia ontology that things found will be joined with
+ - **join-object** : optional concept URI from DBpedia ontology that things found will be joined with via the join-predicate
+
+*The example in thr postman collection finds people associated with the conservative party with 'dav' in their mame*
 
 
+### 7. Find Things Multi-hop
+###### Finds things in the knowledge base. Useful for building typeahead fields to find things.  Use an optional multi-hop join to find things via some relationship in the wider DBpedia knowledge graph.
+*Typical use-case is for type-ahead find widgets*
 
+*Parameters are:*
 
+ - **q** : string - optional a full text search term
+ - **limit** : integer - max num of suggestions to return
+ - **type** : optional URI defining the ontology class to filter things on - multiple types can be specified
+ - **join-predicate** : optional predicate URI from DBpedia ontology that concepts found will be joined with
+ - **join-object** : optional thing URI from DBpedia ontology that concepts found will be joined with via the join-predicate
 
+*The example in the postman collection finds all members of UKIP party *
 
+### 8. Find Thing Occurrences Multi-hop
+###### Finds most frequently tagged things in the knowledge base.
+
+*Parameters are:*
+
+ - **limit** : integer - max num of things to return
+ - **type** : optional/multiple URI defining the ontology class to filter concepts on
+ - **before** : date in YYYY-MM-DD format defining the date before which tag frequencies should be calculated
+ - **after** : date in YYYY-MM-DD format defining the date after which tag frequencies should be calculated
+ - **join-predicate** : optional predicate URI from DBpedia ontology that things found will be joined with
+ - **join-object** : optional thing URI from DBpedia ontology that things found will be joined with via the join-predicate
+
+*The example below finds the most frequently occurring conservative MPs in the news in the last week*
+
+NOTE, quite a heavy weight query so don't expect this to be rocket fast, please keep date ranges narrow.
+Defaults to the last week until now.
+
+### 9. Find Thing Co-Occurrences Multi-hop
+###### Finds most frequently tagged things in the knowledge base, co-occurring with a supplied thing
+
+*Parameters are:*
+
+ - **uri** : URI of a thing to find co-occurrences with
+ - **limit** : integer - max num of things to return
+ - **type** : optional/multiple URI defining the ontology class to filter things on
+ - **before** : date in YYYY-MM-DD format defining the date before which tag frequencies should be calculated
+ - **after** : date in YYYY-MM-DD format defining the date after which tag frequencies should be calculated
+ - **join-predicate** : optional predicate URI from DBpedia ontology that things found will be joined with
+ - **join-object** : optional thing URI from DBpedia ontology that things found will be joined with via the join-predicate
+
+*The example below finds the most frequently occurrring Labour party people in the news co-occuring with Len McClusky in 2015*
+
+Date range defaults to the last week until now.
