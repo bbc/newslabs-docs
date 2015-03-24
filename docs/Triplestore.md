@@ -1,6 +1,6 @@
-#  JUICER V2 - Triplestore API Documentation
+#  Newslabs Semantic API Documentation
 
-## About JUICER Semantic API
+## About the Semantic API
 This API is provided to allow semantic querying of the JUICER content.
 
 ### How does it Work
@@ -47,6 +47,8 @@ The Response format for all the Creative Work API requests is [JSON-LD](http://j
 
 Examples for all of these can be found in the Postman collection referenced above.
 
+##### NOTE: All before / after date parameters can be entered as an ISO68601 Date or DateTime, eg YYYY-MM-DD, YYYY-MM-DDThh:mm:ssZ, YYYY-MM-DDThh:mm:ss.nnnZ
+
 ### 1. GET a concept from the knowledge base
 ##### Gets a Thing from the knowledge base, and the most recent creative works tagged with it.
 
@@ -66,8 +68,8 @@ Examples for all of these can be found in the Postman collection referenced abov
 
  - **tag**: URI of a concept - multiple tag parameters can be used
  - **tagop** : {and | or | fingerprint} The operations to apply to the supplied tags. Default is 'and'. 'fingerprint' returns creative works best matching the set of tags supplied. (Warning fingerprint search is not fast!)
- - **before** : optional date in YYYY-MM-DD format defining the date before which articles were published
- - **after** : optional date in YYYY-MM-DD format defining the date after which articles were published
+ - **before** : optional ISO date defining the date before which articles were published
+ - **after** : optional ISO date defining the date after which articles were published
  - **createdBy** : optionally filter by NewsService (source) using cwork:createdBy URIs
  - **limit** : integer - max number of articles to return, default 10
  - **offset** : integer - offset to start results from to allow for paging / infinite scroll
@@ -88,8 +90,8 @@ Examples for all of these can be found in the Postman collection referenced abov
  - **about-tag-object**: Concept URI - find creative works tagged with concepts that have wider associations where the about-tag-predicate is associated with this object/concept. eg http://dbpedia.org/resource/Conservative_Party_(UK)
  - **tag**: URI of a concept - multiple tag parameters can be used
  - **tagop** : {and | or | fingerprint} The operations to apply to the supplied tags. Default is 'and'. 'fingerprint' returns creative works best matching the set of tags supplied. (Warning fingerprint search is not fast!)
- - **before** : optional date in YYYY-MM-DD format defining the date before which articles were published
- - **after** : optional date in YYYY-MM-DD format defining the date after which articles were published
+ - **before** : optional ISO date defining the date before which articles were published
+ - **after** : optional ISO date defining the date after which articles were published
  - **createdBy** : optionally filter by NewsService (source) using cwork:createdBy URIs
  - **limit** : integer - max number of articles to return, default 10
  - **offset** : integer - offset to start results from to allow for paging / infinite scroll
@@ -109,8 +111,8 @@ Examples for all of these can be found in the Postman collection referenced abov
  - **radius**: {Nmi|km}, eg 10mi , 20km
  - **tag**: URI of a concept - multiple tag parameters can be used
  - **tagop** : {and | or | fingerprint} The operations to apply to the supplied tags. Default is 'and'. 'fingerprint' returns creative works best matching the set of tags supplied. (Warning fingerprint search is not fast!)
- - **before** : optional date in YYYY-MM-DD format defining the date before which articles were published
- - **after** : optional date in YYYY-MM-DD format defining the date after which articles were published
+ - **before** : optional ISO date defining the date before which articles were published
+ - **after** : optional ISO date defining the date after which articles were published
  - **createdBy** : optionally filter by NewsService (source) using cwork:createdBy URIs
  - **limit** : integer - max number of articles to return, default 10
  - **offset** : integer - offset to start results from to allow for paging / infinite scroll
@@ -133,8 +135,8 @@ Examples for all of these can be found in the Postman collection referenced abov
  - **about-tag-object**: Concept URI - find creative works tagged with concepts that have wider associations where the about-tag-predicate is associated with this object/concept. eg http://dbpedia.org/resource/Conservative_Party_(UK)
  - **tag**: URI of a concept - multiple tag parameters can be used
  - **tagop** : {and | or | fingerprint} The operations to apply to the supplied tags. Default is 'and'. 'fingerprint' returns creative works best matching the set of tags supplied. (Warning fingerprint search is not fast!)
- - **before** : optional date in YYYY-MM-DD format defining the date before which articles were published
- - **after** : optional date in YYYY-MM-DD format defining the date after which articles were published
+ - **before** : optional ISO date defining the date before which articles were published
+ - **after** : optional ISO date defining the date after which articles were published
  - **createdBy** : optionally filter by NewsService (source) using cwork:createdBy URIs
  - **limit** : integer - max number of articles to return, default 10
  - **offset** : integer - offset to start results from to allow for paging / infinite scroll
@@ -181,8 +183,8 @@ Examples for all of these can be found in the Postman collection referenced abov
 
  - **limit** : integer - max num of things to return
  - **type** : optional/multiple URI defining the ontology class to filter concepts on
- - **before** : date in YYYY-MM-DD format defining the date before which tag frequencies should be calculated
- - **after** : date in YYYY-MM-DD format defining the date after which tag frequencies should be calculated
+ - **before** : date/dateTime in ISO format defining the date before which tag frequencies should be calculated
+ - **after** : date/dateTime in ISO format defining the date after which tag frequencies should be calculated
  - **join-predicate** : optional predicate URI from DBpedia ontology that things found will be joined with
  - **join-object** : optional thing URI from DBpedia ontology that things found will be joined with via the join-predicate
 
@@ -199,8 +201,8 @@ Defaults to the last week until now.
  - **uri** : URI of a thing to find co-occurrences with
  - **limit** : integer - max num of things to return
  - **type** : optional/multiple URI defining the ontology class to filter things on
- - **before** : date in YYYY-MM-DD format defining the date before which tag frequencies should be calculated
- - **after** : date in YYYY-MM-DD format defining the date after which tag frequencies should be calculated
+ - **before** : date/dateTime in ISO format defining the date before which tag frequencies should be calculated
+ - **after** : date/dateTime in ISO format defining the date after which tag frequencies should be calculated
  - **join-predicate** : optional predicate URI from DBpedia ontology that things found will be joined with
  - **join-object** : optional thing URI from DBpedia ontology that things found will be joined with via the join-predicate
 
