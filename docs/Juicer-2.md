@@ -104,7 +104,7 @@ http://data.test.bbc.co.uk/bbcrd-juicer/articles?like-ids[]=792c35d51f3f8d3c01bf
 
 ### 3. Get Articles from a Source
 
-Get a list of articles from a source
+Get a list of articles from a source. Note: `sources[]` takes a integer as a parameter. You can find this ID by running the Get Sources query (see below).
 
 #### Example request 
 
