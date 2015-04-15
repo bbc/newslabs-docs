@@ -3,12 +3,13 @@
 There are many sources of audio content across the BBC.  For this event a number of sources of live and catch up audio content are available.
 
 ## Podcasts
-   The BBC and in particular the World Service provides a lot of content as podcasts.  These follow the usual feed standards for audio podcasts providing an RSS feed of mp3 content.  All podcasts are globally available content.  
+   The BBC and in particular the World Service provides a lot of content as podcasts.  These follow the usual feed standards for audio podcasts providing an RSS feed of mp3 content.  All podcasts are globally available.  
 
-* *http://www.bbc.co.uk/podcasts/worldservice/a-z**
+* http://www.bbc.co.uk/podcasts/worldservice/a-z
 
 ## Live Streams
-
+   There are a larger number of live streams of BBC content available for use.  These are currently formatted as SHOUTcast playlists.
+ 
 ###English Nets:
 * http://wsdownload.bbc.co.uk/worldservice/meta/live/shoutcast/mp3/eieuk.pls - BBC World Service Online
 * http://wsdownload.bbc.co.uk/worldservice/meta/live/shoutcast/mp3/einws.pls - BBC World Service News Online
@@ -41,6 +42,7 @@ There are many sources of audio content across the BBC.  For this event a number
 
 ## Additional Content
 
-BBC Minute RSS feed
+###BBC Minute
+   One minute of the world's most shareable news - updated every half an hour, 24/7.  This is provide as a single item RSS feed.
 
-http://wsrss.bbc.co.uk/bizdev/bbcminute/bbcminute.rss
+* http://wsrss.bbc.co.uk/bizdev/bbcminute/bbcminute.rss
