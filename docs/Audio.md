@@ -39,6 +39,7 @@ There are many sources of audio content across the BBC.  For this event a number
 * http://wsdownload.bbc.co.uk/worldservice/meta/live/shoutcast/mp3/urdua.pls - BBC Urdu
 * http://wsdownload.bbc.co.uk/worldservice/meta/live/shoutcast/mp3/uzbka.pls - BBC Uzbek
 
+Shoutcast playlists contain links that can be played in conventional HTML5 audio players.
 
 ## Additional Content
 
