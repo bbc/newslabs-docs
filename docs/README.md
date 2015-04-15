@@ -1,9 +1,9 @@
 
 # <i class="fa fa-calendar"></i> Event Information
 
-##[University #newsHACK Wales](NewsHack-Wales.html)
+##[South Africa Development Studio](SA-World-Service.html)
 
- We've prepared some info for those going to #newsHACK Wales!
+ We've prepared some info for those going to Rlabs and World Service Development Studio!
 
 ---
 
