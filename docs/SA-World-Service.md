@@ -18,7 +18,7 @@ We've put together some [explainer videos](Videos.html) for our APIs which give 
 
 To use the BBC APIs you will need an API Key, which we have created for this event:
 
->    `YB0MY3VMHyllzPqEf5alVj5bUvGpvDVi`
+>    `3O320TNQSzygKXF8frRiNBQnAANSyUl7`
 
 You should replace the text `{{apikey}}` in the examples with this key.
 
