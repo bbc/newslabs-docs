@@ -16,11 +16,15 @@ We've put together some [explainer videos](Videos.html) for our APIs which give 
 
 ### API Key
 
-To use the BBC APIs you will need an API Key, which we have created for this event:
+To use some of the BBC APIs you will need an API Key, which we have created for this event:
 
 >    `3O320TNQSzygKXF8frRiNBQnAANSyUl7`
 
 You should replace the text `{{apikey}}` in the examples with this key.
+
+### [Audio Sources](Audio.html)
+
+The BBC, and in particular the World Service, has a wide range of sources of Audio content.  For this event we are providing direct access to some of these sources and demonstration data for some others.
 
 ### [Juicer API](Juicer.html)
 
