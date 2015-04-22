@@ -102,9 +102,9 @@ http://data.test.bbc.co.uk/bbcrd-juicer/articles?like-ids[]=792c35d51f3f8d3c01bf
 ```
 
 
-#### 3. Get Articles from a Source
+### 3. Get Articles from a Source
 
-Get a list of articles from a source
+Get a list of articles from a source. Note: `sources[]` takes a integer as a parameter. You can find this ID by running the Get Sources query (see below).
 
 #### Example request 
 
@@ -120,7 +120,7 @@ Get a list of articles from two different sources:
 http://data.test.bbc.co.uk/bbcrd-juicer/articles?sources[]=1&sources[]=2&apikey={apikey}
 ```
 
-#### 4.Filter by Facets
+### 4.Filter by Facets
 
 
 Get a list of Articles filtered by a list of facets.
