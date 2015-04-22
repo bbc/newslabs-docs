@@ -73,9 +73,9 @@ The Travel service is a HTTP API that allows you to discover real-time travel in
 We also recommend you have a look at what is available elsewhere in terms of content stores and services. Here are some examples that you may find useful: 
 
 * [Open Data for South Africa portal](http://southafrica.opendataforafrica.org/data#menu=source)
-* [Code for South Africa - tools for Data Journos](http://code4sa.org/journos/)
+* Code for South Africa - [open data portal](https://data.code4sa.org/) and [tools for Data Journos](http://code4sa.org/journos/)
 * [City of Cape Town data portal](https://web1.capetown.gov.za/web1/opendataportal/)
-* [Data and pattern ideas with Stream Tools](https://gist.github.com/jacqui/7a133fa560bebac01de9)
+* [Data and pattern ideas with Streamtools](https://gist.github.com/jacqui/7a133fa560bebac01de9) - talk to [Jacqui](http://twitter.com/jacqui) to get setup or help with [streamtools](http://nytlabs.github.com/streamtools)
 * [CrisisNET portal - a firehose for worldwide crisis data](http://api.crisis.net/)
 * [Twitter API](https://dev.twitter.com/)
 * [Facebook Developers portal](https://developers.facebook.com/)

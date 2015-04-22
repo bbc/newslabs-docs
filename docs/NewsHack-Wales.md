@@ -1,7 +1,7 @@
 # University #newsHACK Wales
 
 <p class="lead">
-We are inviting Universities from around Wales to make, create and write the future of news and to explore the art of the possible with our APIs, innovative data services, and a wealth of content.
+We are inviting Universities from around Wales to make, create and write the future of news and to explore the possibilities with our APIs, innovative data services, and a wealth of content.
 </p>
 
 **[See the #newsHACK site for more information](http://newshack.co.uk/university-newshack-wales/)**
@@ -14,7 +14,7 @@ We've put together some [explainer videos](Videos.html) for our APIs which give 
 
 ### API Key
 
-To use the BBC APIs you will need an API Key, which we have created for this event:
+To use the BBC APIs you will need an API Key. Here's one we have created for this event:
 
 >    `YB0MY3VMHyllzPqEf5alVj5bUvGpvDVi`
 
@@ -24,9 +24,9 @@ You should replace the text `{{apikey}}` in the examples with this key.
 
 *Please note that content from the Juicer is suitable for use only for Research and Development purposes.*
 
-The Juicer is tool for automatic entity extraction and artchiving from BBC News Labs.
+The Juicer is a tool for automatic entity extraction and archiving from BBC News Labs.
 
-You can use it fetch the latest news as well running queries for news coverage from the BBC and other news organisations.
+You can use it to fetch the latest news as well running queries for news coverage from the BBC and other news organisations.
 
 [Check out the documentation for the Juicer API](Juicer.html)
 
