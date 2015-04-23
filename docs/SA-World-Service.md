@@ -74,7 +74,7 @@ We also recommend you have a look at what is available elsewhere in terms of con
 
 * [Twitter API](https://dev.twitter.com/)
 * [Facebook Developers portal](https://developers.facebook.com/)
-* [Nexmo API](https://docs.nexmo.com/) - voice calls and SMS, local SA numbers
+* [Nexmo API](https://docs.nexmo.com/) - voice calls and SMS with local numbers; [South Africa features/restrictions info](https://help.nexmo.com/hc/en-us/articles/204017063-South-Africa-Direct-route-)
 * [Twilio API](https://www.twilio.com/docs/api) - alternative platform for voice calls + SMS
 * [Ushahidi Crowdmap](http://www.ushahidi.com/product/crowdmap/) - crowd source info on maps
 * [Ushahidi CrisisNET](http://api.crisis.net/) - a firehose for worldwide crisis data
