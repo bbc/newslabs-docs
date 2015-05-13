@@ -1,9 +1,9 @@
 
 # <i class="fa fa-calendar"></i> Event Information
 
-##[South Africa Development Studio](SA-World-Service.html)
+##[NewsHACK VIII - The News Industry Accelerator](NewsHACK-VIII.html)
 
- We've prepared some info for those going to Rlabs and World Service Development Studio!
+ We've prepared some info for those going to NewsHACK VIII on 3rd-4th June!
 
 ---
 
