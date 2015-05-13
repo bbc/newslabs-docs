@@ -1,7 +1,7 @@
 
 # <i class="fa fa-calendar"></i> Event Information
 
-##[NewsHACK VIII - The News Industry Accelerator](NewsHACK-VIII.html)
+##[NewsHACK VIII - The News Industry Accelerator](NewsHack-VIII.html)
 
  We've prepared some info for those going to NewsHACK VIII on 3rd-4th June!
 
