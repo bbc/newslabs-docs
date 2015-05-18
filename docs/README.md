@@ -9,9 +9,9 @@
 
 # <i class="fa fa-cogs"></i> API Documentation
 
-## [Juicer API Documentation](Juicer.html)
+## [Juicer API Documentation](Juicer-2.html)
 
-The [Juicer Documentation](Juicer.html) contains instructions how to get started with the BBC News Labs Juicer API.
+The [Juicer Documentation](Juicer-2.html) contains instructions how to get started with the BBC News Labs Juicer API.
 
 Please you will need an API key to be able to make calls to the API.
 

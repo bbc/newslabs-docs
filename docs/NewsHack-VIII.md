@@ -24,7 +24,7 @@ You should replace the text `{{apikey}}` in the examples with this key.
 
 The BBC, and in particular the World Service, has a wide range of sources of Audio content.  For this event we are providing direct access to some of these sources and demonstration data for some others.
 
-### [Juicer API](Juicer.html)
+### [Juicer API](Juicer-2.html)
 
 *Please note that content from the Juicer is suitable for use only for Research and Development purposes.*
 
