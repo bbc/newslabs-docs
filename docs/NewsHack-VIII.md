@@ -32,7 +32,7 @@ The Juicer is tool for automatic entity extraction and artchiving from BBC News 
 
 You can use it fetch the latest news as well running queries for news coverage from the BBC and other news organisations.
 
-[Check out the documentation for the Juicer API](Juicer.html)
+[Check out the documentation for the Juicer API](Juicer-2.html)
 
 ### [Need geospatial or semantic multi-hop queries?](Triplestore.html)
 
