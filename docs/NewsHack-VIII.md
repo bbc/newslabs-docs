@@ -6,6 +6,11 @@ Organised by BBC and the Global Editors Network, this hack will gather teams fro
 
 **Important: [See the #newsHACK site for more information](http://newshack.co.uk/newshack-viii-the-2015-news-industry-accelerator/)**
 
+## Submitting Your Project
+
+Please submit your work to the [GEN Community site](http://community.globaleditorsnetwork.org/projects) before the pitch sessions today - which start at 1500. You can find [guidelines and instructions in this pdf](./files/NewsHack-VIII-GEN-Upload-Guide.pdf).
+
+
 ## [<i class="fa fa-youtube"></i> Explainer Videos](Videos.html)
 
 We've put together some [explainer videos](Videos.html) for our APIs which give a quick overview of the different services and API endpoints available.
