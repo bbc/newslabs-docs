@@ -1,17 +1,17 @@
 
 # <i class="fa fa-calendar"></i> Event Information
 
-##[South Africa Development Studio](SA-World-Service.html)
+##[NewsHACK VIII - The News Industry Accelerator](NewsHack-VIII.html)
 
- We've prepared some info for those going to Rlabs and World Service Development Studio!
+ We've prepared some info for those going to NewsHACK VIII on 3rd-4th June!
 
 ---
 
 # <i class="fa fa-cogs"></i> API Documentation
 
-## [Juicer API Documentation](Juicer.html)
+## [Juicer API Documentation](Juicer-2.html)
 
-The [Juicer Documentation](Juicer.html) contains instructions how to get started with the BBC News Labs Juicer API.
+The [Juicer Documentation](Juicer-2.html) contains instructions how to get started with the BBC News Labs Juicer API.
 
 Please you will need an API key to be able to make calls to the API.
 
