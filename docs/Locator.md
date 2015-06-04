@@ -4,6 +4,14 @@
 
 The Locator service is a HTTP API that allows you to discover and ask geospatial questions about places and other entities such as postcodes, news regions, councils etc.
 
+### API Key
+
+To use some of the BBC APIs you will need an API Key, which we have created for this event:
+
+>    `YB0MY3VMHyllzPqEf5alVj5bUvGpvDVi`
+
+You should replace the text `{{apikey}}` in the examples with this key.
+
 ### Core Concepts
 #### Locations
 
