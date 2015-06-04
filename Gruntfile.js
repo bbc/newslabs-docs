@@ -70,6 +70,12 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-rename');
     
-    grunt.registerTask('default', ['clean:release', 'clean:build', 'md2html', 'rename:buildindex', 'rename:build', 'copy:images', 'copy:files', 'copy:webfiles', 'clean:build']);
+    // The default task updates the 'html' directory so that documentation 
+    // can be easily viewed offline.
+    grunt.registerTask('default', ['clean:release', 'clean:build', 'md2html', 'rename:buildindex', 'rename:build', 'copy:images', 'copy:files', 'copy:files', 'clean:build']);
+    
+    // The 'www' task created a directory called '_www' which is not part of the
+    // repository (it is in .gitignore) and run by http://docs.bbcnewslabs.co.uk
+    // to generate the website any time new changes are pushed to the repository
     grunt.registerTask('www', ['clean:build', 'md2html', 'rename:buildindex', 'clean:releaseweb', 'rename:buildweb', 'copy:webimages', 'copy:files', 'copy:webfiles', 'clean:build']);
 };
