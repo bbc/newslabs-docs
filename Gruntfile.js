@@ -49,6 +49,12 @@ module.exports = function(grunt) {
             dest: 'html/img/',
             expand: true
           },
+          webfiles: {
+            cwd: 'docs/files',
+            src: '**/*',
+            dest: '_www/files/',
+            expand: true
+          },
           webimages: {
             cwd: 'docs/img',
             src: '**/*',
@@ -64,6 +70,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-rename');
     
-    grunt.registerTask('default', ['clean:release', 'clean:build', 'md2html', 'rename:buildindex', 'rename:build', 'copy:images', 'copy:files', 'clean:build']);
-    grunt.registerTask('www', ['clean:build', 'md2html', 'rename:buildindex', 'clean:releaseweb', 'rename:buildweb', 'copy:webimages', 'copy:files', 'clean:build']);
+    grunt.registerTask('default', ['clean:release', 'clean:build', 'md2html', 'rename:buildindex', 'rename:build', 'copy:images', 'copy:files', 'copy:webfiles', 'clean:build']);
+    grunt.registerTask('www', ['clean:build', 'md2html', 'rename:buildindex', 'clean:releaseweb', 'rename:buildweb', 'copy:webimages', 'copy:files', 'copy:webfiles', 'clean:build']);
 };
