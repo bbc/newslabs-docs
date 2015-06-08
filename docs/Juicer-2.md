@@ -52,6 +52,8 @@ Available parameters:
 
 * `hist_interval`: allows to specify the intervals for the time-series aggregation (The parameter is one of: `second`, `minute`, `hour`, `day`, `week`, `month`, `year`)
 
+* `trending`: Additionally return a list of "trending" concepts for the specified query. Ex: `published_after=2015-06-07&published_before=2015-06-08&trending=true`. This uses Elasticsearch's [significant terms](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-bucket-significantterms-aggregation.html) functionality.
+
 All parameters are optional. If parameters are omitted, the endpoint will just return the latest articles.
 
 **That's it. Build great things. Enjoy. And if you do something cool with it let use know [@BCC_News_Labs](https://twitter.com/BBC_News_Labs)!**
