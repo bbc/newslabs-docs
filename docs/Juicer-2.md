@@ -55,6 +55,8 @@ Available parameters:
 
 * `trending`: Additionally return a list of "trending" concepts for the specified query. Ex: `published_after=2015-06-07&published_before=2015-06-08&trending=true`. This uses Elasticsearch's [significant terms](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-bucket-significantterms-aggregation.html) functionality.
 
+* `concepts`: It return the concepts aggregated by Thing, People, Place, Organisation.
+
 All parameters are optional. If parameters are omitted, the endpoint will just return the latest articles.
 
 **That's it - Enjoy! Build great things on top of the Juicer, ask smart questions about the news! Questions and feedback to [@BCC_News_Labs](https://twitter.com/BBC_News_Labs)!**
