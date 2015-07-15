@@ -55,7 +55,9 @@ Available parameters:
 
 * `trending`: Additionally return a list of "trending" concepts for the specified query. Ex: `published_after=2015-06-07&published_before=2015-06-08&trending=true`. This uses Elasticsearch's [significant terms](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-bucket-significantterms-aggregation.html) functionality.
 
-* `concepts`: It return the concepts aggregated by Thing, People, Place, Organisation.
+* `concepts`: if true it will return the concepts aggregated by Thing, People, Place, Organisation.
+
+* `sources_aggregation`: if true it will return the articles count grouped by source. 
 
 All parameters are optional. If parameters are omitted, the endpoint will just return the latest articles.
 
