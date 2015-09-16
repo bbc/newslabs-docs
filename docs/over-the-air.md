@@ -8,9 +8,10 @@
 
 
 
-## [<i class="fa fa-youtube"></i> Explainer Videos](Videos.html)
+## <i class="fa fa-youtube"></i> Explainer Video for THE JUICER
 
-We've put together some [explainer videos](Videos.html) for our APIs which give a quick overview of the different services and API endpoints available.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uIwWN1ALQWU" frameborder="0" allowfullscreen></iframe>
+
 
 ## API Documentation
 
