@@ -187,8 +187,8 @@ Add `&hist_interval=`, and the time unit to aggregate over, to your URL. Possibl
 #### Example Requests
 
 ```
-http://new.juicer.bbcnewslabs.co.uk/articles?q=David%20Cameron&hist_interval=day
-http://new.juicer.bbcnewslabs.co.uk/articles?q=Climate%20Change&hist_interval=month
+http://data.test.bbc.co.uk/bbcrd-juicer/articles?q=David%20Cameron&hist_interval=day
+http://data.test.bbc.co.uk/bbcrd-juicer/articles?q=Climate%20Change&hist_interval=month
 ```
 
 
