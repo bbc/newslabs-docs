@@ -5,7 +5,7 @@ Important: This BBC API must only be used for this Hack Event, and is for R&D an
  It cannot be used for commercial or business-commercial promotion purposes.
 </p>
 
-> [The Juicer](http://bbcnewslabs.co.uk/projects/juicer/) - [BBC News Labs'](http://bbcnewslabs.co.uk/) Journalism Experiment Platform
+> [The Juicer](http://bbcnewslabs.co.uk/projects/juicer/) is [BBC News Labs'](http://bbcnewslabs.co.uk/) Journalism Experiment Platform
 
 ## <i class="fa fa-youtube"></i> Explainer Video for THE JUICER
 
