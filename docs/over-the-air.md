@@ -1,13 +1,11 @@
 # BBC Juicer Docs for Over The Air 2015
 
 <p class="lead">
-.
+Important: This BBC API must only be used for this Hack Event, and is for R&D and educational purposes only.
+ It cannot be used for commercial or business-commercial promotion purposes.
 </p>
 
-> Important: This BBC API must only be used for this Hack Event, and is for R&D and educational purposes only.
- It cannot be used for commercial or business-commercial promotion purposes.
-
-
+> [The Juicer](http://bbcnewslabs.co.uk/projects/juicer/) - [BBC News Labs'](http://bbcnewslabs.co.uk/) Journalism Experiment Platform
 
 ## <i class="fa fa-youtube"></i> Explainer Video for THE JUICER
 
