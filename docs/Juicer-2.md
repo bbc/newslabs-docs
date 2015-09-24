@@ -70,7 +70,7 @@ Find articles containing the word `London`
 http://data.bbc.co.uk/bbcrd-juicer/articles?q=London&apikey={apikey}
 ```
 
-Find articles containing `London` AND `Festival` (watch out for `%20` which replaces the `space` in [URL encoding](http://www.w3schools.com/tags/ref_urlencode.asp))
+Find articles containing `London` AND `Festival` (watch out for `%20` which replaces the `space` in [URL encoding](https://en.wikipedia.org/wiki/Query_string#URL_encoding))
 ```
 http://data.bbc.co.uk/bbcrd-juicer/articles?q=London%20AND%20Festival&apikey={apikey}
 ```
