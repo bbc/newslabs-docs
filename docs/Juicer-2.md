@@ -1,6 +1,6 @@
 # The Juicer v2 API Documentation
 
-This is the active version of the Juicer API. See the [Juicer v1 API documentation](Juicer.html) for documentation for first version.
+This is the active version of the Juicer API. See the [Juicer v1 API documentation](Juicer.html) for documentation for the first version.
 
 ## About the Juicer
 
@@ -22,7 +22,7 @@ http://data.bbc.co.uk/bbcrd-juicer/articles?apikey={apikey}
 
 Parameters can be provided in the query string.
 
-Note: arguments must be **URL-encoded**. For example, the url `"http://dbpedia.org/page/Barack_Obama"` must be encoded as `"http%3A%2F%2Fdbpedia.org%2Fresource%2FBarack_Obama"`
+Note: arguments must be [URL encoded](https://en.wikipedia.org/wiki/Query_string#URL_encoding). For example, the url `"http://dbpedia.org/page/Barack_Obama"` must be encoded as `"http%3A%2F%2Fdbpedia.org%2Fresource%2FBarack_Obama"`
 
 Available parameters:
 
@@ -32,7 +32,7 @@ Available parameters:
 
 * `sources[]`: Scopes the results to certain sources, i.e. news outlets. The parameter is a number that correspond to a _source id_. To specify multiple sources add multiple `sources[]` options, e.g.  `...&sources[]=1&sources[]=5`. Find the source IDs for the news outlets you're interested in via `http://data.bbc.co.uk/bbcrd-juicer/sources`.
 
-* `facets[]`:  Filter the results by facets, i.e. entities from [DBpedia](http://wiki.dbpedia.org/). The parameter is a string and it refers to a DBpedia resource, e.g. `"http://dbpedia.org/page/Barack_Obama"`. To specify multiple facets add multiple `facets[]` keys and values, just like with the sources. Note: The facet parameter is URL-encoded!
+* `facets[]`:  Filter the results by facets, i.e. entities from [DBpedia](http://wiki.dbpedia.org/). The parameter is a string and it refers to a DBpedia resource, e.g. `"http://dbpedia.org/page/Barack_Obama"`. To specify multiple facets add multiple `facets[]` keys and values, just like with the sources. Note: The facet parameter is [URL encoded](https://en.wikipedia.org/wiki/Query_string#URL_encoding)!
 
 * `size`: number of results to be returned. The parameter is a number, the default value is 25.
 
