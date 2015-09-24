@@ -58,7 +58,7 @@ Available parameters:
 
 All parameters are optional. If parameters are omitted, the endpoint will just return the latest articles.
 
-**That's it - Enjoy! Build great things on top of the Juicer, ask smart questions about the news! Questions and feedback to [@BCC_News_Labs](https://twitter.com/BBC_News_Labs)!**
+**That's it - Enjoy! Build great things on top of the Juicer, ask smart questions about the news! Questions and feedback to [@BBC_News_Labs](https://twitter.com/BBC_News_Labs)!**
 
 
 ## 1. Get Articles by query term
@@ -93,7 +93,7 @@ http://data.bbc.co.uk/bbcrd-juicer/articles/{article-id}?apikey={apikey}
 ### Example Request
 
 ```
-http://data.bbc.co.uk/bbcrd-juicer/articles/414adf52b72e2eac9ffd9beaf6eb02725053e9c4&apikey={apikey}
+http://data.bbc.co.uk/bbcrd-juicer/articles/414adf52b72e2eac9ffd9beaf6eb02725053e9c4?apikey={apikey}
 ```
 
 ## 3. Get Similar Articles
@@ -117,7 +117,7 @@ http://data.bbc.co.uk/bbcrd-juicer/articles?like-ids[]=792c35d51f3f8d3c01bf74d94
 The Juicer currently ingests news articles from over 400 sources (i.e. RSS feeds of news outlets). You can get a list of the available sources and corresponding IDs from the `/sources` endpoint.
 
 ```
-http://data.bbc.co.uk/bbcrd-juicer/sources&apikey={apikey}
+http://data.bbc.co.uk/bbcrd-juicer/sources?apikey={apikey}
 ```
 
 If you want to narrow down your search to specific sources, e.g. just the BBC (source ID is `1`), you use the `sources[]` bit and the source ID to filter your results.
@@ -155,7 +155,7 @@ http://data.bbc.co.uk/bbcrd-juicer/articles?q=London&facets[]=http%3A%2F%2Fdbped
 Topics don't necessarily appear literally in the text. An article, which contains `Great Britain` may be tagged as `United Kingdom` and both `Liberal Democrats` and `LibDems` may be tagged as `Liberal Democrats`. The tagging process however is under development and you may discover articles talking about 'liberals' being tagged as `Liberal Democrats`, too. We recommend to use the topics as a discovery tool for topics that are co-occurring with certain search terms. If you want to count the articles which actually contain `London` and `David Cameron`, you could rather use a query for the two topics:
 
 ```
-http://data.bbc.co.uk/bbcrd-juicer/articles?q=London%20AND%David%20Cameron&apikey={apikey}
+http://data.bbc.co.uk/bbcrd-juicer/articles?q=London%20AND%20David%20Cameron&apikey={apikey}
 ```
 
 ## 6. Specify time interval for time-series aggregation
@@ -167,8 +167,8 @@ Add `&hist_interval=` and the time unit to aggregate over to your URL. Possible 
 ### Example Requests
 
 ```
-http://data.bbc.co.uk/bbcrd-juicer/articles?q=David%20Cameron&hist_interval=day
-http://data.bbc.co.uk/bbcrd-juicer/articles?q=Climate%20Change&hist_interval=month
+http://data.bbc.co.uk/bbcrd-juicer/articles?q=David%20Cameron&hist_interval=day&apikey={apikey}
+http://data.bbc.co.uk/bbcrd-juicer/articles?q=Climate%20Change&hist_interval=month&apikey={apikey}
 ```
 
 ## 7. Get a list of available Sources
@@ -184,7 +184,7 @@ Available parameters:
 Get all sources:
 
 ```
-http://data.bbc.co.uk/bbcrd-juicer/sources&apikey={apikey}
+http://data.bbc.co.uk/bbcrd-juicer/sources?apikey={apikey}
 ```
 
 Get all sources by name:
