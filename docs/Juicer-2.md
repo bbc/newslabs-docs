@@ -15,7 +15,7 @@ To use this API you will need a Juicer API Key. Keys are available from the [BBC
 ## The URL to retrieve articles
 
 ```
-http://data.bbc.co.uk/bbcrd-juicer/articles?apikey={apikey}
+http://juicer.api.bbci.co.uk/articles?api_key={API_KEY}
 ```
 
 ## Options
@@ -30,7 +30,7 @@ Available parameters:
 
 * `lang`: Scopes the results to sources in the specified language. Available languages at the moment are `en` (English) and `es` (Spanish)
 
-* `sources[]`: Scopes the results to certain sources, i.e. news outlets. The parameter is a number that correspond to a _source id_. To specify multiple sources add multiple `sources[]` options, e.g.  `...&sources[]=1&sources[]=5`. Find the source IDs for the news outlets you're interested in via `http://data.bbc.co.uk/bbcrd-juicer/sources`.
+* `sources[]`: Scopes the results to certain sources, i.e. news outlets. The parameter is a number that correspond to a _source id_. To specify multiple sources add multiple `sources[]` options, e.g.  `...&sources[]=1&sources[]=5`.  Find the source IDs for the news outlets you're interested in via `http://juicer.api.bbci.co.uk/sources`.
 
 * `facets[]`:  Filter the results by facets, i.e. entities from [DBpedia](http://wiki.dbpedia.org/). The parameter is a string and it refers to a DBpedia resource, e.g. `"http://dbpedia.org/page/Barack_Obama"`. To specify multiple facets add multiple `facets[]` keys and values, just like with the sources. Note: The facet parameter is [URL encoded](https://en.wikipedia.org/wiki/Query_string#URL_encoding)!
 
@@ -67,17 +67,17 @@ All parameters are optional. If parameters are omitted, the endpoint will just r
 
 Find articles containing the word `London`
 ```
-http://data.bbc.co.uk/bbcrd-juicer/articles?q=London&apikey={apikey}
+http://juicer.api.bbci.co.uk/articles?q=London&api_key={API_KEY}
 ```
 
 Find articles containing `London` AND `Festival` (watch out for `%20` which replaces the `space` in [URL encoding](https://en.wikipedia.org/wiki/Query_string#URL_encoding))
 ```
-http://data.bbc.co.uk/bbcrd-juicer/articles?q=London%20AND%20Festival&apikey={apikey}
+http://juicer.api.bbci.co.uk/articles?q=London%20AND%20Festival&api_key={API_KEY}
 ```
 
 The following query uses the search phrase `Kenya` OR `Nairobi` AND (`Government` OR `"Uhuru Kenyatta"`)
 ```
-http://data.bbc.co.uk/bbcrd-juicer/articles?q=kenya%20OR%20nairobi%20AND%20(government%20OR%20%22Uhuru%20Kenyatta%22)&apikey={apikey}
+http://juicer.api.bbci.co.uk/articles?q=kenya%20OR%20nairobi%20AND%20(government%20OR%20%22Uhuru%20Kenyatta%22)&api_key={API_KEY}
 ```
 
 ## 2. Get one Article by ID
@@ -87,13 +87,13 @@ You can get the full text of a specific article by using its `id`. The `id` is a
 ### URL
 
 ```
-http://data.bbc.co.uk/bbcrd-juicer/articles/{article-id}?apikey={apikey}
+http://juicer.api.bbci.co.uk/articles?q=kenya%20OR%20nairobi%20AND%20(government%20OR%20%22Uhuru%20Kenyatta%22)&api_key={api_key}
 ```
 
 ### Example Request
 
 ```
-http://data.bbc.co.uk/bbcrd-juicer/articles/414adf52b72e2eac9ffd9beaf6eb02725053e9c4?apikey={apikey}
+http://juicer.api.bbci.co.uk/articles/414adf52b72e2eac9ffd9beaf6eb02725053e9c4?api_key={api_key}
 ```
 
 ## 3. Get Similar Articles
@@ -103,13 +103,13 @@ You can get a list of similar articles by using `like-ids`.
 ### URL
 
 ```
-http://data.bbc.co.uk/bbcrd-juicer/articles?like-ids[]={article-id}&apikey={apikey}
+http://juicer.api.bbci.co.uk/articles?like-ids[]={article-id}&api_key={api_key}
 ```
 
 ### Example Request
 
 ```
-http://data.bbc.co.uk/bbcrd-juicer/articles?like-ids[]=792c35d51f3f8d3c01bf74d940aaf4e2893fc968&apikey={apikey}
+http://juicer.api.bbci.co.uk/articles?like-ids[]=792c35d51f3f8d3c01bf74d940aaf4e2893fc968&api_key={api_key}
 ```
 
 ## 4. Get Articles from a Source
@@ -117,7 +117,7 @@ http://data.bbc.co.uk/bbcrd-juicer/articles?like-ids[]=792c35d51f3f8d3c01bf74d94
 The Juicer currently ingests news articles from over 400 sources (i.e. RSS feeds of news outlets). You can get a list of the available sources and corresponding IDs from the `/sources` endpoint.
 
 ```
-http://data.bbc.co.uk/bbcrd-juicer/sources?apikey={apikey}
+http://juicer.api.bbci.co.uk/sources?api_key={api_key}
 ```
 
 If you want to narrow down your search to specific sources, e.g. just the BBC (source ID is `1`), you use the `sources[]` bit and the source ID to filter your results.
@@ -127,13 +127,13 @@ If you want to narrow down your search to specific sources, e.g. just the BBC (s
 Articles from BBC News with the query term `London`:
 
 ```
-http://data.bbc.co.uk/bbcrd-juicer/articles?q=London&sources[]=1&apikey={apikey}
+http://juicer.api.bbci.co.uk/articles?q=London&sources[]=1&api_key={api_key}
 ```
 
 Articles from BBC News and The Guardian with the query term `Paddington`:
 
 ```
-http://data.bbc.co.uk/bbcrd-juicer/articles?q=Paddington&sources[]=1&sources[]=8&apikey={apikey}
+http://juicer.api.bbci.co.uk/articles?q=Paddington&sources[]=1&sources[]=8&api_key={api_key}
 ```
 
 ## 5.Filter by topics
@@ -149,13 +149,13 @@ Topics are a way to filter down your search. They are added by our topic extract
 Get articles with the query term `London` that have been tagged both with `David Cameron` and `United Kingdom`.
 
 ```
-http://data.bbc.co.uk/bbcrd-juicer/articles?q=London&facets[]=http%3A%2F%2Fdbpedia.org%2Fresource%2FDavid_Cameron&facets[]=http%3A%2F%2Fdbpedia.org%2Fresource%2FUnited_Kingdom&apikey={apikey}
+http://juicer.api.bbci.co.uk/articles?q=London&facets[]=http%3A%2F%2Fdbpedia.org%2Fresource%2FDavid_Cameron&facets[]=http%3A%2F%2Fdbpedia.org%2Fresource%2FUnited_Kingdom&api_key={api_key}
 ```
 
 Topics don't necessarily appear literally in the text. An article, which contains `Great Britain` may be tagged as `United Kingdom` and both `Liberal Democrats` and `LibDems` may be tagged as `Liberal Democrats`. The tagging process however is under development and you may discover articles talking about 'liberals' being tagged as `Liberal Democrats`, too. We recommend to use the topics as a discovery tool for topics that are co-occurring with certain search terms. If you want to count the articles which actually contain `London` and `David Cameron`, you could rather use a query for the two topics:
 
 ```
-http://data.bbc.co.uk/bbcrd-juicer/articles?q=London%20AND%20David%20Cameron&apikey={apikey}
+http://juicer.api.bbci.co.uk/articles?q=London%20AND%20David%20Cameron&api_key={api_key}
 ```
 
 ## 6. Specify time interval for time-series aggregation
@@ -167,8 +167,8 @@ Add `&hist_interval=` and the time unit to aggregate over to your URL. Possible 
 ### Example Requests
 
 ```
-http://data.bbc.co.uk/bbcrd-juicer/articles?q=David%20Cameron&hist_interval=day&apikey={apikey}
-http://data.bbc.co.uk/bbcrd-juicer/articles?q=Climate%20Change&hist_interval=month&apikey={apikey}
+http://juicer.api.bbci.co.uk/articles?q=David%20Cameron&hist_interval=day&api_key={api_key}
+http://juicer.api.bbci.co.uk/articles?q=Climate%20Change&hist_interval=month&api_key={api_key}
 ```
 
 ## 7. Get a list of available Sources
@@ -184,13 +184,13 @@ Available parameters:
 Get all sources:
 
 ```
-http://data.bbc.co.uk/bbcrd-juicer/sources?apikey={apikey}
+http://juicer.api.bbci.co.uk/sources?api_key={api_key}
 ```
 
 Get all sources by name:
 
 ```
-http://data.bbc.co.uk/bbcrd-juicer/sources?name=sun&apikey={apikey}
+http://juicer.api.bbci.co.uk/sources?name=sun&api_key={api_key}
 ```
 
 ## Juicer Postman Collection
@@ -201,4 +201,4 @@ If you install the free [Postman REST Client](https://www.getpostman.com) you ca
 
 This allows you to easily try out the API and explore how it works without writing any code.
 
-You will need to configure an "Environment" within Postman to be able to make calls, add `apikey` as a key and your Juicer API key as the value, this will replace {{apikey}} in the requests and the URL variables to your key.
+You will need to configure an "Environment" within Postman to be able to make calls, add `api_key` as a key and your Juicer API key as the value, this will replace {{api_key}} in the requests and the URL variables to your key.
