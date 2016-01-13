@@ -1,9 +1,9 @@
 
 # <i class="fa fa-calendar"></i> Event Information
 
-##[NewsHACK VIII - The News Industry Accelerator](NewsHack-VIII.html)
+## [BBC Connected Studio: World Service - Lagos](CS-World-Service-Lagos.html)
 
- We've prepared some info for those going to NewsHACK VIII on 3rd-4th June!
+We've prepared some technical resources info for those attending the Connected Studio event in Lagos.
 
 ---
 
@@ -13,7 +13,7 @@
 
 The [Juicer Documentation](Juicer-2.html) contains instructions how to get started with the BBC News Labs Juicer API.
 
-Please you will need an API key to be able to make calls to the API.
+Please note you will need an API key to be able to make calls to the API.
 
 ---
 
