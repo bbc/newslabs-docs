@@ -15,11 +15,37 @@ We are now continuing the programme, inviting news and tech organisations from a
 
 ## BBC Resources
 
-The BBC will be making a variety of resources available to participants in this event. Here are a few examples of projects and prototypes News Labs has created with the APIs and data sources you'll have access to:
-
-* [News Map](http://newsmap.bbcnewslabs.co.uk) - built with D3.js using data from the Juicer API
-* [Who's Talking About What](http://wat.bbcnewslabs.co.uk) - using data from the Juicer API to generate charts for each query
-* More tk
+### [Linked Data Platform](LDP.html)
+ 
+Information TK.
+ 
+### [Nitro](Nitro.html)
+ 
+Information TK.
+ 
+### [Locator API](Locator.html)
+ 
+The Locator service is a HTTP API that allows you to discover and ask geospatial questions about places and other entities such as postcodes, news regions, councils etc.
+ 
+[Check out the documentation for the Locator API](Locator.html)
+ 
+### [Content Store API](CANDY.html)
+ 
+The BBC Content Store API (aka CANDY) provides an interface to BBC News content with structured metadata.
+ 
+CANDY stands for "CPS and Dynamic", it integrates the Content Production System (CPS) with the Dynamic Semantic Publishing system (DSP).
+ 
+The Content Store API is a production platform, used internally by the BBC on the BBC website and in BBC mobile apps.
+ 
+In addition to English, the Content Store includes articles written in several languages.
+ 
+[Check out the documentation for the Content Store API](CANDY.html)
+ 
+### Weather Forecast Data
+ 
+* #### [How to get forecast data for next 24 hours (in 3 hour intervals)](Weather-3-Hourly-Forecast.html)
+ 
+* #### [How to get forecast data for next 3 days](Weather-3-Day-Forecast.html)
 
 ### [Audio Sources](Audio.html)
 
@@ -35,7 +61,26 @@ You can use it fetch the latest news as well running queries for news coverage f
 
 [Check out the documentation for the Juicer API](Juicer.html)
 
+### Example uses of Juicer
+Here are a few examples of projects and prototypes News Labs has created with Juicer:
+
+* [News Map](http://newsmap.bbcnewslabs.co.uk) - built with D3.js using data from the Juicer API
+* [Who's Talking About What](http://wat.bbcnewslabs.co.uk) - using data from the Juicer API to generate charts for each query
+
 ### [<i class="fa fa-youtube"></i> Explainer Videos](Videos.html)
 
 We've put together some [explainer videos](Videos.html) for our APIs which give a quick overview of the different services and API endpoints available.
 
+### Third-party Resources
+
+* [Africa Open Data](http://africaopendata.org/)
+* [Nigeria Data Portal](http://nigeria.opendataforafrica.org/)
+* [Open Data - Ghana](http://ghana.opendataforafrica.org/data#menu=topic)
+
+* [Twitter APIs](https://dev.twitter.com/)
+* [Facebook APIs](https://developers.facebook.com/)
+* SMS/Phone APIs - [Nexmo](https://docs.nexmo.com/api-ref/sms-api), [Twilio](https://www.twilio.com/docs/api), [Fonenode](https://fonenode.com/docs)
+
+* [Code for Africa](http://www.codeforafrica.org/)
+* [Code for Nigeria](http://www.code4nigeria.org/)(coming soon)
+* [Code for Ghana](http://www.codeforghana.org/)
