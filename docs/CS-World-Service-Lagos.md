@@ -13,21 +13,7 @@ We are now continuing the programme, inviting news and tech organisations from a
 <li>Mobile and Chat Apps - How does the use of social platforms offer a way to reach the audience with BBC content?</li>
 </ul>
 
-## BBC Resources
-
-### [Linked Data Platform](LDP.html)
- 
-Information TK.
- 
-### [Nitro](Nitro.html)
- 
-Information TK.
- 
-### [Locator API](Locator.html)
- 
-The Locator service is a HTTP API that allows you to discover and ask geospatial questions about places and other entities such as postcodes, news regions, councils etc.
- 
-[Check out the documentation for the Locator API](Locator.html)
+## BBC Developer Resources
  
 ### [Content Store API](CANDY.html)
  
@@ -35,29 +21,21 @@ The BBC Content Store API (aka CANDY) provides an interface to BBC News content 
  
 CANDY stands for "CPS and Dynamic", it integrates the Content Production System (CPS) with the Dynamic Semantic Publishing system (DSP).
  
-The Content Store API is a production platform, used internally by the BBC on the BBC website and in BBC mobile apps.
+The Content API is a production platform, used internally by the BBC on the BBC website and in BBC mobile apps.
  
-In addition to English, the Content Store includes articles written in several languages.
+In addition to English, the Content API includes articles written in several languages.
  
 [Check out the documentation for the Content Store API](CANDY.html)
- 
-### Weather Forecast Data
- 
-* #### [How to get forecast data for next 24 hours (in 3 hour intervals)](Weather-3-Hourly-Forecast.html)
- 
-* #### [How to get forecast data for next 3 days](Weather-3-Day-Forecast.html)
-
-### [Audio Sources](Audio.html)
-
-The BBC, and in particular the World Service, has a wide range of sources of Audio content.  For this event we are providing direct access to some of these sources and demonstration data for some others.
 
 ### [Juicer API](Juicer-2.html)
 
 *Please note that content from the Juicer is suitable for use only for Research and Development purposes.*
 
-The Juicer is tool for automatic entity extraction and artchiving from BBC News Labs.
+The Juicer is a tool for automatic entity extraction and archiving from BBC News Labs.
 
 You can use it fetch the latest news as well running queries for news coverage from the BBC and other news organisations.
+
+Due to rights restrictions we are only able to link to third-party content and cannot republish anything on our services.
 
 [Check out the documentation for the Juicer API](Juicer.html)
 
@@ -66,21 +44,49 @@ Here are a few examples of projects and prototypes News Labs has created with Ju
 
 * [News Map](http://newsmap.bbcnewslabs.co.uk) - built with D3.js using data from the Juicer API
 * [Who's Talking About What](http://wat.bbcnewslabs.co.uk) - using data from the Juicer API to generate charts for each query
+ 
+### Weather Forecast Data
+ 
+* [How to get forecast data for next 24 hours (in 3 hour intervals)](Weather-3-Hourly-Forecast.html)
+* [How to get forecast data for next 3 days](Weather-3-Day-Forecast.html)
+
+### [Locator API](Locator.html)
+ 
+The Locator service is a HTTP API that allows you to discover and ask geospatial questions about places and other entities such as postcodes, news regions, councils etc.
+ 
+[Check out the documentation for the Locator API](Locator.html)
+ 
+### [Nitro API](Nitro.html)
+ 
+Information TK.
 
 ### [<i class="fa fa-youtube"></i> Explainer Videos](Videos.html)
 
 We've put together some [explainer videos](Videos.html) for our APIs which give a quick overview of the different services and API endpoints available.
 
-### Third-party Resources
+## BBC Editorial Resources
+
+* [BBC News - Africa](http://www.bbc.co.uk/news/world/africa) (also available as [RSS feed](http://feeds.bbci.co.uk/news/world/africa/rss.xml))
+* [BBC World Service - Focus on Africa](http://www.bbc.co.uk/programmes/p00gbjvb)
+* [BBC News - World](http://www.bbc.co.uk/news/world/) (also available as [RSS feed](http://feeds.bbci.co.uk/news/rss.xml?edition=int))
+* [BBC Sport - Football](http://www.bbc.co.uk/sport/0/football/)
+
+### [Audio Sources](Audio.html)
+
+The BBC, and in particular the World Service, has a wide range of sources of audio content. For this event we are providing direct access to some of these sources and demonstration data for some others.
+
+Click the link above to see some of these sources - and for the Lagos event please note we are only interested in using English language services.
+
+### Social Media
+
+* BBC Africa on [Facebook](https://www.facebook.com/bbcafrica), [Twitter](https://twitter.com/BBCAfrica), [Instagram](http://instagram.com/bbcafrica), [Google+](https://plus.google.com/+BBCAfrica), [Youtube](https://www.youtube.com/user/bbcafrica) and [Soundcloud](https://soundcloud.com/bbcafrica)
+* BBC World Service on [Facebook](https://www.facebook.com/bbcworldservice), [Twitter](https://twitter.com/BBCWorld)
+* BBC Shorts on [Facebook](https://www.facebook.com/bbcshorts), [Twitter](https://twitter.com/bbcshorts) and [Instagram](https://www.instagram.com/bbcnews/)
+
+## Third-party Resources
 
 * [Africa Open Data](http://africaopendata.org/)
 * [Nigeria Data Portal](http://nigeria.opendataforafrica.org/)
-* [Open Data - Ghana](http://ghana.opendataforafrica.org/data#menu=topic)
-
 * [Twitter APIs](https://dev.twitter.com/)
 * [Facebook APIs](https://developers.facebook.com/)
 * SMS/Phone APIs - [Nexmo](https://docs.nexmo.com/api-ref/sms-api), [Twilio](https://www.twilio.com/docs/api), [Fonenode](https://fonenode.com/docs)
-
-* [Code for Africa](http://www.codeforafrica.org/)
-* [Code for Nigeria](http://www.code4nigeria.org/)(coming soon)
-* [Code for Ghana](http://www.codeforghana.org/)
