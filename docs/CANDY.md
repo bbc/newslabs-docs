@@ -47,7 +47,7 @@ http://data.bbc.co.uk/content/asset/news/world/africa?api_key={{apikey}}
 
 #### Europe
 ```
-http://data.bbc.co.uk/content/asset/news/world/africa?api_key={{apikey}}
+http://data.bbc.co.uk/content/asset/news/world/europe?api_key={{apikey}}
 ```
 
 #### Asia
@@ -57,7 +57,7 @@ http://data.bbc.co.uk/content/asset/news/world/asia?api_key={{apikey}}
 
 #### Australia
 ```
-http://data.bbc.co.uk/content/asset/news/world/asia?api_key={{apikey}}
+http://data.bbc.co.uk/content/asset/news/world/australia?api_key={{apikey}}
 ```
 
 #### Latin America
@@ -77,12 +77,12 @@ http://data.bbc.co.uk/content/asset/news/world/us_and_canada?api_key={{apikey}}
 
 #### Technology News
 ```
-http://data.bbc.co.uk/content/asset/news/world/technology?api_key={{apikey}}
+http://data.bbc.co.uk/content/asset/news/technology?api_key={{apikey}}
 ```
 
 #### Business News
 ```
-http://data.bbc.co.uk/content/asset/news/world/business?api_key={{apikey}}
+http://data.bbc.co.uk/content/asset/news/business?api_key={{apikey}}
 ```
 
 #### Sport: Football
