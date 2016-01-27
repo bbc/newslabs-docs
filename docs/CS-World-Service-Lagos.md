@@ -58,7 +58,11 @@ The Locator service is a HTTP API that allows you to discover and ask geospatial
  
 ### [Nitro API](Nitro.html)
  
-Information TK.
+Nitro exposes XML and JSON feeds providing programme and schedule metadata. The feeds are the same as those used by BBC products such as the iPlayer.
+
+They provide linear broadcast schedules for all 10 TV channels and 59 radio stations, 7 seven days in the futures, with details of On Demand availability ; a catalogue of all BBC programmes available on demand ; collection of programmes curated by BBC editorial ; EPG-compliant images.
+
+*Link TK if approval*
 
 ### [<i class="fa fa-youtube"></i> Explainer Videos](Videos.html)
 
