@@ -1,107 +1,204 @@
-#  Juicer v1 API Documentation
+# The BBC Juicer API Documentation
 
-> **NEW! [Try out the new Juicer v2 API](Juicer-2.html)**
+This is the active version of the BBC Juicer API (v2). See the [BBC Juicer v1 API documentation](Juicer-v1.html) for documentation for the old version.
 
-## About the Juicer
+## About the BBC Juicer API
 
-The BBC Labs News Juicer is the software responsible for fetching content from the web - articles, videos and images from the BBC and other sources - parsing the content and tagging it with people, organisations and places that correspond to DBpedia entries.
+The BBC Juicer API allows you to search articles by text, topics, dates, and sources. It also provides aggregations and co-occurrences of people, places, organisations and 'things' as tags.
 
-The public Juicer API allows you to specify start and end dates for articles, select which sources or concepts you wish to search for and to free text search in real time, as articles, tweets and other content is ingested.
+[Read more about the BBC Juicer](http://bbcnewslabs.co.uk/projects/juicer/)
 
-[Read more about the Juicer](http://www.bbc.co.uk/partnersandsuppliers/connectedstudio/newslabs/projects/juicer.html)
+## API Key
 
-## Juicer Client Libraries
+To use this API you will need a BBC Juicer API Key. Keys are available from the [BBC News Labs team](http://twitter.com/BBC_News_Labs).
 
-* There is a Juicer client library for node.js called [newsQuery](https://www.npmjs.com/package/newsquery)
-* There is also a [Juicer client GEM for Ruby](https://rubygems.org/gems/juicer-client)
-
-If you are not using Ruby or Node.JS (or just want to use the REST API directly) see the documentation for REST API endpoints below.
-
-## Juicer Postman Collection
-
-If you install the free [Postman REST Client](https://www.getpostman.com) you can import the Juicer API into using this URL:
-
-**https://www.getpostman.com/collections/051237f056d1124d75b0**
-
-This allows you to easily try out the API and explore how it works without writing any code.
-
-You will need to configure an "Environment" within Postman to be able to make calls:
-
-<img src=" ./img/juicer-postman.png" class="img-responsive" style="max-height: 300px !important;" />
-
-## REST API Endpoints
-
-### 1. Get Articles
-
-#### URL
+## The URL to retrieve articles
 
 ```
-http://data.bbc.co.uk/bbcrd-juicer/articles.json
+http://juicer.api.bbci.co.uk/articles?api_key={API_KEY}
 ```
 
-#### Options
+## Options
 
-You can filter and sort the articles returned from the `articles` endpoint. Parameters can be provided in the query string.
+Parameters can be provided in the query string.
+
+Note: arguments must be [URL encoded](https://en.wikipedia.org/wiki/Query_string#URL_encoding). For example, the url `"http://dbpedia.org/page/Barack_Obama"` must be encoded as `"http%3A%2F%2Fdbpedia.org%2Fresource%2FBarack_Obama"`
 
 Available parameters:
 
-* `text`: keywords to search for. Searches in title, description and body of the article.
-* `product[]`: scopes the results to certain products. Multiple products can be specified by adding multiple `product[]` keys and values. Just specify 'NewsWeb' to return only BBC News articles.
-* `content_format[]`: scopes the results to certain formats. Multiple formats can be specified by adding multiple `content_format[]` keys and values.
-* `section[]`: scopes the results to certain sections. Multiple sections can be specified by adding multiple `section[]` keys and values.
-* `site[]`: scopes the results to certain sites. Multiple sites can be specified by adding multiple `site[]` keys and values.
-* `published_after`: fetch articles published after `published_after`. The date format is `yyyy-mm-yy`.
-* `published_before`: fetch articles published before `published_before`. The date format is `yyyy-mm-yy`.
-* `recent_first`: Specify 'yes' to sort results by date (with most recent first) instead of by relevance to keywords.
+* `q`: Keywords to search for. Searches in title, description and body of the article.
+
+* `lang`: Scopes the results to sources in the specified language. Available languages at the moment are `en` (English) and `es` (Spanish)
+
+* `sources[]`: Scopes the results to certain sources, i.e. news outlets. The parameter is a number that correspond to a _source id_. To specify multiple sources add multiple `sources[]` options, e.g.  `...&sources[]=1&sources[]=5`.  Find the source IDs for the news outlets you're interested in via `http://juicer.api.bbci.co.uk/sources`.
+
+* `facets[]`:  Filter the results by facets, i.e. entities from [DBpedia](http://wiki.dbpedia.org/). The parameter is a string and it refers to a DBpedia resource, e.g. `"http://dbpedia.org/page/Barack_Obama"`. To specify multiple facets add multiple `facets[]` keys and values, just like with the sources. Note: The facet parameter is [URL encoded](https://en.wikipedia.org/wiki/Query_string#URL_encoding)!
+
+* `size`: number of results to be returned. The parameter is a number, the default value is 25.
+
+* `offset`: number of results to skip. It can be used together with `size` for pagination. The parameter is a number, the default value is 0.
+
+* `published_after`: fetch articles published after a date. The date format is in UTC. Ex: `2015-02-02T00:00:00.000Z`.
+
+* `published_before`: fetch articles published before a date. The date format is in UTC. Ex: `2015-02-02T00:00:00.000Z`.
+
+* `recent_first`: sort results by date (with most recent first) instead of by relevance to keywords. The parameter can be either `yes` or empty.
+
+* `like-text`: return a list of articles with a text similar to the parameter. The `like-text` parameter is a string.
+
+* `like-ids[]`: return a list of articles similar to other articles based on * their textual content. The parameter is a string (the article id in the BBC Juicer database). This feature is implemented using Elasticsearch's [More Like This API](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-more-like-this.html).
+
+* `hist_interval`: if this parameter is not empty, return a time series for the current query. The parameter specifies the granularity ot the time series and must be one of: `second`, `minute`, `hour`, `day`, `week`, `month`, `year`.
+
+* `trending`: if `true` return a list of "trending" topics for the specified date range. Trending topics are DBpedia URLs that are appearing more frequently than usual in the specified date range. Ex: `published_after=2015-06-07&published_before=2015-06-08&trending=true`. This uses Elasticsearch's [significant terms](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-bucket-significantterms-aggregation.html) functionality.
+
+* `concepts`: if `true` it will return an aggregation of all the topics found in the articles matching the current query, aggregated by Things, People, Places, Organisations.
+
+* `sources_aggregation`: if `true` it will return the articles count grouped by source.
 
 All parameters are optional. If parameters are omitted, the endpoint will just return the latest articles.
 
-#### Example Request
+**That's it - Enjoy! Build great things on top of the BBC Juicer API, ask smart questions about the news! Questions and feedback to [@BBC_News_Labs](https://twitter.com/BBC_News_Labs)!**
 
+
+## 1. Get Articles by query term
+
+### Some Examples Requests
+
+Find articles containing the word `London`
 ```
-http://data.bbc.co.uk/bbcrd-juicer/articles.json?text=London&product[]=NewsWeb&content_format[]=TextualFormat&recent_first=yes&apikey={{apikey}}
-```
-
-#### Complex Query Example
-
-The Juicer supports doing complex queries across multiple sources. For example, the following query uses the search phrase `kenya || nairobi AND (government || president || "Uhuru Kenyatta")` which returns articles only from the listed products that match that specific query.
-
-```
-http://data.bbc.co.uk/bbcrd-juicer/articles.json?&text=kenya+%7C%7C+nairobi+AND+%28government+%7C%7C+president+%7C%7C+%22Uhuru+Kenyatta%22%29&product[]=DailyNewsEgypt&product[]=KenyaBroadcastingCorporation&product[]=TechMoran&product[]=NigerDeltaStandard&product[]=NationalElectionCommissionSudan&content_format[]=TextualFormat&recent_first=yes&apikey={{apikey}}
+http://juicer.api.bbci.co.uk/articles?q=London&api_key={API_KEY}
 ```
 
-### 2. Get Article
-
-You can get the full text of a specific article by using it's `id` (this property is sometimes called the `cps_id`).
-
-#### URL
-
+Find articles containing `London` AND `Festival` (watch out for `%20` which replaces the `space` in [URL encoding](https://en.wikipedia.org/wiki/Query_string#URL_encoding))
 ```
-http://data.bbc.co.uk/bbcrd-juicer/articles/{{article-id}}.json
+http://juicer.api.bbci.co.uk/articles?q=London%20AND%20Festival&api_key={API_KEY}
 ```
 
-#### Example Request
-
+The following query uses the search phrase `Kenya` OR `Nairobi` AND (`Government` OR `"Uhuru Kenyatta"`)
 ```
-http://data.bbc.co.uk/bbcrd-juicer/articles/news_web_5da5811f84a8c718689bbb831f0098bc4c5e4a1c.json?apikey={{apikey}}
-```
-
-### 3. Get Products
-
-Get the a list of `products` currently indexed and avalible from the Juicer.
-
-"Products" are newspapers, broadcast TV channels and other sources.
-
-To return only BBC News articles, specify `product[]=NewsWeb` when calling `articles.json`.
-
-#### URL
-
-```
-http://data.bbc.co.uk/bbcrd-juicer/products.json
+http://juicer.api.bbci.co.uk/articles?q=kenya%20OR%20nairobi%20AND%20(government%20OR%20%22Uhuru%20Kenyatta%22)&api_key={API_KEY}
 ```
 
-#### Example Request
+## 2. Get one Article by ID
+
+You can get the full text of a specific article by using its `id`. The `id` is a SHA1 hash of the fully resolved URL of an article. E.g. the SHA1 (the `id`) for an article located at http://www.bbc.co.uk/news/business-31980802 is `414adf52b72e2eac9ffd9beaf6eb02725053e9c4`.
+
+### URL
 
 ```
-http://data.bbc.co.uk/bbcrd-juicer/products.json?apikey={{apikey}}
+http://juicer.api.bbci.co.uk/articles?q=kenya%20OR%20nairobi%20AND%20(government%20OR%20%22Uhuru%20Kenyatta%22)&api_key={api_key}
 ```
+
+### Example Request
+
+```
+http://juicer.api.bbci.co.uk/articles/414adf52b72e2eac9ffd9beaf6eb02725053e9c4?api_key={api_key}
+```
+
+## 3. Get Similar Articles
+
+You can get a list of similar articles by using `like-ids`.
+
+### URL
+
+```
+http://juicer.api.bbci.co.uk/articles?like-ids[]={article-id}&api_key={api_key}
+```
+
+### Example Request
+
+```
+http://juicer.api.bbci.co.uk/articles?like-ids[]=792c35d51f3f8d3c01bf74d940aaf4e2893fc968&api_key={api_key}
+```
+
+## 4. Get Articles from a Source
+
+The BBC Juicer currently ingests news articles from over 400 sources (i.e. RSS feeds of news outlets). You can get a list of the available sources and corresponding IDs from the `/sources` endpoint.
+
+```
+http://juicer.api.bbci.co.uk/sources?api_key={api_key}
+```
+
+If you want to narrow down your search to specific sources, e.g. just the BBC (source ID is `1`), you use the `sources[]` bit and the source ID to filter your results.
+
+### Example requests
+
+Articles from BBC News with the query term `London`:
+
+```
+http://juicer.api.bbci.co.uk/articles?q=London&sources[]=1&api_key={api_key}
+```
+
+Articles from BBC News and The Guardian with the query term `Paddington`:
+
+```
+http://juicer.api.bbci.co.uk/articles?q=Paddington&sources[]=1&sources[]=8&api_key={api_key}
+```
+
+## 5.Filter by topics
+
+Topics are a way to filter down your search. They are added by our topic extraction system called Mango: it finds relevant DBpedia entities based on the text of an article. You can filter articles for the ones that have one or more of those topics by referring to its DBpedia URL.
+
+    * http://dbpedia.org/resource/David_Cameron
+    * http://dbpedia.org/resource/Liberal_Democrats
+    * http://dbpedia.org/resource/United_Kingdom
+
+### Example Request
+
+Get articles with the query term `London` that have been tagged both with `David Cameron` and `United Kingdom`.
+
+```
+http://juicer.api.bbci.co.uk/articles?q=London&facets[]=http%3A%2F%2Fdbpedia.org%2Fresource%2FDavid_Cameron&facets[]=http%3A%2F%2Fdbpedia.org%2Fresource%2FUnited_Kingdom&api_key={api_key}
+```
+
+Topics don't necessarily appear literally in the text. An article, which contains `Great Britain` may be tagged as `United Kingdom` and both `Liberal Democrats` and `LibDems` may be tagged as `Liberal Democrats`. The tagging process however is under development and you may discover articles talking about 'liberals' being tagged as `Liberal Democrats`, too. We recommend to use the topics as a discovery tool for topics that are co-occurring with certain search terms. If you want to count the articles which actually contain `London` and `David Cameron`, you could rather use a query for the two topics:
+
+```
+http://juicer.api.bbci.co.uk/articles?q=London%20AND%20David%20Cameron&api_key={api_key}
+```
+
+## 6. Specify time interval for time-series aggregation
+
+One common use case would be to see the appearance of news articles over time, e.g. "How frequently was the term `money` mentioned over the time election campaign?". Since every news article has the date attached to it you could get this information day-by-day but if you wanted to look into a longer term coverage of a topic that maybe isn't picked up so frequently (e.g. Climate Change) you can retrieve the number of articles per week or month or year, too.
+
+Add `&hist_interval=` and the time unit to aggregate over to your URL. Possible time units are `second`, `minute`, `hour`, `day`, `week`, `month`, `year`.
+
+### Example Requests
+
+```
+http://juicer.api.bbci.co.uk/articles?q=David%20Cameron&hist_interval=day&api_key={api_key}
+http://juicer.api.bbci.co.uk/articles?q=Climate%20Change&hist_interval=month&api_key={api_key}
+```
+
+## 7. Get a list of available Sources
+
+Get the a list of `sources` currently indexed and available from the BBC Juicer. Sources are newspapers, broadcast TV channels and other sources.
+
+Available parameters:
+
+* `name`: keyword to search for. It searches in name of the source.
+
+### Example request
+
+Get all sources:
+
+```
+http://juicer.api.bbci.co.uk/sources?api_key={api_key}
+```
+
+Get all sources by name:
+
+```
+http://juicer.api.bbci.co.uk/sources?name=sun&api_key={api_key}
+```
+
+## BBC Juicer API Postman Collection
+
+If you install the free [Postman REST Client](https://www.getpostman.com) you can import the BBC Juicer API into using this URL:
+
+**https://www.getpostman.com/collections/513c27db483d11862eab**
+
+This allows you to easily try out the API and explore how it works without writing any code.
+
+You will need to configure an "Environment" within Postman to be able to make calls, add `api_key` as a key and your BBC Juicer API key as the value, this will replace {{api_key}} in the requests and the URL variables to your key.

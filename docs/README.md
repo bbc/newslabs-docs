@@ -9,9 +9,9 @@ We've prepared some technical resources info for those attending the Connected S
 
 # <i class="fa fa-cogs"></i> API Documentation
 
-## [Juicer API Documentation](Juicer-2.html)
+## [BBC Juicer API](Juicer.html)
 
-The [Juicer Documentation](Juicer-2.html) contains instructions how to get started with the BBC News Labs Juicer API.
+The [BBC Juicer API Documentation](Juicer.html) contains instructions how to get started with the BBC News Labs Juicer API.
 
 Please note you will need an API key to be able to make calls to the API.
 
