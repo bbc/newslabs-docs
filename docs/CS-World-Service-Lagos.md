@@ -27,7 +27,7 @@ In addition to English, the Content API includes articles written in several lan
  
 [Check out the documentation for the Content Store API](CANDY.html)
 
-### [Juicer API](Juicer-2.html)
+### [Juicer API](Juicer.html)
 
 *Please note that content from the Juicer is suitable for use only for Research and Development purposes.*
 
