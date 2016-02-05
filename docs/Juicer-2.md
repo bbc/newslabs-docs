@@ -197,7 +197,7 @@ http://juicer.api.bbci.co.uk/sources?name=sun&api_key={api_key}
 
 If you install the free [Postman REST Client](https://www.getpostman.com) you can import the Juicer 2 API into using this URL:
 
-**https://www.getpostman.com/collections/cebe998a209d9862135b**
+**https://www.getpostman.com/collections/513c27db483d11862eab**
 
 This allows you to easily try out the API and explore how it works without writing any code.
 
