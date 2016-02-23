@@ -32,62 +32,62 @@ There are various indexes provided to surface BBC News content by region (e.g. "
 
 #### World News
 ```
-http://data.bbc.co.uk/content/asset/news/world?api_key={{apikey}}
+http://content-api-a127.api.bbci.co.uk/asset/news/world?api_key={{apikey}}
 ```
 
 #### UK
 ```
-http://data.bbc.co.uk/content/asset/news/uk?api_key={{apikey}}
+http://content-api-a127.api.bbci.co.uk/asset/news/uk?api_key={{apikey}}
 ```
 
 ####  Africa
 ```
-http://data.bbc.co.uk/content/asset/news/world/africa?api_key={{apikey}}
+http://content-api-a127.api.bbci.co.uk/asset/news/world/africa?api_key={{apikey}}
 ```
 
 #### Europe
 ```
-http://data.bbc.co.uk/content/asset/news/world/europe?api_key={{apikey}}
+http://content-api-a127.api.bbci.co.uk/asset/news/world/europe?api_key={{apikey}}
 ```
 
 #### Asia
 ```
-http://data.bbc.co.uk/content/asset/news/world/asia?api_key={{apikey}}
+http://content-api-a127.api.bbci.co.uk/asset/news/world/asia?api_key={{apikey}}
 ```
 
 #### Australia
 ```
-http://data.bbc.co.uk/content/asset/news/world/australia?api_key={{apikey}}
+http://content-api-a127.api.bbci.co.uk/asset/news/world/australia?api_key={{apikey}}
 ```
 
 #### Latin America
 ```
-http://data.bbc.co.uk/content/asset/news/world/latin_america?api_key={{apikey}}
+http://content-api-a127.api.bbci.co.uk/asset/news/world/latin_america?api_key={{apikey}}
 ```
 
 #### Middle East
 ```
-http://data.bbc.co.uk/content/asset/news/world/middle_east?api_key={{apikey}}
+http://content-api-a127.api.bbci.co.uk/asset/news/world/middle_east?api_key={{apikey}}
 ```
 
 #### US and Canada
 ```
-http://data.bbc.co.uk/content/asset/news/world/us_and_canada?api_key={{apikey}}
+http://content-api-a127.api.bbci.co.uk/asset/news/world/us_and_canada?api_key={{apikey}}
 ```
 
 #### Technology News
 ```
-http://data.bbc.co.uk/content/asset/news/technology?api_key={{apikey}}
+http://content-api-a127.api.bbci.co.uk/asset/news/technology?api_key={{apikey}}
 ```
 
 #### Business News
 ```
-http://data.bbc.co.uk/content/asset/news/business?api_key={{apikey}}
+http://content-api-a127.api.bbci.co.uk/asset/news/business?api_key={{apikey}}
 ```
 
 #### Sport: Football
 ```
-http://data.bbc.co.uk/content/asset/sport/football?api_key={{apikey}}
+http://content-api-a127.api.bbci.co.uk/asset/sport/football?api_key={{apikey}}
 ```
 
 ### Article URL Endpoint
@@ -95,7 +95,7 @@ http://data.bbc.co.uk/content/asset/sport/football?api_key={{apikey}}
 To get the full text of an article you can use it's "assetUri" to determine how to request an article in full:
 
 ```
-http://data.bbc.co.uk/content/asset/news/world-middle-east-30945324?api_key={{apikey}}
+http://content-api-a127.api.bbci.co.uk/asset/news/world-middle-east-30945324?api_key={{apikey}}
 ```
 
 #### Content in other languages
@@ -103,7 +103,7 @@ http://data.bbc.co.uk/content/asset/news/world-middle-east-30945324?api_key={{ap
 The Content Store also includes content in languages other than English, for example:
 
 ````
-http://data.bbc.co.uk/content/asset/hausa/news/2015/01/150130_au_boko_haram?api_key={{apikey}}
+http://content-api-a127.api.bbci.co.uk/asset/hausa/news/2015/01/150130_au_boko_haram?api_key={{apikey}}
 ````
 
 ## Example Responses
