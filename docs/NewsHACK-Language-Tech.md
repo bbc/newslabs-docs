@@ -1,16 +1,16 @@
 # Language Tech #newsHACK
 
 <p class="lead">
-The BBC is looking to increase its reach in Africa, and better serve younger audiences across the continent. BBC Connected Studio, along with News Labs, has partnered with the World Service on a programme of work to support this objective by inviting tech communities in Africa to develop ideas around language technology, mobile formats and audio content distribution. With development support and funding from the BBC, two ideas have already been developed into working pilots, with more ideas currently in development.
+BBC Connected Studio and News Labs have partnered with the World Service to research and develop tools in language technology, and we are inviting academic institutions and professionals involved in this specialism to take part.
 </p>
 <p>
-As part of this programme, a Language Technology #newsHACK was held in December 2014, and a similar event is now being held in London on 15-16 March 2016.
+We held a Language Technology #newsHACK in December 2014, and a similar event is now being held in London on 15-16 March 2016.
 </p>
 <p>
-The event will be looking at the next step in researching and developing tools in language technology, and we are inviting academic institutions and professionals involved in this specialism to take part.
+We're looking for teams to participate who will bring one or more instances of a 'Language Technology' to use in prototype ideas that they will work on during the two-day hack event. We are making some space for interested individuals (eg multilingual journalists, or UX designers) who are not bringing their own language tech, and we'll be integrating them into teams that are, where appropriate.
 </p>
 <p>
-Each participating team will need to bring one or more instances of a 'Language Technology' to use for their prototypes, and to add to the mix at the event. We are looking for concepts utilising:
+We are looking for concepts utilising:
 </p>
 <ol>
   <li>Speech to text (ideally in a non-English language)</li>
