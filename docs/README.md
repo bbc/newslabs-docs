@@ -1,9 +1,9 @@
 
 # <i class="fa fa-calendar"></i> Event Information
 
-## [BBC Connected Studio: World Service - Lagos](CS-World-Service-Lagos.html)
+## [NewsHACK Language Tech](NewsHACK-Language-Tech.html)
 
-We've prepared some technical resources info for those attending the Connected Studio event in Lagos.
+We've prepared some technical resources info for those attending our second Language Tech hack.
 
 ---
 
