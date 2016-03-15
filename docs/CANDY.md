@@ -1,6 +1,6 @@
 #  Content Store API (aka CANDY)
 
-## About the Content Store API
+## About
 
 The Content Store API (aka CANDY) provides an interface to BBC News content.
 
