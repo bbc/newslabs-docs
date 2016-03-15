@@ -32,62 +32,62 @@ There are various indexes provided to surface BBC News content by region (e.g. "
 
 #### World News
 ```
-http://content-api-a127.api.bbci.co.uk/asset/news/world?api_key={{apikey}}
+http://content-api-a127.api.bbci.co.uk/asset/news/world?api_key={{api_key}}
 ```
 
 #### UK
 ```
-http://content-api-a127.api.bbci.co.uk/asset/news/uk?api_key={{apikey}}
+http://content-api-a127.api.bbci.co.uk/asset/news/uk?api_key={{api_key}}
 ```
 
-####  Africa
+#### Africa
 ```
-http://content-api-a127.api.bbci.co.uk/asset/news/world/africa?api_key={{apikey}}
+http://content-api-a127.api.bbci.co.uk/asset/news/world/africa?api_key={{api_key}}
 ```
 
 #### Europe
 ```
-http://content-api-a127.api.bbci.co.uk/asset/news/world/europe?api_key={{apikey}}
+http://content-api-a127.api.bbci.co.uk/asset/news/world/europe?api_key={{api_key}}
 ```
 
 #### Asia
 ```
-http://content-api-a127.api.bbci.co.uk/asset/news/world/asia?api_key={{apikey}}
+http://content-api-a127.api.bbci.co.uk/asset/news/world/asia?api_key={{api_key}}
 ```
 
 #### Australia
 ```
-http://content-api-a127.api.bbci.co.uk/asset/news/world/australia?api_key={{apikey}}
+http://content-api-a127.api.bbci.co.uk/asset/news/world/australia?api_key={{api_key}}
 ```
 
 #### Latin America
 ```
-http://content-api-a127.api.bbci.co.uk/asset/news/world/latin_america?api_key={{apikey}}
+http://content-api-a127.api.bbci.co.uk/asset/news/world/latin_america?api_key={{api_key}}
 ```
 
 #### Middle East
 ```
-http://content-api-a127.api.bbci.co.uk/asset/news/world/middle_east?api_key={{apikey}}
+http://content-api-a127.api.bbci.co.uk/asset/news/world/middle_east?api_key={{api_key}}
 ```
 
 #### US and Canada
 ```
-http://content-api-a127.api.bbci.co.uk/asset/news/world/us_and_canada?api_key={{apikey}}
+http://content-api-a127.api.bbci.co.uk/asset/news/world/us_and_canada?api_key={{api_key}}
 ```
 
 #### Technology News
 ```
-http://content-api-a127.api.bbci.co.uk/asset/news/technology?api_key={{apikey}}
+http://content-api-a127.api.bbci.co.uk/asset/news/technology?api_key={{api_key}}
 ```
 
 #### Business News
 ```
-http://content-api-a127.api.bbci.co.uk/asset/news/business?api_key={{apikey}}
+http://content-api-a127.api.bbci.co.uk/asset/news/business?api_key={{api_key}}
 ```
 
 #### Sport: Football
 ```
-http://content-api-a127.api.bbci.co.uk/asset/sport/football?api_key={{apikey}}
+http://content-api-a127.api.bbci.co.uk/asset/sport/football?api_key={{api_key}}
 ```
 
 ### Article URL Endpoint
@@ -95,7 +95,7 @@ http://content-api-a127.api.bbci.co.uk/asset/sport/football?api_key={{apikey}}
 To get the full text of an article you can use it's "assetUri" to determine how to request an article in full:
 
 ```
-http://content-api-a127.api.bbci.co.uk/asset/news/world-middle-east-30945324?api_key={{apikey}}
+http://content-api-a127.api.bbci.co.uk/asset/news/world-middle-east-30945324?api_key={{api_key}}
 ```
 
 #### Content in other languages
@@ -103,7 +103,7 @@ http://content-api-a127.api.bbci.co.uk/asset/news/world-middle-east-30945324?api
 The Content Store also includes content in languages other than English, for example:
 
 ````
-http://content-api-a127.api.bbci.co.uk/asset/hausa/news/2015/01/150130_au_boko_haram?api_key={{apikey}}
+http://content-api-a127.api.bbci.co.uk/asset/hausa/news/2015/01/150130_au_boko_haram?api_key={{api_key}}
 ````
 
 ## Example Responses
