@@ -8,6 +8,14 @@ CANDY stands for "CPS and Dynamic", it integrates the Content Production System 
 
 The Content Store API is a production platform, used internally by the BBC.
 
+## API key
+
+You need to provide a valid API key as a query parameter on every request, i.e.
+
+```
+http://content-api-a127.api.bbci.co.uk/asset/news/front_page?api_key={{api_key}}
+```
+
 ## Headers
 
 At a minimum, "X-Candy-Platform" and "X-Candy-Audience" and "Accept" headers must be set with valid values when making a request.
