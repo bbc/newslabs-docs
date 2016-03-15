@@ -50,12 +50,27 @@ Due to rights restrictions we are only able to link to third-party content and c
 
 API key available for the event duration only: Yk3KFzyVliTamletdhg7FOAqf26vwGeL
 
-### Example uses of the Juicer
+#### Example uses of the Juicer
 
 Here are a few examples of projects and prototypes News Labs has created with Juicer:
 
 * [News Map](http://newsmap.bbcnewslabs.co.uk) - built with D3.js using data from the Juicer API
 * [Who's Talking About What](http://wat.bbcnewslabs.co.uk) - using data from the Juicer API to generate charts for each query
+
+### Mango API
+
+This API has been built by BBC R&D as part of the ABC-IP project. It extracts topics from text, using an algorithm similar to the one we used for automatically tagging the World Service archive. The topics extracted are DBpedia identifiers.
+
+For the duration of the event, we provide a version of the Mango API supporting the following languages:
+
+* Arabic
+* Chinese
+* English
+* Spanish
+* Portuguese
+* Russian
+
+API URL and documentation: http://mango.newshack.newslabs.co/
 
 ## Third-party Resources
 
