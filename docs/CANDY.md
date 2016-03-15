@@ -45,7 +45,7 @@ The endpoint URL takes the form:
 http://content-api-a127.api.bbci.co.uk/asset + [relative url]
 ```
 
-Where the relative url is either `front_page` or the same suffix used in the
+Where the relative url is either `/front_page` or the same suffix used in the
 public-facing News website.
 
 So for example:
