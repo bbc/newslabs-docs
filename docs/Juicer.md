@@ -10,7 +10,7 @@ The BBC Juicer API allows you to search articles by text, topics, dates, and sou
 
 ## API Key
 
-To use this API you will need a BBC Juicer API Key. Keys are available from the [BBC News Labs team](http://twitter.com/BBC_News_Labs).
+To use this API you will need a BBC Juicer API Key.
 
 ## The URL to retrieve articles
 
